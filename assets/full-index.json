@@ -40,44 +40,140 @@
 "text": "⌄ What it does A curated store with only approved productivity tools — no Google Play dependency. When should I use this? Fleets that must never touch public stores. private custom app store curated approved no play dependent"
 },
 {
+"page": "changelog.html",
+"url": "changelog.html#overview",
+"group": "Reference",
+"title": "Changelog",
+"crumb": "FieldX Documentation › Changelog",
+"text": "What changed in these docs — newest first."
+},
+{
+"page": "changelog.html",
+"url": "changelog.html#september-2026",
+"group": "Reference",
+"title": "September 2026",
+"crumb": "FieldX Documentation › Changelog › September 2026 — Major refresh",
+"text": "⌄ Navigation Restrictions split into 29 category sub-pages with a sidebar dropdown; collapsible master list; unified menus everywhere. Theme Minix blue palette with Public Sans/Barlow, dark mode with saved preference, FieldX logo and favicon. Search Full-text ranked search with light-blue…"
+},
+{
 "page": "devices.html",
 "url": "devices.html#overview",
 "group": "Reference",
 "title": "Devices",
 "crumb": "FieldX Documentation › Devices",
-"text": "Reference for the device inventory, device details, and per-device actions — the day-to-day control surface for every managed endpoint. Send your source data to expand this to full reference depth."
+"text": "Every enrolled device gets an inventory row, a details page with 100+ live parameters, nine console tabs, and one-click actions — this page maps them all."
 },
 {
 "page": "devices.html",
-"url": "devices.html#device-inventory",
+"url": "devices.html#device-inventory-table",
 "group": "Reference",
-"title": "Device inventory",
-"crumb": "FieldX Documentation › Devices › Inventory & details",
-"text": "⌄ What it does Lists every enrolled device with search and filters — by group, zone, status, model, OS, compliance and enrollment recency. Where to find it Devices / Inventory When should I use this? Daily fleet checks, auditing a rollout, or locating a specific unit by IMEI/serial. inventory…"
+"title": "Device inventory table",
+"crumb": "FieldX Documentation › Devices › Inventory & bulk actions",
+"text": "⌄ What it does Lists every enrolled device with checkbox selection and columns for Device ID, IMEI Number, Serial Number, Device User, Alias, Last Seen Time, Model and Manufacturer. Toolbar Refresh icon re-reads the list; Sync AE Devices pulls the latest Android Enterprise inventory. Where to find…"
 },
 {
 "page": "devices.html",
-"url": "devices.html#device-details-100-parameters",
+"url": "devices.html#bulk-actions-menu",
 "group": "Reference",
-"title": "Device details (100+ parameters)",
-"crumb": "FieldX Documentation › Devices › Inventory & details",
-"text": "⌄ What it does Shows 100+ live parameters per device: battery, storage, RAM, CPU, temperature, signal, data usage, GPS, uptime, app crashes, policy compliance, network status. When should I use this? Diagnosing a single misbehaving device before taking action. device details parameters battery…"
+"title": "Bulk actions menu",
+"crumb": "FieldX Documentation › Devices › Inventory & bulk actions",
+"text": "⌄ What it does The gear icon applies one operation to every selected device. Menu item Effect Change Zone Moves devices to another zone with its policies Assign Group Attaches devices to a group for policy targeting Assign User to device Links a device to a user Unassign User Releases the device…"
 },
 {
 "page": "devices.html",
-"url": "devices.html#action-catalog",
+"url": "devices.html#identity-status",
 "group": "Reference",
-"title": "Action catalog",
-"crumb": "FieldX Documentation › Devices › Instant actions",
-"text": "⌄ Action Effect Reboot / Lock / Wipe / Factory Reset Power and security control, executed immediately Ring / Buzz / Custom message Locate a nearby device or notify its user Push app / Sync policies Force pending installs and configurations now Enter / Exit Kiosk Toggle lockdown remotely (PIN…"
+"title": "Identity & status",
+"crumb": "FieldX Documentation › Devices › Details tab",
+"text": "⌄ Field Example Device ID DEMO-8F3K-2A91 IMEI Number 860000000000001 Serial Number DEMO-SN-0001 Model & Manufacturer Galaxy A14 / Samsung OS Version v13 (API 33) Zone / Groups Demo Zone / Demo-Retail Status Activated, Last Seen, Registration Date Compliance Keyguard, lock screen, security patch…"
 },
 {
 "page": "devices.html",
-"url": "devices.html#block-unblock-device",
+"url": "devices.html#system-battery",
 "group": "Reference",
-"title": "Block / Unblock device",
-"crumb": "FieldX Documentation › Devices › Instant actions",
-"text": "⌄ What it does Instantly blocks a lost, non-compliant or unpaid (rental) device; restores access when safe — no physical access needed. When should I use this? Theft, policy violation, or rental non-payment workflows. block unblock lost non-compliant unpaid rental restore physical access"
+"title": "System & battery",
+"crumb": "FieldX Documentation › Devices › Details tab",
+"text": "⌄ System CPU load and frequency, memory and storage usage with percentages, external storage, brightness. Battery Charge remaining, charger plugged-in time, voltage, health status, battery and CPU temperature. Power & screen Power-on time, power-save / idle / standby modes, resolution, size,…"
+},
+{
+"page": "devices.html",
+"url": "devices.html#network-emm",
+"group": "Reference",
+"title": "Network & EMM",
+"crumb": "FieldX Documentation › Devices › Details tab",
+"text": "⌄ Wi-Fi Connected SSID, IP and MAC address, total Wi-Fi data usage. Mobile Dual-SIM IMEIs, carrier, roaming status, mobile data usage per slot. More Bluetooth MAC and connected devices, VPN service and active state, location mode and last update, connectivity log. EMM agent Manager version,…"
+},
+{
+"page": "devices.html",
+"url": "devices.html#location-trails",
+"group": "Reference",
+"title": "Location trails",
+"crumb": "FieldX Documentation › Devices › Locations tab",
+"text": "⌄ What it does Plots GPS history between a Start and End date on a Map/Satellite view with a GPS Locations side panel. Pick Start Date → End Date → Submit. Toggle Plot All on Map; Export CSV for records; page with Rows selector. Where to find it Devices → select → Locations locations gps map…"
+},
+{
+"page": "devices.html",
+"url": "devices.html#installed-apps",
+"group": "Reference",
+"title": "Installed Apps",
+"crumb": "FieldX Documentation › Devices › Installed Apps & App Limits",
+"text": "⌄ What it does Per-app table with Send App Action dropdown, Filter dropdown and Search. Columns App Name, Package, App usage, Data usage, Installed vs Expected Version, System App, State. Where to find it Devices → select → Installed Apps installed apps send app action filter search package usage…"
+},
+{
+"page": "devices.html",
+"url": "devices.html#app-limits",
+"group": "Reference",
+"title": "App Limits",
+"crumb": "FieldX Documentation › Devices › Installed Apps & App Limits",
+"text": "⌄ What it does Caps daily usage per app — pick Day, App Name, Hour, Minutes, then Submit. Existing limits list below as Day / App Usage. Where to find it Devices → select → App Limits app limits day hour minutes usage cap submit"
+},
+{
+"page": "devices.html",
+"url": "devices.html#device-shell",
+"group": "Reference",
+"title": "Device Shell",
+"crumb": "FieldX Documentation › Devices › Device Shell & Screen View",
+"text": "⌄ What it does Remote command-line into the device for diagnostics — no site visit. dumpsys battery | grep level pm list packages | grep fieldx Where to find it Devices → select → Device Shell device shell terminal commands diagnostics dumpsys adb logs"
+},
+{
+"page": "devices.html",
+"url": "devices.html#screen-view",
+"group": "Reference",
+"title": "Screen View",
+"crumb": "FieldX Documentation › Devices › Device Shell & Screen View",
+"text": "⌄ What it does Watch and control the live screen — tap, swipe and type as if holding the device, with unattended access for kiosks. Where to find it Devices → select → Screen View screen view live remote control unattended tap swipe"
+},
+{
+"page": "devices.html",
+"url": "devices.html#applied-restrictions",
+"group": "Reference",
+"title": "Applied Restrictions",
+"crumb": "FieldX Documentation › Devices",
+"text": "⌄ What it does Searchable table of effective restrictions: Restriction Type, Value, Restriction Name. Use it to confirm a policy reached the unit. Where to find it Devices → select → Applied Restrictions Full catalog: Restrictions → applied restrictions effective type value name search"
+},
+{
+"page": "devices.html",
+"url": "devices.html#device-logs",
+"group": "Reference",
+"title": "Device logs",
+"crumb": "FieldX Documentation › Devices › Logs tab",
+"text": "⌄ What it does Time-stamped log messages with Search, Type filter (e.g. All Logs) and refresh. Where to find it Devices → select → Logs logs time message type all logs search refresh filter"
+},
+{
+"page": "devices.html",
+"url": "devices.html#actions-list",
+"group": "Reference",
+"title": "Actions List (15)",
+"crumb": "FieldX Documentation › Devices › Action tab",
+"text": "⌄ What it does Pick an action on the left and run it on this device. The Pending badge marks actions not yet executed. Action Effect Refresh Device information Pulls the latest parameters from the unit Send Message Shows a custom message on the device screen Ring / Buzz Device Plays sound to locate…"
+},
+{
+"page": "devices.html",
+"url": "devices.html#send-action-sms",
+"group": "Reference",
+"title": "Send Action + SMS fallback",
+"crumb": "FieldX Documentation › Devices › Action tab",
+"text": "⌄ What it does Describe the command in the Description box, add a Parameter, then Send Action over data — or Generate SMS Text to deliver it as an encrypted SMS when the device is offline. send action description parameter sms text offline generate fallback"
 },
 {
 "page": "enroll-device.html",
