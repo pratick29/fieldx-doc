@@ -37,7 +37,7 @@
 "group": "Reference",
 "title": "Private App Store",
 "crumb": "FieldX Documentation › Apps › App management",
-"text": "⌄ What it does A curated store with only approved productivity tools — no Google Play dependency; brandable on Enterprise. When should I use this? Fleets that must never touch public stores. private custom app store curated approved no play dependent brandable enterprise"
+"text": "⌄ What it does A curated store with only approved productivity tools — no Google Play dependency. When should I use this? Fleets that must never touch public stores. private custom app store curated approved no play dependent"
 },
 {
 "page": "devices.html",
@@ -293,7 +293,7 @@
 "group": "Reference",
 "title": "FAQ",
 "crumb": "FieldX Documentation › FAQ",
-"text": "Short answers to the questions every evaluator asks — platforms, updates, offline control, and trials."
+"text": "Short answers to the questions every evaluator asks — platforms, updates, offline control, and getting help."
 },
 {
 "page": "faq.html",
@@ -344,20 +344,12 @@
 "text": "⌄ Answer Yes — no Play Store or Firebase required, including regions where Google is blocked. google play firebase de-googled blocked regions"
 },
 {
-"page": "faq.html",
-"url": "faq.html#is-there-a-free-trial",
-"group": "Reference",
-"title": "Is there a free trial?",
-"crumb": "FieldX Documentation › FAQ › Questions",
-"text": "⌄ Answer Yes — 1 month free trial, no credit card. Begin with Getting Started → trial free credit card start setup account"
-},
-{
 "page": "getting-started.html",
 "url": "getting-started.html#overview",
 "group": "Reference",
 "title": "Getting Started",
 "crumb": "FieldX Documentation › Getting Started",
-"text": "Create your account, tour the console, and enroll your first device in about 15 minutes — no credit card, 1 month free trial."
+"text": "Create your account, tour the console, and enroll your first device in about 15 minutes."
 },
 {
 "page": "getting-started.html",
@@ -1493,7 +1485,7 @@
 "group": "Reference",
 "title": "Retention & delivery",
 "crumb": "FieldX Documentation › Reports › History & scheduling",
-"text": "⌄ Growth plan keeps 60-day device history; Enterprise adds unlimited history, scheduled email and custom BI export. history retention 60 days growth unlimited enterprise scheduled email custom bi erp crm export"
+"text": "⌄ Standard plans keep 60-day device history; extended plans add unlimited history, scheduled email and custom BI export. history retention 60 days extended unlimited scheduled email custom bi erp crm export"
 },
 {
 "page": "restrictions.html",
