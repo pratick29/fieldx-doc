@@ -136,6 +136,8 @@ body,.header,.sidebar,.main,.article,.table,.step,.doc-note,.right-card,.to-top,
 .gr-empty{padding:12px;font-size:12.5px;color:var(--muted)}
 #result-count{font-size:11px;color:#919EAB;margin:6px 0}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+mark{background:rgba(0,156,222,.22);border-radius:3px;padding:0 2px;color:inherit}
+mark.fx-hl{background:rgba(0,156,222,.32);box-shadow:0 0 0 3px rgba(0,156,222,.18)}
 @media print{
  .header-search,.sidebar,.right,.mobile-menu{display:none!important}
  .layout{display:block}.main{padding:0}
