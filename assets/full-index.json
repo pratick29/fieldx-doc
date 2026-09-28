@@ -4,7 +4,7 @@
 "url": "404.html#overview",
 "group": "Reference",
 "title": "Page not found",
-"crumb": "FieldX Documentation › Not found",
+"crumb": "FieldX Documentation › Page not found",
 "text": "The page you asked for moved or never existed. Try search, or jump to a section below."
 },
 {
@@ -1507,7 +1507,7 @@
 "page": "support.html",
 "url": "support.html#overview",
 "group": "Reference",
-"title": "Contact FieldX",
+"title": "Support",
 "crumb": "FieldX Documentation › Support",
 "text": "Get help from the FieldX team — email, support portal, and knowledge base."
 },
@@ -1516,7 +1516,7 @@
 "url": "support.html#email-us",
 "group": "Reference",
 "title": "Email us",
-"crumb": "FieldX Documentation › Contact FieldX › Contact channels",
+"crumb": "FieldX Documentation › Support › Contact channels",
 "text": "⌄ Address info@fieldx.io contact email info fieldx write support help"
 },
 {
@@ -1524,7 +1524,7 @@
 "url": "support.html#support-portal",
 "group": "Reference",
 "title": "Support portal",
-"crumb": "FieldX Documentation › Contact FieldX › Contact channels",
+"crumb": "FieldX Documentation › Support › Contact channels",
 "text": "⌄ Where support.fieldx.io support portal tickets help desk"
 },
 {
@@ -1532,7 +1532,7 @@
 "url": "support.html#knowledge-base",
 "group": "Reference",
 "title": "Knowledge base",
-"crumb": "FieldX Documentation › Contact FieldX › Contact channels",
+"crumb": "FieldX Documentation › Support › Contact channels",
 "text": "⌄ Where Knowledge Base → knowledge base kb articles how to"
 }
 ]
