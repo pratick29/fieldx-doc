@@ -248,6 +248,70 @@
 "text": "⌄ Make sure the target device has no signed-in accounts. Make sure no other device-management app is installed. If necessary, factory reset the device and repeat the preparation steps."
 },
 {
+"page": "faq.html",
+"url": "faq.html#overview",
+"group": "Reference",
+"title": "FAQ",
+"crumb": "FieldX Documentation › FAQ",
+"text": "Short answers to the questions every evaluator asks — platforms, updates, offline control, and trials."
+},
+{
+"page": "faq.html",
+"url": "faq.html#does-fieldx-support-custom-os-and-firmware",
+"group": "Reference",
+"title": "Does FieldX support custom OS and firmware?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — stock + custom Android + select Linux, with OEM firmware-team support. custom os firmware stock android linux oem support"
+},
+{
+"page": "faq.html",
+"url": "faq.html#which-devices-and-operating-systems-are-covered",
+"group": "Reference",
+"title": "Which devices and operating systems are covered?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Android 5–15 + custom builds + Linux IoT + Apple. Legacy + modern. devices platforms android apple linux versions legacy modern"
+},
+{
+"page": "faq.html",
+"url": "faq.html#does-it-handle-ota-firmware-updates",
+"group": "Reference",
+"title": "Does it handle OTA firmware updates?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — manual + automated full/incremental updates via CDN, no physical access needed. ota firmware updates automated incremental cdn physical access"
+},
+{
+"page": "faq.html",
+"url": "faq.html#can-it-run-digital-signage",
+"group": "Reference",
+"title": "Can it run digital signage?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — kiosk lock, unattended access, downtime and network SLA monitoring. digital signage kiosk unattended sla monitoring"
+},
+{
+"page": "faq.html",
+"url": "faq.html#is-it-usable-by-non-technical-teams",
+"group": "Reference",
+"title": "Is it usable by non-technical teams?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — dashboards + automation, and hierarchical access hides complexity. non technical teams dashboards automation hierarchical access"
+},
+{
+"page": "faq.html",
+"url": "faq.html#does-it-work-without-google-services",
+"group": "Reference",
+"title": "Does it work without Google services?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — no Play Store or Firebase required, including regions where Google is blocked. google play firebase de-googled blocked regions"
+},
+{
+"page": "faq.html",
+"url": "faq.html#is-there-a-free-trial",
+"group": "Reference",
+"title": "Is there a free trial?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Yes — 1 month free trial, no credit card. Begin with Getting Started → trial free credit card start setup account"
+},
+{
 "page": "getting-started.html",
 "url": "getting-started.html#overview",
 "group": "Reference",
