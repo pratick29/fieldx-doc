@@ -63,7 +63,8 @@
 <a class="nav-sub-item" href="restriction-geofencing.html"><span>Geofencing</span><small>1</small></a>
 <a class="nav-sub-item" href="restriction-reboot-device.html"><span>Reboot Device</span><small>2</small></a>
 <a class="nav-sub-item" href="restriction-device-usage-limits.html"><span>Device Usage Limits</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-certificates-and-credentials.html"><span>Certificates & Credentials</span><small>3</small></a></div></div>
+<a class="nav-sub-item" href="restriction-certificates-and-credentials.html"><span>Certificates & Credentials</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-app-monitoring-and-diagnostics.html"><span>App Monitoring & Diagnostics</span><small>2</small></a></div></div>
 <a class="nav-item active" href="enroll-device.html"><span>Enroll Device</span></a>
 <a class="nav-item" href="devices.html"><span>Devices</span></a>
 <a class="nav-item" href="groups.html"><span>Groups</span></a>
@@ -108,7 +109,8 @@
           <tr><td><strong>Simplified QR</strong></td><td>The standard QR code is difficult or impossible to scan.</td><td>Simplified QR code and Activation QR/access code.</td></tr>
           <tr><td><strong>Web Based Enrolment</strong></td><td>Your device does not support Zero-Touch or QR-code enrolment.</td><td>USB cable, computer, Chrome, and USB debugging.</td></tr>
           <tr><td><strong>App Based Enrolment</strong></td><td>You want to enrol using another Android phone over wireless ADB.</td><td>Installer phone, target device, same Wi-Fi, and Wireless debugging.</td></tr>
-        </tbody>
+        <tr><td><strong>Pre-installed (Custom OS)</strong></td><td>Agent baked into the factory image.</td><td>Ships enrolled; no setup steps.</td></tr>
+</tbody>
       </table>
     </div>
   </section>
@@ -189,6 +191,29 @@
           <div class="step">4. Select <strong>Done</strong> when the “You're all set!” screen appears.</div>
         </div>
       </article>
+<article class="article" id="qr-requirements-reset">
+<button class="article-title"><span>Requirements & factory reset</span><i>⌄</i></button>
+<div class="article-body" data-search="requirements android 8 enterprise ready fresh factory reset backup data">
+<div class="step">Device runs Android 8.0 or higher and is Android Enterprise ready.</div>
+<div class="step">Fresh out of the box (no accounts) or factory reset — back up data first, reset wipes it.</div>
+</div>
+</article>
+<article class="article" id="find-enrolment-qr">
+<button class="article-title"><span>Find the enrolment QR code</span><i>⌄</i></button>
+<div class="article-body" data-search="qr code provisioning downloads console simplified scan location">
+<div class="step">1. Login to the FieldX Web Portal → Downloads page → QR Code Provisioning tab.</div>
+<div class="step">2. If the code will not scan, use the Simplified QR Code just below it.</div>
+</div>
+</article>
+<article class="article" id="after-scanning">
+<button class="article-title"><span>After scanning</span><i>⌄</i></button>
+<div class="article-body" data-search="accept continue permissions google protect install anyway new devices tag move zone restrictions apps">
+<div class="step">1. Accept & Continue → follow setup → grant the Manager app its permissions.</div>
+<div class="step">2. If Google Protect warns during install, choose Install Anyway.</div>
+<div class="step">3. The device appears under New Devices — tag it and move it to its zone.</div>
+<div class="step">4. Next: apply Restrictions and push Apps to it.</div>
+</div>
+</article>
     </div>
   </section>
 
@@ -414,7 +439,40 @@
     </div>
   </section>
 
-  <section class="category-block" id="troubleshooting">
+  <section class="category-block" id="manual"><div class="cat-kicker">ENROLMENT METHOD</div><div class="catrow"><div><h2>Manual enrolment (ADB)</h2><p>For devices without QR provisioning — needs command-line comfort.</p></div><span class="badge">ADB</span></div>
+<div class="articles">
+<article class="article" id="manual-prereqs">
+<button class="article-title"><span>Before you start</span><i>⌄</i></button>
+<div class="article-body" data-search="manual prerequisites accounts backup platform tools spare device">
+<div class="step">Remove all accounts (Settings → Accounts / Google Accounts) and back up data.</div>
+<div class="step">Install Platform Tools (Windows/Mac/Linux) and try a spare device first.</div>
+<div class="step">Copy the Organization code + Access code from the Enrollment Code page.</div>
+</div>
+</article>
+<article class="article" id="manual-commands">
+<button class="article-title"><span>Run the commands</span><i>⌄</i></button>
+<div class="article-body" data-search="adb install device owner dpm appops grant whitelist notification configure org access reboot commands">
+<div class="step">Download the Manager APK from Plugin Apps, rename to io.fieldx.app.devices-release.apk.</div>
+<div class="step">Connect with USB debugging on, then run one by one:</div>
+<div class="step">adb install io.fieldx.app.devices-release.apk</div>
+<div class="step">adb shell dpm set-device-owner io.fieldx.app.devices/io.droid.admin.DeviceAdminRx</div>
+<div class="step">adb shell appops set io.fieldx.app.devices GET_USAGE_STATS allow</div>
+<div class="step">adb shell pm grant io.fieldx.app.devices android.permission.WRITE_SECURE_SETTINGS</div>
+<div class="step">adb shell dumpsys deviceidle whitelist +io.fieldx.app.devices</div>
+<div class="step">adb shell cmd notification allow_listener io.fieldx.app.devices/io.fieldx.api.services.NotificationListener</div>
+<div class="step">adb shell am broadcast --receiver-include-background -a io.app.CONFIGURE --es org ORG_CODE --es access ACCESS_CODE</div>
+<div class="step">adb reboot</div>
+<div class="field warning"><b>If it fails</b><span>The set-device-owner step must print success — else contact support with the error. After reboot the device appears in the portal within ~10 minutes.</span></div>
+</div>
+</article>
+<article class="article" id="manual-bulk-script">
+<button class="article-title"><span>Bulk tip: script it</span><i>⌄</i></button>
+<div class="article-body" data-search="bulk script serial adb -s multiple devices">
+<div class="step">Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once.</div>
+</div>
+</article>
+</div></section>
+<section class="category-block" id="troubleshooting">
     <div class="cat-kicker">HELP</div>
     <div class="catrow">
       <div>
@@ -479,7 +537,7 @@
     <a href="#web">Web Based Enrolment</a>
     <a href="#app">App Based Enrolment</a>
     <a href="#activation">Activation QR Code</a>
-    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="#manual">Manual ADB</a><a href="#troubleshooting">Troubleshooting</a>
   </nav>
   <div class="right-card"><strong>Need help?</strong>Start with the enrolment method supported by your device, then follow the steps in order.</div>
 </aside>

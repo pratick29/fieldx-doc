@@ -73,8 +73,7 @@ button,input{font:inherit}
 .table{overflow:auto;border:1px solid var(--border);border-radius:8px;margin:13px 0}
 .table table,.master{width:100%;border-collapse:collapse;min-width:520px;font-size:12px}
 .table th,.master th{text-align:left;background:var(--th-bg);color:#637381;font-size:9px;text-transform:uppercase;letter-spacing:.05em}
-.table thead th,.master thead th{position:sticky;top:72px;z-index:5}
-@media(max-width:760px){.table thead th,.master thead th{top:62px}}
+.table thead th,.master thead th{position:sticky;top:0;z-index:5}
 .table th,.table td,.master th,.master td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
 .step{background:#F4F6F8;border-radius:6px;padding:6px 9px;margin:4px 0;color:#637381;font-size:12px}
 .right{height:calc(100vh - 72px);position:sticky;top:72px;overflow:auto;padding:50px 16px 40px}
@@ -130,6 +129,11 @@ body,.header,.sidebar,.main,.article,.table,.step,.doc-note,.right-card,.to-top,
 .help-card .help-btns{display:flex;gap:8px}
 .help-card .help-btns button{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:7px;padding:6px 16px;font-size:12px;cursor:pointer}
 .help-card .help-btns button:hover{border-color:var(--accent);color:var(--accent)}
+.recent-row{display:flex;align-items:center;gap:2px}
+.recent-row .nav-item{flex:1;min-width:0}
+.recent-x{border:0;background:none;color:var(--subtle);cursor:pointer;font-size:11px;padding:6px 8px;border-radius:7px;line-height:1;flex:none;opacity:0}
+.recent-row:hover .recent-x,.recent-x:focus-visible{opacity:1}
+.recent-x:hover{color:var(--accent);background:var(--accent-soft)}
 .empty{display:none;text-align:center;padding:60px;color:var(--muted)}
 .mobile-menu{display:none}
 @media(max-width:1050px){.layout{grid-template-columns:235px minmax(0,1fr)}.right{display:none}}

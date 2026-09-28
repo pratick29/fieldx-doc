@@ -13,31 +13,79 @@
 "group": "Reference",
 "title": "Apps",
 "crumb": "FieldX Documentation › Apps",
-"text": "Reference for managing the application lifecycle on managed devices — silent deployment, allowlists, the private store, and kiosk delivery. Send your source data to expand this to full reference depth."
+"text": "Three ways to get apps onto devices — force-push APKs, curate a private store, or approve from Managed Google Play — then track rollout to every unit."
 },
 {
 "page": "apps.html",
-"url": "apps.html#silent-install-update-uninstall",
+"url": "apps.html#push-apps-list",
 "group": "Reference",
-"title": "Silent install / update / uninstall",
-"crumb": "FieldX Documentation › Apps › App management",
-"text": "⌄ What it does Deploys, updates or removes apps remotely with no user tap, including version pinning and staged rollout. Where to find it Apps → Add (upload APK or Play link) → Assign group → Silent mode silent install update uninstall auto deploy version staged rollout no tap"
+"title": "Push Apps list",
+"crumb": "FieldX Documentation › Apps › Push Apps",
+"text": "⌄ What it does Pushes an app to devices immediately after saving its details. Devices must be online to receive it; offline units get it once they come back online. List Search box + Add button; each row shows app Name, Package Name and a status dot; Rows-per-page pagination. Where to find it Apps…"
 },
 {
 "page": "apps.html",
-"url": "apps.html#blacklist-whitelist-permitted-policy",
+"url": "apps.html#push-app-detail",
 "group": "Reference",
-"title": "Blacklist / Whitelist / Permitted policy",
-"crumb": "FieldX Documentation › Apps › App management",
-"text": "⌄ What it does Hide or suspend distracting apps; protect required apps from uninstall; or lock the device to an approved allowlist where anything else is hidden, disabled or uninstalled. Full option tables live in Restrictions → App Management & Control blacklist whitelist hide suspend protect…"
+"title": "App detail",
+"crumb": "FieldX Documentation › Apps › Push Apps",
+"text": "⌄ Buttons Refresh re-reads state, Start Rollout begins deployment, Edit opens the editor, Delete removes the app. Enable flow New entries start Disabled — search the entry, click Enable (top-right), and a green dot marks it live; pushing begins for the assigned groups. Field Example Assigned Groups…"
 },
 {
 "page": "apps.html",
-"url": "apps.html#private-app-store",
+"url": "apps.html#split-xapk",
 "group": "Reference",
-"title": "Private App Store",
-"crumb": "FieldX Documentation › Apps › App management",
-"text": "⌄ What it does A curated store with only approved productivity tools — no Google Play dependency. When should I use this? Fleets that must never touch public stores. private custom app store curated approved no play dependent"
+"title": "Split APK & XAPK packages",
+"crumb": "FieldX Documentation › Apps › Push Apps",
+"text": "⌄ Split APKs Generate the APKs, put them in one folder, and zip the folder contents — the ZIP must contain only APK files, no folders — then push the ZIP like any app. XAPK / APKM Rename to .zip, delete everything except the APK files, re-zip APKs only, and push. Not supported AAB format (Google…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#updating-app",
+"group": "Reference",
+"title": "Updating an app",
+"crumb": "FieldX Documentation › Apps › Push Apps",
+"text": "⌄ 1. Increment the Version Code and sign with v1+v2 using the SAME keys as before. 2. Upload to your hosting, copy the link. 3. Push Apps → search the listing → Edit → replace the link → details pre-populate. Signatures must match If the signature hashes differ from the previous build, Save stays…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#deleting-listing",
+"group": "Reference",
+"title": "Deleting a listing",
+"crumb": "FieldX Documentation › Apps › Push Apps",
+"text": "⌄ Push Apps → search → select the listing → Delete (top-right) → confirm. Prefer Disable Disabling beats deleting for cleanup-safe pauses; delete only to tidy the section. Important Deleting a listing does NOT uninstall the app from devices — add a “Force uninstall App” restriction for that. delete…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#add-app-apk",
+"group": "Reference",
+"title": "Add via APK link",
+"crumb": "FieldX Documentation › Apps › Add & Edit dialogs",
+"text": "⌄ 1. Paste a Download Link → Fetch App Details. Rules Enter a valid APK link that is directly downloadable. Google Drive and file-storage links are not supported — HTTPS only. See the Knowledge Base article for details. Signing Sign APKs with both v1 and v2 schemes, as Android recommends. Hosting…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#edit-app",
+"group": "Reference",
+"title": "Edit app",
+"crumb": "FieldX Documentation › Apps › Add & Edit dialogs",
+"text": "⌄ Auto-filled metadata Package Name, Version, Version Code, File size, Min/Target SDK, Supported ABI — plus md5 / sha1 / sha256 Signatures for verification. Options App Name, Managed Config (+ Add/Update), Runtime Permissions (e.g. Prompt), Auto update from Google Play Store. Install window Install…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#custom-app-store",
+"group": "Reference",
+"title": "Custom App Store",
+"crumb": "FieldX Documentation › Apps",
+"text": "⌄ What it is The FieldX Store plugin — an internal, enterprise app store for devices with no Play Store. It is NOT preinstalled, so you choose exactly which devices or groups get it. Put the Store on devices Downloads → Plugin Apps → copy icon next to App Store → Push Apps → Add → paste the link →…"
+},
+{
+"page": "apps.html",
+"url": "apps.html#managed-play",
+"group": "Reference",
+"title": "Managed Google Play",
+"crumb": "FieldX Documentation › Apps",
+"text": "⌄ What it does Pick an app from the Google Play store and push it to devices. Click the Google Play icon to load the embedded store, then select apps into your App Catalog. List has Search, Play shortcut and refresh. Detail extras Everything in Push Apps, plus the Play Store listing URL, Managed…"
 },
 {
 "page": "changelog.html",
@@ -225,6 +273,30 @@
 },
 {
 "page": "enroll-device.html",
+"url": "enroll-device.html#qr-requirements-reset",
+"group": "Reference",
+"title": "Requirements & factory reset",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"text": "⌄ Device runs Android 8.0 or higher and is Android Enterprise ready. Fresh out of the box (no accounts) or factory reset — back up data first, reset wipes it."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#find-enrolment-qr",
+"group": "Reference",
+"title": "Find the enrolment QR code",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"text": "⌄ 1. Login to the FieldX Web Portal → Downloads page → QR Code Provisioning tab. 2. If the code will not scan, use the Simplified QR Code just below it."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#after-scanning",
+"group": "Reference",
+"title": "After scanning",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"text": "⌄ 1. Accept & Continue → follow setup → grant the Manager app its permissions. 2. If Google Protect warns during install, choose Install Anyway. 3. The device appears under New Devices — tag it and move it to its zone. 4. Next: apply Restrictions and push Apps to it."
+},
+{
+"page": "enroll-device.html",
 "url": "enroll-device.html#how-to-use-the-simplified-qr-code",
 "group": "Reference",
 "title": "How to use the Simplified QR Code",
@@ -350,6 +422,30 @@
 "title": "When is Server URL required?",
 "crumb": "FieldX Documentation › Enroll Device › Activation QR Code",
 "text": "⌄ The Server URL field is required only when connecting to a privately hosted MDM server."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#manual-prereqs",
+"group": "Reference",
+"title": "Before you start",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"text": "⌄ Remove all accounts (Settings → Accounts / Google Accounts) and back up data. Install Platform Tools (Windows/Mac/Linux) and try a spare device first. Copy the Organization code + Access code from the Enrollment Code page."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#manual-commands",
+"group": "Reference",
+"title": "Run the commands",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"text": "⌄ Download the Manager APK from Plugin Apps, rename to io.fieldx.app.devices-release.apk. Connect with USB debugging on, then run one by one: adb install io.fieldx.app.devices-release.apk adb shell dpm set-device-owner io.fieldx.app.devices/io.droid.admin.DeviceAdminRx adb shell appops set…"
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#manual-bulk-script",
+"group": "Reference",
+"title": "Bulk tip: script it",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"text": "⌄ Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once."
 },
 {
 "page": "enroll-device.html",
@@ -493,39 +589,95 @@
 "group": "Reference",
 "title": "Groups",
 "crumb": "FieldX Documentation › Groups",
-"text": "Reference for organizing devices into smart groups, buckets and zones — and how policies, apps and access attach to them. Send your source data to expand this to full reference depth."
+"text": "A group bundles devices with their restrictions and apps — create it, fill it manually or by rules, then attach policies once for the whole fleet slice."
 },
 {
 "page": "groups.html",
-"url": "groups.html#smart-groups",
+"url": "groups.html#what-groups-are",
 "group": "Reference",
-"title": "Smart Groups",
-"crumb": "FieldX Documentation › Groups › Grouping constructs",
-"text": "⌄ What it does Groups devices by department, location, project, role, OS or custom tags for bulk actions and policy targeting. When should I use this? Any fleet above a handful of devices — assign policies once per group instead of per device. smart groups department location project role os tags…"
+"title": "What groups are for",
+"crumb": "FieldX Documentation › Groups › Groups table",
+"text": "⌄ Definition A group is a logical classification of managed devices — by Department, Branch, Type of use, or Hardware characteristics (e.g. Production Devices, Beta Devices, Internal Test Users, Samsung Devices, TV Boxes). Grouping lets admins manage devices at scale. Use cases Selectively push…"
 },
 {
 "page": "groups.html",
-"url": "groups.html#logical-buckets-zones",
+"url": "groups.html#three-ways",
 "group": "Reference",
-"title": "Logical Buckets & Zones",
-"crumb": "FieldX Documentation › Groups › Grouping constructs",
-"text": "⌄ What it does Isolates devices and their policies per zone (city, store, school) without affecting other zones; zone-based inventory and dashboards. When should I use this? Multi-site deployments — franchises, districts, regional fleets. buckets zones logical isolate location franchise school…"
+"title": "Three ways to fill a group",
+"crumb": "FieldX Documentation › Groups › Groups table",
+"text": "⌄ Manual addition — pick devices and assign them. Bulk addition — paste IMEI/Serial lists. Automatic grouping — rules place devices themselves. three ways fill group manual bulk automatic grouping add devices"
 },
 {
 "page": "groups.html",
-"url": "groups.html#hierarchical-access",
+"url": "groups.html#groups-table",
 "group": "Reference",
-"title": "Hierarchical access",
-"crumb": "FieldX Documentation › Groups › Grouping constructs",
-"text": "⌄ What it does Tiered users (Super Admin → Zone Admin → Team lead), each seeing only their devices. When should I use this? Resellers and large enterprises needing delegated administration. hierarchical access users roles visibility reseller zone admin team lead only relevant devices"
+"title": "Groups table",
+"crumb": "FieldX Documentation › Groups",
+"text": "⌄ What it does Lists all groups with columns for Name, Last Updated Time, Devices, Restrictions and Apps, plus a Search box and an add (+) button. Row actions Send Action runs a command on the group; Delete removes it. Where to find it Groups (top-level console page) groups table name last updated…"
 },
 {
 "page": "groups.html",
-"url": "groups.html#assigning-policies-to-groups",
+"url": "groups.html#create-group",
 "group": "Reference",
-"title": "Assigning policies to groups",
-"crumb": "FieldX Documentation › Groups › Assignment & priority",
-"text": "⌄ 1. Restrictions → Add → name + unique Order (priority). 2. Assign to one or more Groups. 3. Higher-priority policies override lower ones for the same devices. Baseline everything with the Global Restriction (Priority 1); override per group where needed. See Restrictions → assign policy group…"
+"title": "Create Group dialog",
+"crumb": "FieldX Documentation › Groups › Groups table",
+"text": "⌄ Group Details Group Name (required), Max. Devices (leave empty for unlimited), Apply Auto Rules only to devices Reported Since (date), and Auto add only Android Enterprise Devices checkbox. Auto Grouping Rules Pick a Rule, enter a Value or Regex, then Add — matching devices join automatically.…"
+},
+{
+"page": "groups.html",
+"url": "groups.html#group-details-tab",
+"group": "Reference",
+"title": "Edit group & rules",
+"crumb": "FieldX Documentation › Groups › Group Details tab",
+"text": "⌄ What it does Change the Group Name, Max. Devices, Reported-Since date or AE-only flag, then Save . Delete (or the ⋮ menu) removes the group. Rule types Manufacturer & Model (e.g. Google, Pixel 7a), Regex on IMEI, Serial or MAC address, and App package (e.g. com.android.vending groups devices with…"
+},
+{
+"page": "groups.html",
+"url": "groups.html#manual-assignment",
+"group": "Reference",
+"title": "Manual assignment",
+"crumb": "FieldX Documentation › Groups › Group Details tab",
+"text": "⌄ 1. Open My Devices or New Devices (or the top-bar Search), select one or more devices. 2. Click Assign Group on the right side → pick the group → save. 3. From a Device Details page: search by IMEI/Serial → Device ID link → Assign Group → save. Apps and restrictions can take 15–30 minutes to land…"
+},
+{
+"page": "groups.html",
+"url": "groups.html#bulk-assign-delete",
+"group": "Reference",
+"title": "Bulk Assign / Delete Devices",
+"crumb": "FieldX Documentation › Groups › Group Details tab",
+"text": "⌄ What it does Paste comma-separated IMEI or Serial numbers (pick which with the radio buttons) and Submit — to add units in bulk, or remove them in bulk. Note Removing devices from a group never removes their restrictions or apps. Choose IMEI Number or Serial Number → paste list → Submit. bulk…"
+},
+{
+"page": "groups.html",
+"url": "groups.html#group-pro-tips",
+"group": "Reference",
+"title": "Pro tips",
+"crumb": "FieldX Documentation › Groups › Group Details tab",
+"text": "⌄ Name groups technically — by model, make, manufacturer. Auto rules trigger full workflows: grouping auto-pushes apps and restrictions. Deleting devices from a group removes membership only — restrictions and apps stay on. pro tips naming model auto rules workflow delete remove policies stay"
+},
+{
+"page": "groups.html",
+"url": "groups.html#group-devices-tab",
+"group": "Reference",
+"title": "Group devices",
+"crumb": "FieldX Documentation › Groups › Devices tab",
+"text": "⌄ Toolbar Send Action , Assign Group , Remove Group , Export CSV and a Search-device box. Columns Device ID, IMEI Number, Serial Number, Zone, Device User, Alias, Last Seen Time, Model — with Total rows and Rows-per-page pagination. Where to find it Groups → click a group name → Devices group…"
+},
+{
+"page": "groups.html",
+"url": "groups.html#group-restrictions-tab",
+"group": "Reference",
+"title": "Group restrictions",
+"crumb": "FieldX Documentation › Groups › Restrictions tab",
+"text": "⌄ What it does Lists attached restriction policies as Name / Order rows — Order is the priority: higher-priority policies win on the same devices. Where to find it Groups → click a group name → Restrictions Full catalog: Restrictions → group restrictions name order priority attach policy"
+},
+{
+"page": "groups.html",
+"url": "groups.html#group-apps-tab",
+"group": "Reference",
+"title": "Group apps",
+"crumb": "FieldX Documentation › Groups › Apps tab",
+"text": "⌄ Columns App Status (e.g. Enabled), Name, Version, Package Name, Last Updated Time — plus per-row Download and Shell cmd shortcuts. Where to find it Groups → click a group name → Apps App lifecycle: Apps → group apps status name version package updated download shell"
 },
 {
 "page": "index.html",
@@ -601,11 +753,19 @@
 },
 {
 "page": "policies.html",
+"url": "policies.html#global-restriction",
+"group": "Reference",
+"title": "Global Restriction",
+"crumb": "FieldX Documentation › Restrictions › Managing restrictions",
+"text": "⌄ What it is The default restriction of order one, created by the system. It applies to all devices, cannot be deleted, but can be edited by authorized users. Use it for The common set for every device — e.g. disable factory reset, enable auto date & time. Anything group-specific overrides it by…"
+},
+{
+"page": "policies.html",
 "url": "policies.html#adding-a-restriction",
 "group": "Reference",
 "title": "Adding a restriction",
 "crumb": "FieldX Documentation › Restrictions › Managing restrictions",
-"text": "⌄ 1. Navigate to Restrictions → Add. 2. Enter a descriptive name and assign a unique priority. 3. Assign the restriction to the required group or groups. 4. Select a category and configure parameters. 5. Select Add to create the restriction."
+"text": "⌄ 1. Side menu → Restrictions → Add at the top of the page. 2. Restriction Name — user-friendly, describing its purpose or group. 3. Order — unique number; lower orders are overridden by higher ones. 4. Group Selection — one or multiple groups from the dropdown. 5. Pick a category and configure…"
 },
 {
 "page": "policies.html",
@@ -613,7 +773,15 @@
 "group": "Reference",
 "title": "Deleting a restriction",
 "crumb": "FieldX Documentation › Restrictions › Managing restrictions",
-"text": "⌄ Select the target restriction, choose Delete, and confirm. Deleting a restriction from the Web Portal does not automatically revert settings already applied to active devices."
+"text": "⌄ Read first Deleting removes the restriction from the portal but does NOT undo settings already on devices. To lift settings, edit first and set everything to ‘Do not Apply’. Side menu → Restrictions → pick the restriction → Delete → confirm (irreversible). The Global Restriction cannot be deleted…"
+},
+{
+"page": "policies.html",
+"url": "policies.html#watchdog-setup",
+"group": "Reference",
+"title": "Watchdog setup",
+"crumb": "FieldX Documentation › Restrictions › App Watchdog",
+"text": "⌄ Prerequisite Watchdog works only if FieldX is installed as a system app. On capable devices, contact support for know-how. 1. Restrictions page → add or edit the restriction. 2. App Restrictions category → scroll to App Watchdog settings → Add/Update. 3. Enter each app's fully qualified class…"
 },
 {
 "page": "policies.html",
@@ -848,6 +1016,14 @@
 "text": "3 Manage certificate installation and which apps may act as credential providers. Open → certificates  credentials restrictions category"
 },
 {
+"page": "policies.html",
+"url": "policies.html#cat-monitoring",
+"group": "Reference",
+"title": "App Monitoring & Diagnostics",
+"crumb": "FieldX Documentation › Restrictions › Restriction categories",
+"text": "2 Keep critical apps alive and collect their logs for diagnosis. Open → app monitoring diagnostics restrictions category"
+},
+{
 "page": "reports.html",
 "url": "reports.html#overview",
 "group": "Reference",
@@ -891,7 +1067,7 @@
 "page": "restriction-app-installation-and-permissions.html",
 "url": "restriction-app-installation-and-permissions.html#disallow-app-installs-from-all-sources",
 "group": "Reference",
-"title": "Disallow App Installs from all Sources",
+"title": "Allow Installing or Sideloading Apps",
 "crumb": "FieldX Documentation › App Installation & Permissions › App Installation & Permissions",
 "text": "⌄ What it does Controls whether the user can install apps from any source at all, including the Play Store. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents the behavior controlled by this restriction. Available for FieldX EMM, Android Enterprise Where…"
 },
@@ -899,7 +1075,7 @@
 "page": "restriction-app-installation-and-permissions.html",
 "url": "restriction-app-installation-and-permissions.html#disallow-app-installs-from-sources-except-google-play-store-adb-mdm",
 "group": "Reference",
-"title": "Disallow App Installs from Sources except Google Play Store, adb & MDM",
+"title": "Allow App Installs from Unknown Sources",
 "crumb": "FieldX Documentation › App Installation & Permissions › App Installation & Permissions",
 "text": "⌄ What it does Controls whether the user can enable the \"Unknown Sources\" setting that permits installing apps from outside the Play Store. adb and trusted app stores are not affected by this setting. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents…"
 },
@@ -907,7 +1083,7 @@
 "page": "restriction-app-installation-and-permissions.html",
 "url": "restriction-app-installation-and-permissions.html#disallow-app-installs-unknown-sources-globally-except-mdm",
 "group": "Reference",
-"title": "Disallow App Installs Unknown Sources Globally (except MDM)",
+"title": "Allow App Installs Unknown Sources Globally",
 "crumb": "FieldX Documentation › App Installation & Permissions › App Installation & Permissions",
 "text": "⌄ What it does Disables installs from every unknown source — including adb, third-party app stores, and the Downloads folder — leaving only MDM-pushed installs available. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents the behavior controlled by this…"
 },
@@ -987,7 +1163,7 @@
 "page": "restriction-app-management-and-control.html",
 "url": "restriction-app-management-and-control.html#permitted-apps-policy",
 "group": "Reference",
-"title": "Permitted Apps Policy",
+"title": "Permitted Apps on Device",
 "crumb": "FieldX Documentation › App Management & Control › App Management & Control",
 "text": "⌄ What it does Restricts the device to only the apps on this list. Every other app — including sideloaded ones — is automatically uninstalled or disabled. What to enter Enter the package name(s) of every application that should remain permitted on the device. Available for FieldX EMM Where to find…"
 },
@@ -995,9 +1171,33 @@
 "page": "restriction-app-management-and-control.html",
 "url": "restriction-app-management-and-control.html#non-permitted-app-action",
 "group": "Reference",
-"title": "Non-Permitted App Action",
+"title": "Action for Unauthorized App installs",
 "crumb": "FieldX Documentation › App Management & Control › App Management & Control",
 "text": "⌄ What it does Chooses how the device handles an app that isn't on the Permitted Apps Policy list. Option What it does No Action The app is left alone. Uninstall immediately The app is force-uninstalled if it is a user-installed app. Hide them from Apps list The app is hidden from the launcher…"
+},
+{
+"page": "restriction-app-monitoring-and-diagnostics.html",
+"url": "restriction-app-monitoring-and-diagnostics.html#overview",
+"group": "Reference",
+"title": "App Monitoring & Diagnostics",
+"crumb": "FieldX Documentation › App Monitoring & Diagnostics",
+"text": "Keep critical apps alive and collect their logs for diagnosis."
+},
+{
+"page": "restriction-app-monitoring-and-diagnostics.html",
+"url": "restriction-app-monitoring-and-diagnostics.html#app-watchdog-settings",
+"group": "Reference",
+"title": "App Watchdog Settings",
+"crumb": "FieldX Documentation › App Monitoring & Diagnostics › App Monitoring & Diagnostics",
+"text": "⌄ What it does Monitors an app's activity or service and restarts it if it stops running — Service, Top Activity or whole Package modes. Requires the fully qualified class name and a system-level install. Full setup flow: Restrictions → App Watchdog → Where to find it Restrictions / App Monitoring…"
+},
+{
+"page": "restriction-app-monitoring-and-diagnostics.html",
+"url": "restriction-app-monitoring-and-diagnostics.html#collect-app-logs",
+"group": "Reference",
+"title": "Collect App Logs",
+"crumb": "FieldX Documentation › App Monitoring & Diagnostics › App Monitoring & Diagnostics",
+"text": "⌄ What it does Monitors folders on the device and uploads zipped logs to an FTP server for diagnosis. Where to find it Restrictions / App Monitoring & Diagnostics / Collect App Logs collect app logs monitor folders upload zip ftp diagnostics"
 },
 {
 "page": "restriction-bluetooth-connectivity.html",
@@ -1387,7 +1587,7 @@
 "page": "restriction-location-services.html",
 "url": "restriction-location-services.html#allow-location-configuration",
 "group": "Reference",
-"title": "Allow Location Configuration",
+"title": "Location Toggle",
 "crumb": "FieldX Documentation › Location Services › Location Services",
 "text": "⌄ What it does Controls whether the user can enable or disable individual location providers. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents the behavior controlled by this restriction. Available for FieldX EMM Where to find it Restrictions /…"
 },
@@ -1395,7 +1595,7 @@
 "page": "restriction-location-services.html",
 "url": "restriction-location-services.html#allow-location-sharing",
 "group": "Reference",
-"title": "Allow Location Sharing",
+"title": "Location Sharing",
 "crumb": "FieldX Documentation › Location Services › Location Services",
 "text": "⌄ What it does Controls whether the user can turn on location sharing. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents the behavior controlled by this restriction. Available for FieldX EMM Minimum Android API level Jelly Bean 4.3 (18) Where to find it…"
 },
@@ -1739,7 +1939,7 @@
 "page": "restriction-password-and-lock-screen.html",
 "url": "restriction-password-and-lock-screen.html#lock-screen-timeout",
 "group": "Reference",
-"title": "Lock Screen Timeout",
+"title": "Keyguard Timeout",
 "crumb": "FieldX Documentation › Password & Lock Screen › Password & Lock Screen",
 "text": "⌄ What it does Sets how long a passcode can go unchanged before the user is forced to reset it. Option What it does 10 days The user must reset their passcode every 10 days. 20 days The user must reset their passcode every 20 days. 30 days The user must reset their passcode every 30 days. Never The…"
 },
@@ -1865,6 +2065,22 @@
 },
 {
 "page": "restriction-system-wide-restrictions.html",
+"url": "restriction-system-wide-restrictions.html#autofill-services",
+"group": "Reference",
+"title": "Autofill Services",
+"crumb": "FieldX Documentation › System-Wide Restrictions",
+"text": "⌄ What it does Specifies whether the user is allowed to use autofill services. Where to find it Restrictions / System-Wide Restrictions / Autofill Services autofill services allow disallow"
+},
+{
+"page": "restriction-system-wide-restrictions.html",
+"url": "restriction-system-wide-restrictions.html#printing",
+"group": "Reference",
+"title": "Printing",
+"crumb": "FieldX Documentation › System-Wide Restrictions",
+"text": "⌄ What it does Specifies whether the user is allowed to print from the device. Where to find it Restrictions / System-Wide Restrictions / Printing printing allow disallow"
+},
+{
+"page": "restriction-system-wide-restrictions.html",
 "url": "restriction-system-wide-restrictions.html#status-bar",
 "group": "Reference",
 "title": "Status Bar",
@@ -1963,7 +2179,7 @@
 "page": "restriction-system-wide-restrictions.html",
 "url": "restriction-system-wide-restrictions.html#disallow-settings-app",
 "group": "Reference",
-"title": "Disallow Settings App",
+"title": "Settings App",
 "crumb": "FieldX Documentation › System-Wide Restrictions › System-Wide Restrictions",
 "text": "⌄ What it does Disables the Settings app from use. Available only on Samsung devices in Device Owner mode. Option What it does Allow Allows the behavior controlled by this restriction. Disallow Prevents the behavior controlled by this restriction. Available for Samsung & FieldX EMM Where to find it…"
 },

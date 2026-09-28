@@ -168,11 +168,22 @@ document.addEventListener('DOMContentLoaded',function(){
       try{localStorage.setItem('fx-recent',JSON.stringify(rec));}catch(e5){}
       var others=rec.filter(function(r){return r.u!==cur.u;}).slice(0,5);
       if(others.length){
-        var g=document.createElement('div');g.className='nav-group';
+        var g=document.createElement('div');g.className='nav-group recent-group';
         var lb=document.createElement('div');lb.className='nav-label';lb.textContent='Recently viewed';g.appendChild(lb);
         others.forEach(function(r){
+          var row=document.createElement('div');row.className='recent-row';
           var a=document.createElement('a');a.className='nav-item';a.href=r.u;
-          var s=document.createElement('span');s.textContent=r.t.length>26?r.t.slice(0,25)+'…':r.t;a.appendChild(s);g.appendChild(a);
+          var s=document.createElement('span');s.textContent=r.t.length>26?r.t.slice(0,25)+'…':r.t;a.appendChild(s);row.appendChild(a);
+          var x=document.createElement('button');x.className='recent-x';x.setAttribute('aria-label','Remove '+r.t+' from recently viewed');x.textContent='✕';
+          x.addEventListener('click',function(ev){
+            ev.preventDefault();ev.stopPropagation();
+            var kept=[];try{kept=JSON.parse(localStorage.getItem('fx-recent')||'[]');}catch(e6){kept=[];}
+            kept=kept.filter(function(k){return k.u!==r.u;});
+            try{localStorage.setItem('fx-recent',JSON.stringify(kept));}catch(e7){}
+            row.remove();
+            if(!g.querySelector('.recent-row'))g.remove();
+          });
+          row.appendChild(x);g.appendChild(row);
         });
         side.appendChild(g);
       }
