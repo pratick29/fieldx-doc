@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FieldX Documentation — Groups</title><link rel="stylesheet" href="assets/minimal.css"></head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="logo">F</span><span class="brand-name">FieldX Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<nav class="header-links"><a href="index.html">Home</a><a href="policies.html">Restrictions</a></nav>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Getting started</div>
+<a class="nav-item" href="index.html"><span>Introduction</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-item" href="policies.html"><span>Restrictions</span><small>118</small></a>
+<a class="nav-item" href="enroll-device.html"><span>Enroll Device</span></a>
+<a class="nav-item" href="devices.html"><span>Devices</span></a>
+<a class="nav-item active" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main">
+<div class="breadcrumb">FieldX <span>›</span> Documentation <span>›</span> Groups</div>
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Groups</h1>
+<p>Reference for organizing devices into smart groups, buckets and zones — and how policies, apps and access attach to them. Send your source data to expand this to full reference depth.</p>
+<div class="meta-row"><span class="meta">Smart groups</span><span class="meta">Buckets & zones</span><span class="meta">Priority order</span></div></section>
+<p id="result-count"></p>
+<div class="doc-note"><strong>About this reference</strong>Starter content below. Share the Groups source material and every grouping construct gets full options, paths and notes.</div>
+
+<section class="category-block" id="grouping"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Grouping constructs</h2><p>Three layers for organizing a fleet of any size.</p></div><span class="badge">3</span></div>
+<div class="articles">
+<article class="article" id="smart-groups" data-search="smart groups department location project role os tags bulk actions policies dynamic"><button class="article-title"><span>Smart Groups</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Groups devices by department, location, project, role, OS or custom tags for bulk actions and policy targeting.</span></div><p>When should I use this? Any fleet above a handful of devices — assign policies once per group instead of per device.</p></div></article>
+<article class="article" id="logical-buckets-zones" data-search="buckets zones logical isolate location franchise school district without affecting others"><button class="article-title"><span>Logical Buckets & Zones</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Isolates devices and their policies per zone (city, store, school) without affecting other zones; zone-based inventory and dashboards.</span></div><p>When should I use this? Multi-site deployments — franchises, districts, regional fleets.</p></div></article>
+<article class="article" id="hierarchical-access" data-search="hierarchical access users roles visibility reseller zone admin team lead only relevant devices"><button class="article-title"><span>Hierarchical access</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Tiered users (Super Admin → Zone Admin → Team lead), each seeing only their devices.</span></div><p>When should I use this? Resellers and large enterprises needing delegated administration.</p></div></article>
+</div></section>
+
+<section class="category-block" id="assignment"><div class="cat-kicker">CONCEPT</div><div class="catrow"><div><h2>Assignment & priority</h2><p>How policies attach to groups and which wins.</p></div></div>
+<div class="articles"><article class="article" id="assigning-policies-to-groups" data-search="assign policy group restriction add order priority override baseline global higher"><button class="article-title"><span>Assigning policies to groups</span><i>⌄</i></button><div class="article-body"><div class="step">1. Restrictions → Add → name + unique Order (priority).</div><div class="step">2. Assign to one or more Groups.</div><div class="step">3. Higher-priority policies override lower ones for the same devices.</div><p>Baseline everything with the Global Restriction (Priority 1); override per group where needed. See <a href="policies.html" style="color:#5b5bd6">Restrictions →</a></p></div></article></div></section>
+
+<div class="empty">No matching documentation found.</div>
+<div class="footer">FieldX Documentation · Groups · © 2026 Smargav Solutions</div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Groups</a><a href="#grouping">Constructs</a><a href="#assignment">Assignment</a></nav>
+<div class="right-card"><strong>Send data</strong>Share the Groups source and this page expands to full reference depth.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+</body></html>

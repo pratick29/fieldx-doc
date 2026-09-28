@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FieldX Documentation — Devices</title><link rel="stylesheet" href="assets/minimal.css"></head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="logo">F</span><span class="brand-name">FieldX Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<nav class="header-links"><a href="index.html">Home</a><a href="policies.html">Restrictions</a></nav>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Getting started</div>
+<a class="nav-item" href="index.html"><span>Introduction</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-item" href="policies.html"><span>Restrictions</span><small>118</small></a>
+<a class="nav-item" href="enroll-device.html"><span>Enroll Device</span></a>
+<a class="nav-item active" href="devices.html"><span>Devices</span></a>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main">
+<div class="breadcrumb">FieldX <span>›</span> Documentation <span>›</span> Devices</div>
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Devices</h1>
+<p>Reference for the device inventory, device details, and per-device actions — the day-to-day control surface for every managed endpoint. Send your source data to expand this to full reference depth.</p>
+<div class="meta-row"><span class="meta">100+ live parameters</span><span class="meta">20+ instant actions</span><span class="meta">Persistent connection</span></div></section>
+<p id="result-count"></p>
+<div class="doc-note"><strong>About this reference</strong>Starter content below. Share the Devices source material and each view and action gets full options, availability, paths and notes.</div>
+
+<section class="category-block" id="inventory"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Inventory & details</h2><p>Find any device and drill into its live state.</p></div></div>
+<div class="articles">
+<article class="article" id="device-inventory" data-search="inventory search filter list imei serial model os compliance last seen recently enrolled"><button class="article-title"><span>Device inventory</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Lists every enrolled device with search and filters — by group, zone, status, model, OS, compliance and enrollment recency.</span></div><div class="field"><b>Where to find it</b><span>Devices / Inventory</span></div><p>When should I use this? Daily fleet checks, auditing a rollout, or locating a specific unit by IMEI/serial.</p></div></article>
+<article class="article" id="device-details-100-parameters" data-search="device details parameters battery storage ram cpu temperature signal data usage gps uptime crashes compliance"><button class="article-title"><span>Device details (100+ parameters)</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Shows 100+ live parameters per device: battery, storage, RAM, CPU, temperature, signal, data usage, GPS, uptime, app crashes, policy compliance, network status.</span></div><p>When should I use this? Diagnosing a single misbehaving device before taking action.</p></div></article>
+</div></section>
+
+<section class="category-block" id="actions"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Instant actions</h2><p>One-click commands executed immediately over the persistent channel.</p></div><span class="badge">20+</span></div>
+<div class="articles">
+<article class="article" id="action-catalog" data-search="instant actions reboot wipe lock ring buzz message push app kiosk block locate sync"><button class="article-title"><span>Action catalog</span><i>⌄</i></button><div class="article-body"><div class="table"><table><thead><tr><th>Action</th><th>Effect</th></tr></thead><tbody><tr><td>Reboot / Lock / Wipe / Factory Reset</td><td>Power and security control, executed immediately</td></tr><tr><td>Ring / Buzz / Custom message</td><td>Locate a nearby device or notify its user</td></tr><tr><td>Push app / Sync policies</td><td>Force pending installs and configurations now</td></tr><tr><td>Enter / Exit Kiosk</td><td>Toggle lockdown remotely (PIN protected)</td></tr><tr><td>Block / Unblock</td><td>Instantly disable or restore a device</td></tr></tbody></table></div><div class="field"><b>Where to find it</b><span>Devices → select → Actions</span></div></div></article>
+<article class="article" id="block-unblock-device" data-search="block unblock lost non-compliant unpaid rental restore physical access"><button class="article-title"><span>Block / Unblock device</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Instantly blocks a lost, non-compliant or unpaid (rental) device; restores access when safe — no physical access needed.</span></div><p>When should I use this? Theft, policy violation, or rental non-payment workflows.</p></div></article>
+</div></section>
+
+<div class="empty">No matching documentation found.</div>
+<div class="footer">FieldX Documentation · Devices · © 2026 Smargav Solutions</div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Devices</a><a href="#inventory">Inventory</a><a href="#actions">Actions</a></nav>
+<div class="right-card"><strong>Send data</strong>Share the Devices source and this page expands to full reference depth.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+</body></html>

@@ -1,0 +1,41 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Search — FieldX Documentation</title><link rel="stylesheet" href="assets/minimal.css"></head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="logo">F</span><span class="brand-name">FieldX Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<nav class="header-links"><a href="index.html">Home</a><a href="policies.html">Restrictions</a></nav>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Getting started</div>
+<a class="nav-item" href="index.html"><span>Introduction</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-item" href="policies.html"><span>Restrictions</span><small>118</small></a>
+<a class="nav-item" href="enroll-device.html"><span>Enroll Device</span></a>
+<a class="nav-item" href="devices.html"><span>Devices</span></a>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main">
+<div class="breadcrumb">FieldX <span>›</span> Documentation <span>›</span> Search</div>
+<section class="intro"><div class="eyebrow">Full-text search</div>
+<h1>Search results</h1>
+<p>Ranked across all documentation, all 118 restrictions and the master table. Typo-tolerant, handles Wi-Fi/wifi, highlights matches.</p></section>
+<div class="header-search" style="max-width:100%;margin-bottom:12px"><span class="search-icon">⌕</span><input id="page-search" placeholder="Type to search everything..." autocomplete="off"></div>
+<div class="meta-row" style="display:flex;gap:8px;margin:12px 0;flex-wrap:wrap">
+<button class="meta active" data-f="All" style="cursor:pointer">All</button>
+<button class="meta" data-f="Reference" style="cursor:pointer">Reference</button>
+<span class="meta" id="res-count"></span></div>
+<div id="all-results"></div>
+<div class="footer">FieldX Documentation · Search · © 2026 Smargav Solutions</div>
+</main>
+<aside class="right"><div class="toc-label">Tips</div>
+<nav class="toc"><a href="policies.html">Restrictions reference</a><a href="index.html">Home</a></nav>
+<div class="right-card"><strong>Search tips</strong>Use 2+ letters. Multi-word narrows. “wifi” finds “Wi-Fi”. Minor typos tolerated.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+</body></html>

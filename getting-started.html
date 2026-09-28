@@ -1,0 +1,50 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FieldX Documentation — Getting Started</title><link rel="stylesheet" href="assets/minimal.css"></head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><span class="logo">F</span><span class="brand-name">FieldX Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<nav class="header-links"><a href="index.html">Home</a><a href="policies.html">Restrictions</a></nav>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Getting started</div>
+<a class="nav-item" href="index.html"><span>Introduction</span></a>
+<a class="nav-item active" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<a class="nav-item" href="policies.html"><span>Restrictions</span><small>118</small></a>
+<a class="nav-item" href="enroll-device.html"><span>Enroll Device</span></a>
+<a class="nav-item" href="devices.html"><span>Devices</span></a>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main">
+<div class="breadcrumb">FieldX <span>›</span> Documentation <span>›</span> Getting Started</div>
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Getting Started</h1>
+<p>Create your account, tour the console, and enroll your first device in about 15 minutes — no credit card, 1 month free trial.</p>
+<div class="meta-row"><span class="meta">15-minute setup</span><span class="meta">No credit card</span><span class="meta">1 month free trial</span></div></section>
+<p id="result-count"></p>
+<div class="doc-note"><strong>Start here</strong>Follow the steps below in order: account → console tour → first device. Then continue with <a href="enroll-device.html" style="color:#5b5bd6">Enroll Device →</a></div>
+<section class="category-block" id="account"><div class="cat-kicker">SETUP</div><div class="catrow"><div><h2>Account & console</h2><p>Sign up and learn your way around the FieldX Console.</p></div></div>
+<div class="articles">
+<article class="article" id="create-account" data-search="create account signup register verify email login console admin fieldx"><button class="article-title"><span>Create account</span><i>⌄</i></button><div class="article-body"><div class="step">1. Go to <a href="https://admin.fieldx.io/accounts/register" style="color:#5b5bd6">admin.fieldx.io/accounts/register</a> → Sign Up.</div><div class="step">2. Verify email → Login at <a href="https://admin.fieldx.io/users/login" style="color:#5b5bd6">admin.fieldx.io/users/login</a>.</div><div class="step">3. You land on the <b>FieldX Console</b> (dashboard with fleet health, compliance, zones).</div></div></article>
+<article class="article" id="console-tour" data-search="console tour dashboard devices inventory buckets zones users roles policies apps kiosk ota reports alerts downloads"><button class="article-title"><span>Console tour</span><i>⌄</i></button><div class="article-body"><div class="table"><table><thead><tr><th>Area</th><th>Use</th></tr></thead><tbody><tr><td>Dashboard</td><td>Live fleet status, online/offline, compliance donut, recent alerts</td></tr><tr><td>Devices / Inventory</td><td>Search, filter, drill into 100+ params per device</td></tr><tr><td>Buckets & Zones</td><td>Logical grouping by location/dept/project (isolated policies)</td></tr><tr><td>Users & Roles</td><td>Hierarchical access — each user sees only their devices</td></tr><tr><td>Policies / Apps / Kiosk / OTA</td><td>Push configs, apps, lockdowns, firmware</td></tr><tr><td>Reports & Alerts</td><td>Exports (CSV/Excel), scheduled reports</td></tr><tr><td>Downloads</td><td>DeviceManager.apk, Updater.apk, fieldx_settings.json</td></tr></tbody></table></div><div class="field"><b>Where to find it</b><span>Console sidebar after login</span></div></div></article>
+</div></section>
+<section class="category-block" id="first-device"><div class="cat-kicker">SETUP</div><div class="catrow"><div><h2>First device & requirements</h2><p>Enroll one device fast, then check what else is supported.</p></div></div>
+<div class="articles">
+<article class="article" id="first-device-fastest-path-qr" data-search="first device fastest qr enrollment scan setup wizard agent policies apps 3 min"><button class="article-title"><span>First device (fastest path — QR)</span><i>⌄</i></button><div class="article-body"><div class="step">1. Console → Devices → Add → <b>QR Enrollment</b> → download/print QR.</div><div class="step">2. Factory-reset Android → tap 6x on welcome → scan QR.</div><div class="step">3. Device auto-downloads agent + policies + apps. Done in ~3 min.</div><p>Need another way to enroll? See <a href="enroll-device.html" style="color:#5b5bd6">Enroll Device →</a></p></div></article>
+<article class="article" id="requirements" data-search="requirements android linux apple google play firebase sms offline browser chrome edge firefox safari on premise"><button class="article-title"><span>Requirements</span><i>⌄</i></button><div class="article-body"><div class="field"><b>Platforms</b><span>Android 5–15 (stock, Knox, or custom AOSP), select Linux builds, Apple (iOS/iPadOS/macOS).</span></div><div class="field"><b>Google</b><span>Works without Google Play / Firebase — ideal for custom builds & restricted regions.</span></div><div class="field"><b>Connectivity</b><span>Internet preferred, but encrypted SMS fallback keeps control offline.</span></div><div class="field"><b>Browser</b><span>Chrome / Edge / Firefox / Safari. Private-cloud / on-premise available on Enterprise.</span></div></div></article>
+<article class="article" id="next-steps" data-search="next steps enroll bulk explore console"><button class="article-title"><span>Next steps</span><i>⌄</i></button><div class="article-body"><div class="step">Continue with <a href="enroll-device.html" style="color:#5b5bd6">Enroll Device →</a></div><div class="step">Or explore <a href="devices.html" style="color:#5b5bd6">Devices →</a></div></div></article>
+</div></section>
+<div class="empty">No matching documentation found.</div>
+<div class="footer">FieldX Documentation · Getting Started · © 2026 Smargav Solutions</div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Getting Started</a><a href="#account">Account</a><a href="#first-device">First device</a></nav>
+<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+</body></html>
