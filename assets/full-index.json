@@ -1,5 +1,13 @@
 [
 {
+"page": "404.html",
+"url": "404.html#overview",
+"group": "Reference",
+"title": "Page not found",
+"crumb": "FieldX Documentation › Not found",
+"text": "The page you asked for moved or never existed. Try search, or jump to a section below."
+},
+{
 "page": "apps.html",
 "url": "apps.html#overview",
 "group": "Reference",
@@ -357,7 +365,7 @@
 "group": "Home",
 "title": "Devices",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open devices.html → devices inventory details instant actions block unblock"
+"text": "⌄ Live inventory, 100+ parameters per device, and 20+ instant actions. Open devices.html → devices inventory details instant actions block unblock"
 },
 {
 "page": "index.html",
@@ -365,7 +373,7 @@
 "group": "Home",
 "title": "Groups",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open groups.html → groups smart buckets zones hierarchical assignment priority"
+"text": "⌄ Smart groups, buckets and zones — and how policies attach to them. Open groups.html → groups smart buckets zones hierarchical assignment priority"
 },
 {
 "page": "index.html",
@@ -373,7 +381,7 @@
 "group": "Home",
 "title": "Apps",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open apps.html → apps silent install blacklist whitelist store private kiosk"
+"text": "⌄ Silent deployment, allowlists, the private store, and kiosk delivery. Open apps.html → apps silent install blacklist whitelist store private kiosk"
 },
 {
 "page": "index.html",
@@ -381,7 +389,7 @@
 "group": "Home",
 "title": "Reports",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open reports.html → reports types alerts history scheduled export compliance"
+"text": "⌄ Report types, alerts, scheduling, exports and history retention. Open reports.html → reports types alerts history scheduled export compliance"
 },
 {
 "page": "policies.html",

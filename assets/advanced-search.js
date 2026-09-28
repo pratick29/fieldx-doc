@@ -215,7 +215,18 @@ document.addEventListener('DOMContentLoaded',function(){
   retrace();
   document.querySelectorAll('.article-title').forEach(function(b){
     if(b.dataset.fxb)return; b.dataset.fxb='1';
-    b.addEventListener('click',function(){b.closest('.article').classList.toggle('open');});
+    var art0=b.closest('.article');
+    b.setAttribute('aria-expanded',art0&&art0.classList.contains('open')?'true':'false');
+    b.addEventListener('click',function(){
+      var a=b.closest('.article'); if(!a)return;
+      a.classList.toggle('open');
+      b.setAttribute('aria-expanded',a.classList.contains('open')?'true':'false');
+    });
+  });
+  document.querySelectorAll('.sidebar .nav-item').forEach(function(a){
+    a.addEventListener('click',function(){
+      if(window.innerWidth<=760){var s=document.querySelector('.sidebar'); if(s)s.style.display='';}
+    });
   });
   document.addEventListener('keydown',function(e){
     var box=boxEl();
