@@ -1,0 +1,85 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+<link rel="stylesheet" href="assets/minimal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/icon.png"><title>FieldX Documentation — Network - General</title></head>
+<body>
+<header class="header">
+<a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+<nav class="header-links"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="support.html">Support</a></nav>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Start here</div>
+<a class="nav-item" href="index.html"><span>Home</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<div class="nav-drop open"><div class="nav-drop-row"><a class="nav-item" href="policies.html"><span>Restrictions</span></a><button class="nav-drop-toggle" aria-label="Toggle restriction categories">⌄</button></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="restriction-app-installation-and-permissions.html"><span>App Installation & Permissions</span><small>4</small></a>
+<a class="nav-sub-item" href="restriction-app-management-and-control.html"><span>App Management & Control</span><small>9</small></a>
+<a class="nav-sub-item" href="restriction-password-and-lock-screen.html"><span>Password & Lock Screen</span><small>6</small></a>
+<a class="nav-sub-item" href="restriction-multi-user-and-account-management.html"><span>Multi-User & Account Management</span><small>9</small></a>
+<a class="nav-sub-item" href="restriction-device-reset-and-boot-security.html"><span>Device Reset & Boot Security</span><small>5</small></a>
+<a class="nav-sub-item" href="restriction-developer-and-debug-settings.html"><span>Developer & Debug Settings</span><small>1</small></a>
+<a class="nav-sub-item" href="restriction-location-services.html"><span>Location Services</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-phone-and-messaging.html"><span>Phone & Messaging</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-display-and-brightness.html"><span>Display & Brightness</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-organization-settings.html"><span>Organization Settings</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-date-and-time.html"><span>Date & Time</span><small>4</small></a>
+<a class="nav-sub-item" href="restriction-sound-and-volume-control.html"><span>Sound & Volume Control</span><small>6</small></a>
+<a class="nav-sub-item" href="restriction-bluetooth-connectivity.html"><span>Bluetooth Connectivity</span><small>4</small></a>
+<a class="nav-sub-item" href="restriction-wallpaper-and-customization.html"><span>Wallpaper & Customization</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-notifications-and-status-bar.html"><span>Notifications & Status Bar</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-system-wide-restrictions.html"><span>System-Wide Restrictions</span><small>14</small></a>
+<a class="nav-sub-item" href="restriction-usb-and-external-storage.html"><span>USB & External Storage</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-network-wifi.html"><span>Network - WiFi</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-network-vpn.html"><span>Network - VPN</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-network-mobile-data.html"><span>Network - Mobile Data</span><small>6</small></a>
+<a class="nav-sub-item active" href="restriction-network-general.html"><span>Network - General</span><small>5</small></a>
+<a class="nav-sub-item" href="restriction-kiosk-policies.html"><span>Kiosk Policies</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-default-apps-configuration.html"><span>Default Apps Configuration</span><small>5</small></a>
+<a class="nav-sub-item" href="restriction-web-content-filter.html"><span>Web Content Filter</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-device-settings-override.html"><span>Device Settings Override</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-geofencing.html"><span>Geofencing</span><small>1</small></a>
+<a class="nav-sub-item" href="restriction-reboot-device.html"><span>Reboot Device</span><small>2</small></a>
+<a class="nav-sub-item" href="restriction-device-usage-limits.html"><span>Device Usage Limits</span><small>3</small></a>
+<a class="nav-sub-item" href="restriction-certificates-and-credentials.html"><span>Certificates & Credentials</span><small>3</small></a></div></div>
+<a class="nav-item" href="enroll-device.html"><span>Enroll Device</span></a>
+<a class="nav-item" href="devices.html"><span>Devices</span></a>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main" id="maincontent">
+<div class="breadcrumb">FieldX <span>›</span> <a href="policies.html" style="color:#009cde">Restrictions</a> <span>›</span> Network - General</div>
+<section class="intro" id="overview"><div class="eyebrow">Restrictions</div>
+<h1>Network - General</h1>
+<p>General network settings and connectivity.</p>
+<div class="meta-row"><span class="meta">5 restrictions</span><span class="meta">Allow / Disallow</span></div></section>
+<p id="result-count"></p>
+<section class="category-block" id="list"><div class="cat-kicker">RESTRICTION CATEGORY</div><div class="catrow"><div><h2>Network - General</h2><p>General network settings and connectivity.</p></div><span class="badge">5</span></div>
+<div class="articles">
+<article class="article" id="airplane-mode" data-search="airplane mode network - general what it does: controls whether the user is prevented from enabling airplane mode. available for: fieldx emm, android enterprise minimum android api level: pie 9.0 (28) where to find it: restrictions / network - general / airplane mode when should i use this? use this to make sure a device always remains reachable and doesn&#x27;t get accidentally or deliberately cut off from the network."><button class="article-title" aria-expanded="false"><span>Airplane Mode</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Controls whether the user is prevented from enabling Airplane Mode.</span></div><div class="table"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td>Allow</td><td>Allows the behavior controlled by this restriction.</td></tr><tr><td>Disallow</td><td>Prevents the behavior controlled by this restriction.</td></tr></tbody></table></div><div class="field"><b>Available for</b><span>FieldX EMM, Android Enterprise</span></div><div class="field"><b>Minimum Android API level</b><span>Pie 9.0 (28)</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Network - General / Airplane Mode</span></div><p>When should I use this? Use this to make sure a device always remains reachable and doesn&#x27;t get accidentally or deliberately cut off from the network.</p></div></article>
+<article class="article" id="add-private-dns" data-search="add private dns network - general what it does: sets a private dns server for the device. if the dns server becomes unreachable, the device may lose internet connectivity. what to enter: enter the dns server domain, without http:// or https://. enter &quot;none&quot; to remove a previously set domain. available for: fieldx emm where to find it: restrictions / network - general / add private dns when should i use this? use this to route dns queries through an organization-controlled resolver, e.g. for content filtering or logging."><button class="article-title" aria-expanded="false"><span>Add Private DNS</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Sets a private DNS server for the device. If the DNS server becomes unreachable, the device may lose internet connectivity.</span></div><div class="field"><b>What to enter</b><span>Enter the DNS server domain, without http:// or https://. Enter &quot;none&quot; to remove a previously set domain.</span></div><div class="field"><b>Available for</b><span>FieldX EMM</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Network - General / Add Private DNS</span></div><p>When should I use this? Use this to route DNS queries through an organization-controlled resolver, e.g. for content filtering or logging.</p></div></article>
+<article class="article" id="config-private-dns" data-search="config private dns network - general what it does: controls whether the user is allowed to modify private dns settings. available for: fieldx emm where to find it: restrictions / network - general / config private dns when should i use this? use this to prevent users from overriding a private dns configuration you&#x27;ve set."><button class="article-title" aria-expanded="false"><span>Config Private DNS</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Controls whether the user is allowed to modify private DNS settings.</span></div><div class="table"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td>Allow</td><td>Allows the behavior controlled by this restriction.</td></tr><tr><td>Disallow</td><td>Prevents the behavior controlled by this restriction.</td></tr></tbody></table></div><div class="field"><b>Available for</b><span>FieldX EMM</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Network - General / Config Private DNS</span></div><p>When should I use this? Use this to prevent users from overriding a private DNS configuration you&#x27;ve set.</p></div></article>
+<article class="article" id="config-tethering-hotspot" data-search="config tethering/hotspot network - general what it does: controls whether the user can configure tethering and portable hotspot settings. available for: fieldx emm, android enterprise minimum android api level: lollipop 5.0 (21) where to find it: restrictions / network - general / config tethering/hotspot when should i use this? use this to prevent a managed device from being used as an internet gateway for other devices."><button class="article-title" aria-expanded="false"><span>Config Tethering/Hotspot</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Controls whether the user can configure tethering and portable hotspot settings.</span></div><div class="table"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td>Allow</td><td>Allows the behavior controlled by this restriction.</td></tr><tr><td>Disallow</td><td>Prevents the behavior controlled by this restriction.</td></tr></tbody></table></div><div class="field"><b>Available for</b><span>FieldX EMM, Android Enterprise</span></div><div class="field"><b>Minimum Android API level</b><span>Lollipop 5.0 (21)</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Network - General / Config Tethering/Hotspot</span></div><p>When should I use this? Use this to prevent a managed device from being used as an internet gateway for other devices.</p></div></article>
+<article class="article" id="network-reset" data-search="network reset network - general what it does: controls whether the user can reset network settings from settings. available for: fieldx emm minimum android api level: marshmallow 6.0 (23) where to find it: restrictions / network - general / network reset when should i use this? use this to prevent users from wiping wi-fi, vpn, and other network configurations you&#x27;ve provisioned."><button class="article-title" aria-expanded="false"><span>Network Reset</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Controls whether the user can reset network settings from Settings.</span></div><div class="table"><table><thead><tr><th>Option</th><th>What it does</th></tr></thead><tbody><tr><td>Allow</td><td>Allows the behavior controlled by this restriction.</td></tr><tr><td>Disallow</td><td>Prevents the behavior controlled by this restriction.</td></tr></tbody></table></div><div class="field"><b>Available for</b><span>FieldX EMM</span></div><div class="field"><b>Minimum Android API level</b><span>Marshmallow 6.0 (23)</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Network - General / Network Reset</span></div><p>When should I use this? Use this to prevent users from wiping Wi-Fi, VPN, and other network configurations you&#x27;ve provisioned.</p></div></article>
+</div></section>
+<div class="empty">No matching documentation found.</div>
+<div class="footer"><div class="foot-grid"><div><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Help</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="support.html">Support</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base">FieldX Documentation · © 2026 Smargav Solutions · Updated September 2026</div></div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Network - General</a><a href="#airplane-mode">Airplane Mode</a><a href="#add-private-dns">Add Private DNS</a><a href="#config-private-dns">Config Private DNS</a><a href="#config-tethering-hotspot">Config Tethering/Hotspot</a><a href="#network-reset">Network Reset</a></nav>
+<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+<script src="assets/chat-demo.js"></script>
+<script src="assets/ui.js"></script>
+</body></html>

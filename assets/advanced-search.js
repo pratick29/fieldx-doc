@@ -72,7 +72,7 @@ function search(q, limit){
 function css(){
   if(document.getElementById('fxs-css')) return;
   var st=document.createElement('style'); st.id='fxs-css';
-  st.textContent='.fxs-dd{position:absolute;top:46px;left:0;right:0;background:#fff;border:1px solid #e6e8eb;border-radius:10px;box-shadow:0 14px 34px rgba(20,25,40,.18);display:none;max-height:400px;overflow:auto;z-index:500;color:#1c252e;text-align:left}.fxs-lb{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#98a2b3;padding:8px 12px;border-bottom:1px solid #e6e8eb}.fxs-it{display:block;padding:9px 12px;border-bottom:1px solid #f0f1f3}.fxs-it:hover,.fxs-it.on{background:#f0efff;text-decoration:none}.fxs-g{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#5b5bd6;background:#f0efff;border-radius:4px;padding:1px 6px;margin-right:6px}.fxs-t{font-weight:700;font-size:13px;color:#1c252e}.fxs-c{font-size:11px;color:#98a2b3}.fxs-s{font-size:12px;color:#637083;margin-top:2px}.fxs-s mark,.fxs-t mark{background:#ffe58a;border-radius:3px;padding:0 2px}.fxs-ft{display:block;padding:9px 12px;font-size:12.5px;font-weight:700;color:#5b5bd6}.fxs-ft:hover{background:#f0efff;text-decoration:none}.fxs-no{padding:12px;font-size:12.5px;color:#637083}#result-count{font-size:11px;color:#98a2b3;margin:6px 0}';
+  st.textContent='.fxs-dd{position:absolute;top:46px;left:0;right:0;background:#fff;border:1px solid #DFE3E8;border-radius:10px;box-shadow:0 14px 34px rgba(20,25,40,.18);display:none;max-height:400px;overflow:auto;z-index:500;color:#1c252e;text-align:left}.fxs-lb{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#98a2b3;padding:8px 12px;border-bottom:1px solid #DFE3E8}.fxs-it{display:block;padding:9px 12px;border-bottom:1px solid #f0f1f3}.fxs-it:hover,.fxs-it.on{background:#E8F6FD;text-decoration:none}.fxs-g{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#009cde;background:#E8F6FD;border-radius:4px;padding:1px 6px;margin-right:6px}.fxs-t{font-weight:700;font-size:13px;color:#1c252e}.fxs-c{font-size:11px;color:#98a2b3}.fxs-s{font-size:12px;color:#637083;margin-top:2px}.fxs-s mark,.fxs-t mark{background:#ffe58a;border-radius:3px;padding:0 2px}.fxs-ft{display:block;padding:9px 12px;font-size:12.5px;font-weight:700;color:#009cde}.fxs-ft:hover{background:#E8F6FD;text-decoration:none}.fxs-no{padding:12px;font-size:12.5px;color:#637083}#result-count{font-size:11px;color:#98a2b3;margin:6px 0}';
   document.head.appendChild(st);
 }
 function boxEl(){ return document.querySelector('#docs-search')||document.querySelector('#searchBox'); }
@@ -213,6 +213,28 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   initDropdown();
   retrace();
+  (function initTheme(){
+    var root=document.documentElement;
+    function isDark(){return root.getAttribute('data-theme')==='dark';}
+    function paint(){
+      var d=isDark();
+      document.querySelectorAll('.theme-toggle').forEach(function(b){
+        b.textContent=d?'\u2600':'\u263e';
+        b.setAttribute('aria-label',d?'Switch to light mode':'Switch to dark mode');
+      });
+      var m=document.querySelector('meta[name="theme-color"]');
+      if(m)m.setAttribute('content',d?'#141A21':'#ffffff');
+    }
+    paint();
+    document.querySelectorAll('.theme-toggle').forEach(function(b){
+      b.addEventListener('click',function(){
+        var d=!isDark();
+        if(d)root.setAttribute('data-theme','dark');else root.removeAttribute('data-theme');
+        try{localStorage.setItem('fx-theme',d?'dark':'light');}catch(e){}
+        paint();
+      });
+    });
+  })();
   document.querySelectorAll('.article-title').forEach(function(b){
     if(b.dataset.fxb)return; b.dataset.fxb='1';
     var art0=b.closest('.article');
@@ -222,6 +244,9 @@ document.addEventListener('DOMContentLoaded',function(){
       a.classList.toggle('open');
       b.setAttribute('aria-expanded',a.classList.contains('open')?'true':'false');
     });
+  });
+  document.querySelectorAll('.nav-drop-toggle').forEach(function(t){
+    t.addEventListener('click',function(){t.closest('.nav-drop').classList.toggle('open');});
   });
   document.querySelectorAll('.sidebar .nav-item').forEach(function(a){
     a.addEventListener('click',function(){
