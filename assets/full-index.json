@@ -89,6 +89,14 @@
 },
 {
 "page": "enroll-device.html",
+"url": "enroll-device.html#before-you-start",
+"group": "Reference",
+"title": "Before you start",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"text": "⌄ Confirm with your device provider that QR code provisioning is supported. For a low-resolution camera, use the Simplified QR Code shown at the bottom of the enrolment page."
+},
+{
+"page": "enroll-device.html",
 "url": "enroll-device.html#step-1-start-the-device",
 "group": "Reference",
 "title": "Step 1 — Start the device",
@@ -118,6 +126,22 @@
 "title": "Step 4 — Complete provisioning",
 "crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
 "text": "⌄ 1. The setup wizard downloads the FieldX Manager App. 2. Follow the remaining Android setup prompts. 3. Grant the requested permissions to the Manager App. 4. Select Done when the “You're all set!” screen appears."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#how-to-use-the-simplified-qr-code",
+"group": "Reference",
+"title": "How to use the Simplified QR Code",
+"crumb": "FieldX Documentation › Enroll Device › Simplified QR Code",
+"text": "⌃ 1. Scan the Simplified QR Code shown on the FieldX enrolment page. 2. Wait for the FieldX Manager App to download and install. 3. The Manager App asks you to scan an Activation QR Code or enter an Access Code. 4. Open Activation QR Code in the FieldX Admin Portal. 5. Use the corresponding…"
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#what-you-need",
+"group": "Reference",
+"title": "What you need",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"text": "⌃ Android device that is new or factory-reset. USB cable. Recommended: Linux or Mac with the latest Chrome browser. Windows may require additional device drivers depending on the phone model."
 },
 {
 "page": "enroll-device.html",
@@ -161,6 +185,14 @@
 },
 {
 "page": "enroll-device.html",
+"url": "enroll-device.html#requirements",
+"group": "Reference",
+"title": "Requirements",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"text": "⌃ Both phones must be connected to the same Wi-Fi network. The target device should be new or freshly factory-reset. The target device should have no Google/user accounts or other device-management app. Wireless debugging must be enabled on the target device. The installer phone needs a FieldX…"
+},
+{
+"page": "enroll-device.html",
 "url": "enroll-device.html#prepare-the-target-device",
 "group": "Reference",
 "title": "Prepare the target device",
@@ -198,6 +230,14 @@
 "title": "Step 3 — Set up the device",
 "crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
 "text": "⌄ 1. Select Start setup . 2. Wait while provisioning runs. 3. Do not disconnect the device or close FieldX Installer. 4. When complete, the app displays “All done! FieldX is installed and this device is ready to use.” 5. Select Disconnect and check the target device."
+},
+{
+"page": "enroll-device.html",
+"url": "enroll-device.html#find-your-activation-details",
+"group": "Reference",
+"title": "Find your activation details",
+"crumb": "FieldX Documentation › Enroll Device › Activation QR Code",
+"text": "⌃ Open Enrol Devices → Activation QR Code in the FieldX Admin Portal. The page provides the information required to register a device, including: Organization Code Access Code Activation QR Code"
 },
 {
 "page": "enroll-device.html",
@@ -406,6 +446,54 @@
 "title": "FieldX Documentation",
 "crumb": "FieldX Documentation › Home",
 "text": "360° control for every modern device — manage, monitor & troubleshoot Android, Apple & Linux fleets at scale. 10x faster operations with zero guesswork."
+},
+{
+"page": "index.html",
+"url": "index.html#restrictions-full-reference",
+"group": "Home",
+"title": "Restrictions — full reference",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "The complete lockdown catalog — every restriction with its options, platform availability, portal path and usage notes. Master summary table of the full catalog in one place. Add via Restrictions → Add with a descriptive name and unique priority. Baseline everything with the Global Restriction…"
+},
+{
+"page": "index.html",
+"url": "index.html#enroll-device",
+"group": "Home",
+"title": "Enroll Device",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "Set up and enroll Android devices with QR code, Web Installer, another phone, or activation code. FieldX EMM / QR — enroll from the setup screen with the system QR code. Simplified QR — for devices whose cameras cannot scan the standard code. Web based — USB cable + Chrome with USB debugging…"
+},
+{
+"page": "index.html",
+"url": "index.html#devices",
+"group": "Home",
+"title": "Devices",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "The day-to-day control surface for every managed endpoint — find it, inspect it, act on it. Inventory with search and filters — group, zone, status, model, OS, compliance. Device details with 100+ live parameters — battery, storage, signal, GPS, uptime. 20+ instant actions — reboot, lock, wipe,…"
+},
+{
+"page": "index.html",
+"url": "index.html#groups",
+"group": "Home",
+"title": "Groups",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "Organize devices into smart groups, buckets and zones — policies, apps and access attach here. Smart Groups by department, location, project, role, OS or custom tags. Logical Buckets & Zones isolate devices and policies per site. Hierarchical access — Super Admin → Zone Admin → Team lead. Assign…"
+},
+{
+"page": "index.html",
+"url": "index.html#apps",
+"group": "Home",
+"title": "Apps",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "Manage the full application lifecycle — deploy silently, allowlist strictly, deliver via kiosk. Silent install, update and uninstall with no user tap. Version pinning and staged rollout across groups. Blacklist / whitelist — hide, suspend or protect any app. Permitted-apps policy locks devices to…"
+},
+{
+"page": "index.html",
+"url": "index.html#reports",
+"group": "Home",
+"title": "Reports",
+"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
+"text": "Fleet visibility — report types, alerts, scheduling, exports and history retention. Standard reports — inventory, compliance, app, OTA, data usage / SLA. Exports in CSV, Excel and PDF from Reports → pick type → filter. Alerts on offline, geofence exit, low battery or non-compliance. Delivery by…"
 },
 {
 "page": "policies.html",
