@@ -94,3 +94,5 @@ button,input{font:inherit}
 
 
 .fxc-fab{font-family:inherit}
+.article.static .article-body{display:block}
+.static-title{font-size:13px;font-weight:650;padding:14px 3px 4px;color:var(--text)}

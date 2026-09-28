@@ -408,54 +408,6 @@
 "text": "360° control for every modern device — manage, monitor & troubleshoot Android, Apple & Linux fleets at scale. 10x faster operations with zero guesswork."
 },
 {
-"page": "index.html",
-"url": "index.html#restrictions-full-reference-118",
-"group": "Home",
-"title": "Restrictions — full reference (118)",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open policies.html → restrictions policies 118 reference allow disallow full"
-},
-{
-"page": "index.html",
-"url": "index.html#enroll-device",
-"group": "Home",
-"title": "Enroll Device",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Open enroll-device.html → enroll device qr imei serial knox web installer manual bulk"
-},
-{
-"page": "index.html",
-"url": "index.html#devices",
-"group": "Home",
-"title": "Devices",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Live inventory, 100+ parameters per device, and 20+ instant actions. Open devices.html → devices inventory details instant actions block unblock"
-},
-{
-"page": "index.html",
-"url": "index.html#groups",
-"group": "Home",
-"title": "Groups",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Smart groups, buckets and zones — and how policies attach to them. Open groups.html → groups smart buckets zones hierarchical assignment priority"
-},
-{
-"page": "index.html",
-"url": "index.html#apps",
-"group": "Home",
-"title": "Apps",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Silent deployment, allowlists, the private store, and kiosk delivery. Open apps.html → apps silent install blacklist whitelist store private kiosk"
-},
-{
-"page": "index.html",
-"url": "index.html#reports",
-"group": "Home",
-"title": "Reports",
-"crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "⌄ Report types, alerts, scheduling, exports and history retention. Open reports.html → reports types alerts history scheduled export compliance"
-},
-{
 "page": "policies.html",
 "url": "policies.html#overview",
 "group": "Reference",
