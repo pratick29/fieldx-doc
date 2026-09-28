@@ -497,6 +497,14 @@
 },
 {
 "page": "policies.html",
+"url": "policies.html#view-full-master-list",
+"group": "Reference",
+"title": "View full master list",
+"crumb": "FieldX Documentation › Restrictions › Master Restriction Summary",
+"text": "⌄ Category Restriction Available for App Installation & Permissions Disallow App Installs from all Sources FieldX EMM, Android Enterprise App Installation & Permissions Disallow App Installs from Sources except Google Play Store, adb & MDM FieldX EMM, Android Enterprise App Installation &…"
+},
+{
+"page": "policies.html",
 "url": "policies.html#adding-a-restriction",
 "group": "Reference",
 "title": "Adding a restriction",
