@@ -445,7 +445,7 @@
 "group": "Home",
 "title": "Restrictions — full reference",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "The complete lockdown catalog — every restriction with its options, platform availability, portal path and usage notes. Master summary table of the full catalog in one place. Add via Restrictions → Add with a descriptive name and unique priority. Baseline everything with the Global Restriction…"
+"text": "Restrictions are lockdown policies pushed from the console to devices. Each restriction controls one behavior — installing apps, using the camera, joining Wi-Fi — with a priority order that decides which rule wins. Policies attach to groups, so different fleets get different rules. Read full →…"
 },
 {
 "page": "index.html",
@@ -453,7 +453,7 @@
 "group": "Home",
 "title": "Enroll Device",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "Set up and enroll Android devices with QR code, Web Installer, another phone, or activation code. FieldX EMM / QR — enroll from the setup screen with the system QR code. Simplified QR — for devices whose cameras cannot scan the standard code. Web based — USB cable + Chrome with USB debugging…"
+"text": "Enrollment is how a device joins FieldX management. Each device is enrolled once — via QR code, web installer, another phone, or activation code — after which it downloads its policies and apps automatically. Read full → enroll device qr imei serial knox web installer manual bulk"
 },
 {
 "page": "index.html",
@@ -461,7 +461,7 @@
 "group": "Home",
 "title": "Devices",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "The day-to-day control surface for every managed endpoint — find it, inspect it, act on it. Inventory with search and filters — group, zone, status, model, OS, compliance. Device details with 100+ live parameters — battery, storage, signal, GPS, uptime. 20+ instant actions — reboot, lock, wipe,…"
+"text": "Devices is the live inventory of every enrolled endpoint. Each device reports 100+ parameters — battery, storage, signal, location — and accepts 20+ instant actions like reboot, lock, wipe, or block. It is where daily fleet control happens. Read full → devices inventory details instant actions…"
 },
 {
 "page": "index.html",
@@ -469,7 +469,7 @@
 "group": "Home",
 "title": "Groups",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "Organize devices into smart groups, buckets and zones — policies, apps and access attach here. Smart Groups by department, location, project, role, OS or custom tags. Logical Buckets & Zones isolate devices and policies per site. Hierarchical access — Super Admin → Zone Admin → Team lead. Assign…"
+"text": "Groups organize devices so policies apply in bulk instead of per device. Smart groups collect devices by department, location, or tags, while buckets and zones isolate sites with their own admins. Policies attach to groups with a priority order that decides which rule wins. Read full → groups smart…"
 },
 {
 "page": "index.html",
@@ -477,7 +477,7 @@
 "group": "Home",
 "title": "Apps",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "Manage the full application lifecycle — deploy silently, allowlist strictly, deliver via kiosk. Silent install, update and uninstall with no user tap. Version pinning and staged rollout across groups. Blacklist / whitelist — hide, suspend or protect any app. Permitted-apps policy locks devices to…"
+"text": "Apps management controls which applications exist on devices. Admins silently install, update, or remove apps, block distracting ones through blacklist and whitelist policies, and offer approved tools through a private store that needs no Google Play. Read full → apps silent install blacklist…"
 },
 {
 "page": "index.html",
@@ -485,7 +485,7 @@
 "group": "Home",
 "title": "Reports",
 "crumb": "FieldX Documentation › FieldX Documentation › FieldX modules",
-"text": "Fleet visibility — report types, alerts, scheduling, exports and history retention. Standard reports — inventory, compliance, app, OTA, data usage / SLA. Exports in CSV, Excel and PDF from Reports → pick type → filter. Alerts on offline, geofence exit, low battery or non-compliance. Delivery by…"
+"text": "Reports turn fleet data into visibility. Standard reports cover inventory, compliance, apps, OTA, and uptime, exportable as CSV, Excel, or PDF. Alerts notify admins of offline, geofence, or battery events by email, SMS, or webhook. Read full → reports types alerts history scheduled export compliance"
 },
 {
 "page": "policies.html",
