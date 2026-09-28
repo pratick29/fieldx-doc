@@ -11,7 +11,7 @@ function reply(q){
   q=(q||'').toLowerCase();
   if(/kiosk/.test(q))return 'Lock any device to one app (POS, signage) or a small approved set from <a href="apps.html">Apps →</a>. Need the exit PIN flow? It is on the same page.';
   if(/enroll|qr|onboard|add device/.test(q))return 'Fastest path is QR: Console → Devices → Add → QR Enrollment, ~3 min. Full steps: <a href="enroll-device.html">Enroll Device →</a>';
-  if(/price|pricing|cost|trial|plan/.test(q))return 'Starter $1.75/device/mo, Growth $1.50, Enterprise custom — 1 month free trial, no credit card. Details: <a href="faq.html">FAQ →</a>';
+  if(/price|pricing|cost|trial|plan/.test(q))return 'For plans and pricing, please contact the team: <a href="support.html">Contact FieldX →</a>';
   if(/ota|firmware|update|upgrade/.test(q))return 'FieldX pushes full + incremental OTA via CDN with staged rollout and rollback. See <a href="reports.html">Reports →</a> for rollout tracking.';
   if(/restrict|policy|policies|block|lock/.test(q))return 'All 118 restrictions live in the <a href="policies.html">Restrictions reference →</a> — try searching “kiosk”, “camera” or “USB”.';
   if(/vpn|security|knox/.test(q))return 'Always-On VPN, Samsung Knox controls and encrypted channels are covered under <a href="getting-started.html">Getting Started →</a> requirements and the Restrictions reference.';
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded',function(){
   document.body.appendChild(fab);document.body.appendChild(panel);
   var body=panel.querySelector('.fxc-body'),input=panel.querySelector('input'),chips=panel.querySelector('.fxc-chips');
   addMsg(body,'fxc-bot','Hi! I am the FieldX docs assistant <b>(demo)</b>. What do you want to do?');
-  ['Enroll a device','Kiosk mode','Pricing'].forEach(function(c){
+  ['Enroll a device','Kiosk mode','Reports'].forEach(function(c){
     var b=document.createElement('button');b.className='fxc-chip';b.textContent=c;
     b.addEventListener('click',function(){send(c);});chips.appendChild(b);
   });
