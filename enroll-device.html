@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/icon.png">
-<style>.callout{border:1px solid var(--border);border-radius:8px;padding:13px 14px;margin:13px 0;font-size:12px;color:var(--muted)}
+<style>.callout{border:1px solid var(--border);border-radius:8px;padding:13px 14px;margin:13px 0;font-size:14px;color:var(--muted)}
 .callout strong{color:var(--text)}
 .image-wrap{margin:14px 0;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#F4F6F8}
 .image-wrap img{display:block;width:100%;height:auto}
@@ -20,11 +20,13 @@
 </head>
 <body>
 <header class="header">
+  <button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
   <a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
   <button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
   <div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
   <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
 <nav class="header-links"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="support.html">Support</a></nav>
+<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
 </header>
 
 <div class="layout" id="top">
@@ -33,40 +35,29 @@
 <a class="nav-item" href="index.html"><span>Home</span></a>
 <a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
 <div class="nav-group"><div class="nav-label">Documentation</div>
-<div class="nav-drop"><div class="nav-drop-row"><a class="nav-item" href="policies.html"><span>Restrictions</span></a><button class="nav-drop-toggle" aria-label="Toggle restriction categories">⌄</button></div>
+<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle restriction sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Restrictions</span></button></div>
 <div class="nav-sub">
-<a class="nav-sub-item" href="restriction-app-installation-and-permissions.html"><span>App Installation & Permissions</span><small>4</small></a>
-<a class="nav-sub-item" href="restriction-app-management-and-control.html"><span>App Management & Control</span><small>9</small></a>
-<a class="nav-sub-item" href="restriction-password-and-lock-screen.html"><span>Password & Lock Screen</span><small>6</small></a>
-<a class="nav-sub-item" href="restriction-multi-user-and-account-management.html"><span>Multi-User & Account Management</span><small>9</small></a>
-<a class="nav-sub-item" href="restriction-device-reset-and-boot-security.html"><span>Device Reset & Boot Security</span><small>5</small></a>
-<a class="nav-sub-item" href="restriction-developer-and-debug-settings.html"><span>Developer & Debug Settings</span><small>1</small></a>
-<a class="nav-sub-item" href="restriction-location-services.html"><span>Location Services</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-phone-and-messaging.html"><span>Phone & Messaging</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-display-and-brightness.html"><span>Display & Brightness</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-organization-settings.html"><span>Organization Settings</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-date-and-time.html"><span>Date & Time</span><small>4</small></a>
-<a class="nav-sub-item" href="restriction-sound-and-volume-control.html"><span>Sound & Volume Control</span><small>6</small></a>
-<a class="nav-sub-item" href="restriction-bluetooth-connectivity.html"><span>Bluetooth Connectivity</span><small>4</small></a>
-<a class="nav-sub-item" href="restriction-wallpaper-and-customization.html"><span>Wallpaper & Customization</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-notifications-and-status-bar.html"><span>Notifications & Status Bar</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-system-wide-restrictions.html"><span>System-Wide Restrictions</span><small>14</small></a>
-<a class="nav-sub-item" href="restriction-usb-and-external-storage.html"><span>USB & External Storage</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-network-wifi.html"><span>Network - WiFi</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-network-vpn.html"><span>Network - VPN</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-network-mobile-data.html"><span>Network - Mobile Data</span><small>6</small></a>
-<a class="nav-sub-item" href="restriction-network-general.html"><span>Network - General</span><small>5</small></a>
-<a class="nav-sub-item" href="restriction-kiosk-policies.html"><span>Kiosk Policies</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-default-apps-configuration.html"><span>Default Apps Configuration</span><small>5</small></a>
-<a class="nav-sub-item" href="restriction-web-content-filter.html"><span>Web Content Filter</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-device-settings-override.html"><span>Device Settings Override</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-geofencing.html"><span>Geofencing</span><small>1</small></a>
-<a class="nav-sub-item" href="restriction-reboot-device.html"><span>Reboot Device</span><small>2</small></a>
-<a class="nav-sub-item" href="restriction-device-usage-limits.html"><span>Device Usage Limits</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-certificates-and-credentials.html"><span>Certificates & Credentials</span><small>3</small></a>
-<a class="nav-sub-item" href="restriction-app-monitoring-and-diagnostics.html"><span>App Monitoring & Diagnostics</span><small>2</small></a></div></div>
-<a class="nav-item active" href="enroll-device.html"><span>Enroll Device</span></a>
-<a class="nav-item" href="devices.html"><span>Devices</span></a>
+<a class="nav-sub-item" href="policies.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="restriction-master-summary.html"><span>Master Summary</span></a>
+<a class="nav-sub-item" href="restriction-managing.html"><span>Managing</span></a>
+<a class="nav-sub-item" href="restriction-app-watchdog.html"><span>App Watchdog</span></a>
+<a class="nav-sub-item" href="restriction-categories.html"><span>Categories</span></a></div></div>
+<div class="nav-drop open"><div class="nav-drop-row"><button class="nav-drop-main active" aria-label="Toggle enrolment sections" aria-expanded="true"><span class="drop-arrow">›</span><span>Enroll Device</span></button></div>
+<div class="nav-sub">
+<a class="nav-sub-item active" href="enroll-device.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="enroll-qr-code.html"><span>QR Enrolment</span></a>
+<a class="nav-sub-item" href="enroll-web-installer.html"><span>Web Installer</span></a>
+<a class="nav-sub-item" href="enroll-app-installer.html"><span>Installer App</span></a>
+<a class="nav-sub-item" href="enroll-manual-adb.html"><span>Manual ADB</span></a>
+<a class="nav-sub-item" href="enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
+<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle device sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Devices</span></button></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="devices.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="devices-inventory.html"><span>Inventory</span></a>
+<a class="nav-sub-item" href="devices-details.html"><span>Details</span></a>
+<a class="nav-sub-item" href="devices-apps.html"><span>Apps</span></a>
+<a class="nav-sub-item" href="devices-monitor.html"><span>Monitor</span></a>
+<a class="nav-sub-item" href="devices-remote-actions.html"><span>Remote actions</span></a></div></div>
 <a class="nav-item" href="groups.html"><span>Groups</span></a>
 <a class="nav-item" href="apps.html"><span>Apps</span></a>
 <a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
@@ -91,461 +82,24 @@
     Choose the enrolment method supported by your device. Some methods require a new or factory-reset device, while others require USB or wireless debugging.
   </div>
   <p id="result-count"></p>
-
-  <!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
-<section class="category-block" id="choose">
-    <div class="cat-kicker">GETTING STARTED</div>
-    <div class="catrow">
-      <div>
-        <h2>Choose an enrolment method</h2>
-        <p>Use the method that matches your Android device and available setup options.</p>
-      </div>
-    </div>
-    <div class="table">
-      <table>
-        <thead><tr><th>Method</th><th>Use when</th><th>What you need</th></tr></thead>
-        <tbody>
-          <tr><td><strong>FieldX EMM / QR</strong></td><td>Your device supports QR code provisioning.</td><td>FieldX system enrolment QR code and Wi-Fi.</td></tr>
-          <tr><td><strong>Simplified QR</strong></td><td>The standard QR code is difficult or impossible to scan.</td><td>Simplified QR code and Activation QR/access code.</td></tr>
-          <tr><td><strong>Web Based Enrolment</strong></td><td>Your device does not support Zero-Touch or QR-code enrolment.</td><td>USB cable, computer, Chrome, and USB debugging.</td></tr>
-          <tr><td><strong>App Based Enrolment</strong></td><td>You want to enrol using another Android phone over wireless ADB.</td><td>Installer phone, target device, same Wi-Fi, and Wireless debugging.</td></tr>
-        <tr><td><strong>Pre-installed (Custom OS)</strong></td><td>Agent baked into the factory image.</td><td>Ships enrolled; no setup steps.</td></tr>
-</tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="category-block" id="emm">
-    <div class="cat-kicker">ENROLMENT METHOD</div>
-    <div class="catrow">
-      <div>
-        <h2>FieldX EMM / QR Enrolment</h2>
-        <p>Enrol a supported Android device directly from its initial setup screen using the FieldX system QR code.</p>
-      </div>
-      <span class="badge">QR provisioning</span>
-    </div>
-
-    <div class="image-wrap">
-      <img src="https://admin.fieldx.io/assets/illustrations/AndroidEnrollment.png" alt="Android enrolment illustration">
-      <div class="image-caption">FieldX Android enrolment</div>
-    </div>
-
-    <div class="articles">
-      <article class="article open" id="before-you-start">
-        <button class="article-title"><span>Before you start</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Confirm with your device provider that QR code provisioning is supported.</div>
-          <div class="step">For a low-resolution camera, use the Simplified QR Code shown at the bottom of the enrolment page.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-1-start-the-device">
-        <button class="article-title"><span>Step 1 — Start the device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Unbox and power on the device.</div>
-          <div class="step">2. Wait for the initial Welcome screen.</div>
-          <div class="step">3. Tap the same location on the Welcome screen 6 times quickly.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-2-scan-the-enrolment-qr-code">
-        <button class="article-title"><span>Step 2 — Scan the enrolment QR code</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Position the device to scan the unique system enrolment QR code provided by your IT administrator.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-3-connect-to-wi-fi">
-        <button class="article-title"><span>Step 3 — Connect to Wi-Fi</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>When the setup wizard asks for network configuration, use the following values:</p>
-          <div class="table">
-            <table>
-              <thead><tr><th>Setting</th><th>Value</th></tr></thead>
-              <tbody>
-                <tr><td>Metered</td><td>Detect automatically</td></tr>
-                <tr><td>Proxy</td><td>None</td></tr>
-                <tr><td>IP Settings</td><td>Static</td></tr>
-                <tr><td>IP Address</td><td>Static IP on the same subnet as the router</td></tr>
-                <tr><td>Gateway</td><td>Your local router/default gateway</td></tr>
-                <tr><td>Network Prefix Length</td><td>24</td></tr>
-                <tr><td>DNS 1</td><td>34.226.155.149</td></tr>
-                <tr><td>DNS 2</td><td>34.226.155.149</td></tr>
-                <tr><td>Privacy</td><td>Use randomized MAC</td></tr>
-                <tr><td>Send device name to network</td><td>On (Recommended)</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Choose a static IP that is on the same subnet as your router and is not already being used by another device.</p>
-          <div class="callout"><strong>Example:</strong> If the current IP is <span class="code">192.168.1.100</span> and the gateway is <span class="code">192.168.1.1</span>, a possible static IP is <span class="code">192.168.1.101</span>, provided it is unused.</div>
-          <p>After entering the network details, select <strong>Connect</strong> and wait until Wi-Fi shows <strong>Connected</strong>.</p>
-        </div>
-      </article>
-
-      <article class="article" id="step-4-complete-provisioning">
-        <button class="article-title"><span>Step 4 — Complete provisioning</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. The setup wizard downloads the FieldX Manager App.</div>
-          <div class="step">2. Follow the remaining Android setup prompts.</div>
-          <div class="step">3. Grant the requested permissions to the Manager App.</div>
-          <div class="step">4. Select <strong>Done</strong> when the “You're all set!” screen appears.</div>
-        </div>
-      </article>
-<article class="article" id="qr-requirements-reset">
-<button class="article-title"><span>Requirements & factory reset</span><i>⌄</i></button>
-<div class="article-body" data-search="requirements android 8 enterprise ready fresh factory reset backup data">
-<div class="step">Device runs Android 8.0 or higher and is Android Enterprise ready.</div>
-<div class="step">Fresh out of the box (no accounts) or factory reset — back up data first, reset wipes it.</div>
-</div>
-</article>
-<article class="article" id="find-enrolment-qr">
-<button class="article-title"><span>Find the enrolment QR code</span><i>⌄</i></button>
-<div class="article-body" data-search="qr code provisioning downloads console simplified scan location">
-<div class="step">1. Login to the FieldX Web Portal → Downloads page → QR Code Provisioning tab.</div>
-<div class="step">2. If the code will not scan, use the Simplified QR Code just below it.</div>
-</div>
-</article>
-<article class="article" id="after-scanning">
-<button class="article-title"><span>After scanning</span><i>⌄</i></button>
-<div class="article-body" data-search="accept continue permissions google protect install anyway new devices tag move zone restrictions apps">
-<div class="step">1. Accept & Continue → follow setup → grant the Manager app its permissions.</div>
-<div class="step">2. If Google Protect warns during install, choose Install Anyway.</div>
-<div class="step">3. The device appears under New Devices — tag it and move it to its zone.</div>
-<div class="step">4. Next: apply Restrictions and push Apps to it.</div>
-</div>
-</article>
-    </div>
-  </section>
-
-  <section class="category-block" id="simplified">
-    <div class="cat-kicker">ENROLMENT METHOD</div>
-    <div class="catrow">
-      <div>
-        <h2>Simplified QR Code</h2>
-        <p>Use the simplified QR flow when your device camera cannot reliably scan the standard enrolment QR code.</p>
-      </div>
-      <span class="badge">Alternative QR</span>
-    </div>
-    <div class="articles">
-      <article class="article open" id="how-to-use-the-simplified-qr-code">
-        <button class="article-title"><span>How to use the Simplified QR Code</span><i>⌃</i></button>
-        <div class="article-body">
-          <div class="step">1. Scan the Simplified QR Code shown on the FieldX enrolment page.</div>
-          <div class="step">2. Wait for the FieldX Manager App to download and install.</div>
-          <div class="step">3. The Manager App asks you to scan an Activation QR Code or enter an Access Code.</div>
-          <div class="step">4. Open <strong>Activation QR Code</strong> in the FieldX Admin Portal.</div>
-          <div class="step">5. Use the corresponding activation details to register the device.</div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="category-block" id="web">
-    <div class="cat-kicker">ENROLMENT METHOD</div>
-    <div class="catrow">
-      <div>
-        <h2>Web Based Enrolment</h2>
-        <p>Use Web Installer for Android devices that do not support Zero-Touch or QR-code based enrolment.</p>
-      </div>
-      <span class="badge">USB</span>
-    </div>
-
-    <div class="articles">
-      <article class="article open" id="what-you-need">
-        <button class="article-title"><span>What you need</span><i>⌃</i></button>
-        <div class="article-body">
-          <div class="step">Android device that is new or factory-reset.</div>
-          <div class="step">USB cable.</div>
-          <div class="step">Recommended: Linux or Mac with the latest Chrome browser.</div>
-          <div class="step">Windows may require additional device drivers depending on the phone model.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-1-prepare-the-android-device">
-        <button class="article-title"><span>Step 1 — Prepare the Android device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Unbox a new device or factory reset an existing device.</div>
-          <div class="step">2. Power on the device.</div>
-          <div class="step">3. Complete the Android Setup Wizard.</div>
-          <div class="step">4. Do not add a Google account.</div>
-          <div class="step">5. Do not install third-party apps or perform extra setup.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-2-enable-usb-debugging">
-        <button class="article-title"><span>Step 2 — Enable USB debugging</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Open <strong>Settings → About phone</strong>.</div>
-          <div class="step">2. Tap <strong>Build number</strong> 7 times.</div>
-          <div class="step">3. Open <strong>Developer options</strong>.</div>
-          <div class="step">4. Turn on <strong>USB debugging</strong> and confirm the warning.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-3-prepare-your-computer">
-        <button class="article-title"><span>Step 3 — Prepare your computer</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>Close Android Studio and other tools that use ADB before starting the Web Installer. The Web Installer needs exclusive access to the device.</p>
-          <div class="callout">If an ADB server is running, stop it with <span class="code">adb kill-server</span>.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-4-connect-and-enrol">
-        <button class="article-title"><span>Step 4 — Connect and enrol</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Connect the Android device to your computer using USB.</div>
-          <div class="step">2. Connect the device to Wi-Fi.</div>
-          <div class="step">3. In Web Installer, select <strong>Connect your Device</strong>.</div>
-          <div class="step">4. Follow the on-screen provisioning steps.</div>
-          <div class="step">5. Wait while the FieldX EMM agent is installed and the device is provisioned.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-5-verify-enrolment">
-        <button class="article-title"><span>Step 5 — Verify enrolment</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>On the Android device, confirm that the FieldX EMM app/agent is installed.</p>
-          <p>In the FieldX Admin Portal, confirm that the device appears as enrolled and that the required policies and profiles are applied.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="category-block" id="app">
-    <div class="cat-kicker">ENROLMENT METHOD</div>
-    <div class="catrow">
-      <div>
-        <h2>App Based Enrolment</h2>
-        <p>Use the FieldX Installer app to enrol a target Android device from another Android phone over wireless ADB.</p>
-      </div>
-      <span class="badge">Wireless ADB</span>
-    </div>
-
-    <div class="image-wrap">
-      <img src="https://admin.fieldx.io/assets/illustrations/enrollment-workflow-transparent.png" alt="FieldX app based enrolment workflow">
-      <div class="image-caption">FieldX Installer workflow</div>
-    </div>
-
-    <div class="articles">
-      <article class="article open" id="requirements">
-        <button class="article-title"><span>Requirements</span><i>⌃</i></button>
-        <div class="article-body">
-          <div class="step">Both phones must be connected to the same Wi-Fi network.</div>
-          <div class="step">The target device should be new or freshly factory-reset.</div>
-          <div class="step">The target device should have no Google/user accounts or other device-management app.</div>
-          <div class="step">Wireless debugging must be enabled on the target device.</div>
-          <div class="step">The installer phone needs a FieldX account.</div>
-          <div class="step">The target device should be Android 14 or above.</div>
-        </div>
-      </article>
-
-      <article class="article" id="prepare-the-target-device">
-        <button class="article-title"><span>Prepare the target device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Complete the Android setup wizard without signing in to a Google or other account.</div>
-          <div class="step">2. Open <strong>Settings → About phone</strong>.</div>
-          <div class="step">3. Tap <strong>Build number</strong> 7 times to enable Developer options.</div>
-          <div class="step">4. Open <strong>Settings → System → Developer options</strong>.</div>
-          <div class="step">5. Enable <strong>Wireless debugging</strong>.</div>
-          <div class="step">6. Keep the Wireless debugging screen open while pairing.</div>
-        </div>
-      </article>
-
-      <article class="article" id="sign-in-to-fieldx-installer">
-        <button class="article-title"><span>Sign in to FieldX Installer</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Open FieldX Installer on the installer phone.</div>
-          <div class="step">2. Enter your FieldX email and password.</div>
-          <div class="step">3. Tap <strong>Sign in</strong>.</div>
-          <p>The session may be restored automatically on future launches.</p>
-        </div>
-      </article>
-
-      <article class="article" id="step-1-pair-the-device">
-        <button class="article-title"><span>Step 1 — Pair the device</span><i>⌄</i></button>
-        <div class="article-body">
-          <p><strong>QR pairing</strong></p>
-          <div class="step">1. On the target: Settings → Developer options → Wireless debugging → Pair device with QR code.</div>
-          <div class="step">2. On the installer phone, tap <strong>Show pairing QR</strong>.</div>
-          <div class="step">3. Scan the QR shown on the installer phone using the target device.</div>
-          <p><strong>Pairing code</strong></p>
-          <div class="step">1. On the target, choose Pair device with pairing code.</div>
-          <div class="step">2. On the installer phone, tap <strong>Scan for devices</strong>.</div>
-          <div class="step">3. Select the target or enter its IP and pairing port.</div>
-          <div class="step">4. Enter the 6-digit pairing code and tap <strong>Pair</strong>.</div>
-        </div>
-      </article>
-
-      <article class="article" id="step-2-connect-to-the-device">
-        <button class="article-title"><span>Step 2 — Connect to the device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="callout"><strong>Important:</strong> The pairing port and connect port are different. Do not use the pairing port as the connect port.</div>
-          <p><strong>Auto-discover:</strong> Select <strong>Scan for devices</strong>, choose the target, then select <strong>Connect</strong> when the connection port is available.</p>
-          <p><strong>Manual:</strong> Enter the target IP address and the ADB connect port shown under <strong>Wireless debugging → IP address &amp; port</strong>, then select <strong>Connect</strong>.</p>
-          <p>When the state shows <strong>Connected</strong>, select <strong>Continue to Provision</strong>.</p>
-        </div>
-      </article>
-
-      <article class="article" id="step-3-set-up-the-device">
-        <button class="article-title"><span>Step 3 — Set up the device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Select <strong>Start setup</strong>.</div>
-          <div class="step">2. Wait while provisioning runs.</div>
-          <div class="step">3. Do not disconnect the device or close FieldX Installer.</div>
-          <div class="step">4. When complete, the app displays “All done! FieldX is installed and this device is ready to use.”</div>
-          <div class="step">5. Select <strong>Disconnect</strong> and check the target device.</div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="category-block" id="activation">
-    <div class="cat-kicker">ENROLMENT SUPPORT</div>
-    <div class="catrow">
-      <div>
-        <h2>Activation QR Code</h2>
-        <p>Activation details are used with Simplified QR Code, Web Installer, and manual installation methods.</p>
-      </div>
-      <span class="badge">Activation</span>
-    </div>
-    <div class="articles">
-      <article class="article open" id="find-your-activation-details">
-        <button class="article-title"><span>Find your activation details</span><i>⌃</i></button>
-        <div class="article-body">
-          <p>Open <strong>Enrol Devices → Activation QR Code</strong> in the FieldX Admin Portal.</p>
-          <p>The page provides the information required to register a device, including:</p>
-          <div class="step">Organization Code</div>
-          <div class="step">Access Code</div>
-          <div class="step">Activation QR Code</div>
-        </div>
-      </article>
-
-      <article class="article" id="enrol-a-device-to-your-organization">
-        <button class="article-title"><span>Enrol a device to your organization</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Open the FieldX Android application.</div>
-          <div class="step">2. Select <strong>Enrol Device</strong>.</div>
-          <div class="step">3. Scan the Activation QR Code or enter the Access Code manually.</div>
-          <div class="step">4. Complete the enrolment steps shown on the device.</div>
-        </div>
-      </article>
-
-      <article class="article" id="when-is-server-url-required">
-        <button class="article-title"><span>When is Server URL required?</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>The <strong>Server URL</strong> field is required only when connecting to a privately hosted MDM server.</p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="category-block" id="manual"><div class="cat-kicker">ENROLMENT METHOD</div><div class="catrow"><div><h2>Manual enrolment (ADB)</h2><p>For devices without QR provisioning — needs command-line comfort.</p></div><span class="badge">ADB</span></div>
+<div class="doc-note"><strong>Questions?</strong>Contact <a href="mailto:info@fieldx.io" style="color:#009cde">info@fieldx.io</a> or visit <a href="https://support.fieldx.io" style="color:#009cde">support.fieldx.io</a>.</div>
+<section class="category-block" id="sections"><div class="cat-kicker">GUIDE</div><div class="catrow"><div><h2>Enrolment sections</h2><p>Five paths — pick the one matching the device in front of you.</p></div><span class="badge">5</span></div>
 <div class="articles">
-<article class="article" id="manual-prereqs">
-<button class="article-title"><span>Before you start</span><i>⌄</i></button>
-<div class="article-body" data-search="manual prerequisites accounts backup platform tools spare device">
-<div class="step">Remove all accounts (Settings → Accounts / Google Accounts) and back up data.</div>
-<div class="step">Install Platform Tools (Windows/Mac/Linux) and try a spare device first.</div>
-<div class="step">Copy the Organization code + Access code from the Enrollment Code page.</div>
-</div>
-</article>
-<article class="article" id="manual-commands">
-<button class="article-title"><span>Run the commands</span><i>⌄</i></button>
-<div class="article-body" data-search="adb install device owner dpm appops grant whitelist notification configure org access reboot commands">
-<div class="step">Download the Manager APK from Plugin Apps, rename to io.fieldx.app.devices-release.apk.</div>
-<div class="step">Connect with USB debugging on, then run one by one:</div>
-<div class="step">adb install io.fieldx.app.devices-release.apk</div>
-<div class="step">adb shell dpm set-device-owner io.fieldx.app.devices/io.droid.admin.DeviceAdminRx</div>
-<div class="step">adb shell appops set io.fieldx.app.devices GET_USAGE_STATS allow</div>
-<div class="step">adb shell pm grant io.fieldx.app.devices android.permission.WRITE_SECURE_SETTINGS</div>
-<div class="step">adb shell dumpsys deviceidle whitelist +io.fieldx.app.devices</div>
-<div class="step">adb shell cmd notification allow_listener io.fieldx.app.devices/io.fieldx.api.services.NotificationListener</div>
-<div class="step">adb shell am broadcast --receiver-include-background -a io.app.CONFIGURE --es org ORG_CODE --es access ACCESS_CODE</div>
-<div class="step">adb reboot</div>
-<div class="field warning"><b>If it fails</b><span>The set-device-owner step must print success — else contact support with the error. After reboot the device appears in the portal within ~10 minutes.</span></div>
-</div>
-</article>
-<article class="article" id="manual-bulk-script">
-<button class="article-title"><span>Bulk tip: script it</span><i>⌄</i></button>
-<div class="article-body" data-search="bulk script serial adb -s multiple devices">
-<div class="step">Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once.</div>
-</div>
-</article>
+<article class="article static" id="sec-enroll-qr-code" data-search="fieldx emm  qr enrolment"><div class="static-title"><span>FieldX EMM / QR Enrolment</span>&nbsp;<span class="badge">12</span></div><div class="article-body"><p>Enrol a supported Android device directly from its initial setup screen using the FieldX system QR code.</p><div class="step"><a href="enroll-qr-code.html" style="color:#009cde">Open →</a></div></div></article>
+<article class="article static" id="sec-enroll-web-installer" data-search="web based enrolment"><div class="static-title"><span>Web Based Enrolment</span>&nbsp;<span class="badge">6</span></div><div class="article-body"><p>A browser-driven flow for devices without zero-touch or QR support: USB cable, Chrome and USB debugging carry the agent over. Built for distributed and franchise deployments.</p><div class="step"><a href="enroll-web-installer.html" style="color:#009cde">Open →</a></div></div></article>
+<article class="article static" id="sec-enroll-app-installer" data-search="app based enrolment"><div class="static-title"><span>App Based Enrolment</span>&nbsp;<span class="badge">6</span></div><div class="article-body"><p>No computer needed: one Android phone enrols another over wireless ADB. Same Wi-Fi, wireless debugging on, and the installer app walks from pairing to setup.</p><div class="step"><a href="enroll-app-installer.html" style="color:#009cde">Open →</a></div></div></article>
+<article class="article static" id="sec-enroll-manual-adb" data-search="manual enrolment adb"><div class="static-title"><span>Manual enrolment (ADB)</span>&nbsp;<span class="badge">3</span></div><div class="article-body"><p>The hands-on path for devices without QR provisioning: nine ADB commands that install the agent, grant its privileges and configure it. Needs command-line comfort; script it for batches.</p><div class="step"><a href="enroll-manual-adb.html" style="color:#009cde">Open →</a></div></div></article>
+<article class="article static" id="sec-enroll-troubleshooting" data-search="troubleshooting"><div class="static-title"><span>Troubleshooting</span>&nbsp;<span class="badge">4</span></div><div class="article-body"><p>Enrolment failures cluster around USB detection, wireless pairing and unready devices. Each fix below is ordered from most to least likely.</p><div class="step"><a href="enroll-troubleshooting.html" style="color:#009cde">Open →</a></div></div></article>
 </div></section>
-<section class="category-block" id="troubleshooting">
-    <div class="cat-kicker">HELP</div>
-    <div class="catrow">
-      <div>
-        <h2>Troubleshooting</h2>
-        <p>Common issues during device enrolment and the steps to resolve them.</p>
-      </div>
-    </div>
-    <div class="articles">
-      <article class="article" id="web-installer-does-not-detect-my-device">
-        <button class="article-title"><span>Web Installer does not detect my device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Confirm USB debugging is enabled.</div>
-          <div class="step">Try another USB cable or USB port.</div>
-          <div class="step">On Windows, make sure the correct device drivers are installed.</div>
-          <div class="step">Close Android Studio and other ADB tools.</div>
-          <div class="step">If required, run <span class="code">adb kill-server</span>, reconnect the device, and retry.</div>
-        </div>
-      </article>
-
-      <article class="article" id="fieldx-installer-cannot-find-my-device">
-        <button class="article-title"><span>FieldX Installer cannot find my device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Make sure both phones are connected to the same Wi-Fi network.</div>
-          <div class="step">Confirm Wireless debugging is enabled on the target device.</div>
-          <div class="step">For pairing-code mode, keep the target's pairing screen open.</div>
-        </div>
-      </article>
-
-      <article class="article" id="wireless-adb-disconnects-during-setup">
-        <button class="article-title"><span>Wireless ADB disconnects during setup</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Return to the Connect step.</div>
-          <div class="step">Reconnect the target device.</div>
-          <div class="step">Return to Set up device.</div>
-          <div class="step">Select <strong>Start setup</strong> again.</div>
-        </div>
-      </article>
-
-      <article class="article" id="setup-says-the-device-is-not-ready">
-        <button class="article-title"><span>Setup says the device is not ready</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">Make sure the target device has no signed-in accounts.</div>
-          <div class="step">Make sure no other device-management app is installed.</div>
-          <div class="step">If necessary, factory reset the device and repeat the preparation steps.</div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <div class="doc-note"><strong>Questions?</strong>Contact <a href="mailto:info@fieldx.io" style="color:#009cde">info@fieldx.io</a> or visit <a href="https://support.fieldx.io" style="color:#009cde">support.fieldx.io</a>.</div>
-<div class="empty">No matching documentation found.</div>
-  <div class="footer"><div class="foot-grid"><div><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Help</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base">FieldX Documentation · © 2026 Smargav Solutions · Updated September 2026</div></div>
+<div class="empty"><div class="empty">No matching documentation found.</div>
+<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Resources</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a></div><div><strong>Support</strong><a href="support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
 </main>
-
-<aside class="right">
-  <div class="toc-label">On this page</div>
-  <nav class="toc">
-    <a href="#overview">Enroll Device</a>
-    <a href="#choose">Choose an enrolment method</a>
-    <a href="#emm">FieldX EMM / QR</a>
-    <a href="#simplified">Simplified QR Code</a>
-    <a href="#web">Web Based Enrolment</a>
-    <a href="#app">App Based Enrolment</a>
-    <a href="#activation">Activation QR Code</a>
-    <a href="#manual">Manual ADB</a><a href="#troubleshooting">Troubleshooting</a>
-  </nav>
-  <div class="right-card"><strong>Need help?</strong>Start with the enrolment method supported by your device, then follow the steps in order.</div>
-</aside>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Enroll Device</a><a href="#sections">Sections</a></nav>
+<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
 </div>
-
 <script src="assets/full-index.js"></script>
 <script src="assets/advanced-search.js"></script>
 <script src="assets/chat-demo.js"></script>
 <script src="assets/ui.js"></script>
-</body>
-</html>
+</body></html>

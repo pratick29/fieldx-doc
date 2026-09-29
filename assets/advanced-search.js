@@ -269,6 +269,20 @@ document.addEventListener('DOMContentLoaded',function(){
   initDropdown();
   retrace();
   fxArrive();
+  (function initFontSize(){
+    var LEVELS=[100,112,125],cur=100;
+    try{var s=parseInt(localStorage.getItem('fx-zoom')||'100',10);if(LEVELS.indexOf(s)!==-1)cur=s;}catch(e){}
+    function paint(){
+      document.querySelectorAll('.font-toggle').forEach(function(b){
+        b.style.fontSize=Math.round(12*cur/100)+'px';
+        b.setAttribute('title','Text size: '+cur+'% (click to change)');
+        b.setAttribute('aria-label','Text size '+cur+' percent. Activate to change.');
+      });
+    }
+    function apply(v){cur=v;try{document.body.style.zoom=(v/100);}catch(e){}try{localStorage.setItem('fx-zoom',String(v));}catch(e2){}paint();}
+    apply(cur);
+    /* text-size changes now come from the Accessibility panel (ui.js) */
+  })();
   (function initTheme(){
     var root=document.documentElement;
     function isDark(){return root.getAttribute('data-theme')==='dark';}
@@ -301,10 +315,14 @@ document.addEventListener('DOMContentLoaded',function(){
       b.setAttribute('aria-expanded',a.classList.contains('open')?'true':'false');
     });
   });
-  document.querySelectorAll('.nav-drop-toggle').forEach(function(t){
-    t.addEventListener('click',function(){t.closest('.nav-drop').classList.toggle('open');});
+  document.querySelectorAll('.nav-drop-toggle,.nav-drop-main').forEach(function(t){
+    t.addEventListener('click',function(){
+      var d=t.closest('.nav-drop');if(!d)return;
+      d.classList.toggle('open');
+      if(t.classList.contains('nav-drop-main'))t.setAttribute('aria-expanded',d.classList.contains('open')?'true':'false');
+    });
   });
-  document.querySelectorAll('.sidebar .nav-item').forEach(function(a){
+  document.querySelectorAll('.sidebar .nav-item,.sidebar .nav-sub-item').forEach(function(a){
     a.addEventListener('click',function(){
       if(window.innerWidth<=760){var s=document.querySelector('.sidebar'); if(s)s.style.display='';}
     });

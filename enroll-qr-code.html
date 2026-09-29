@@ -1,0 +1,188 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+<title>FieldX Documentation — FieldX EMM / QR Enrolment</title><link rel="stylesheet" href="assets/minimal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/icon.png"></head>
+<body>
+<header class="header">
+  <button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
+  <a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
+  <button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+  <div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+  <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+<nav class="header-links"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="support.html">Support</a></nav>
+<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Start here</div>
+<a class="nav-item" href="index.html"><span>Home</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle restriction sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Restrictions</span></button></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="policies.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="restriction-master-summary.html"><span>Master Summary</span></a>
+<a class="nav-sub-item" href="restriction-managing.html"><span>Managing</span></a>
+<a class="nav-sub-item" href="restriction-app-watchdog.html"><span>App Watchdog</span></a>
+<a class="nav-sub-item" href="restriction-categories.html"><span>Categories</span></a></div></div>
+<div class="nav-drop open"><div class="nav-drop-row"><button class="nav-drop-main active" aria-label="Toggle enrolment sections" aria-expanded="true"><span class="drop-arrow">›</span><span>Enroll Device</span></button></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="enroll-device.html"><span>Overview</span></a>
+<a class="nav-sub-item active" href="enroll-qr-code.html"><span>QR Enrolment</span></a>
+<a class="nav-sub-item" href="enroll-web-installer.html"><span>Web Installer</span></a>
+<a class="nav-sub-item" href="enroll-app-installer.html"><span>Installer App</span></a>
+<a class="nav-sub-item" href="enroll-manual-adb.html"><span>Manual ADB</span></a>
+<a class="nav-sub-item" href="enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
+<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle device sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Devices</span></button></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="devices.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="devices-inventory.html"><span>Inventory</span></a>
+<a class="nav-sub-item" href="devices-details.html"><span>Details</span></a>
+<a class="nav-sub-item" href="devices-apps.html"><span>Apps</span></a>
+<a class="nav-sub-item" href="devices-monitor.html"><span>Monitor</span></a>
+<a class="nav-sub-item" href="devices-remote-actions.html"><span>Remote actions</span></a></div></div>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<a class="nav-item" href="apps.html"><span>Apps</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main" id="maincontent">
+<div class="breadcrumb">FieldX <span>›</span> <a href="enroll-device.html" style="color:#009cde">Enroll Device</a> <span>›</span> FieldX EMM / QR Enrolment</div>
+<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
+<section class="intro" id="overview"><div class="eyebrow">Enroll Device</div>
+<h1>FieldX EMM / QR Enrolment</h1>
+<p>Enrol a supported Android device directly from its initial setup screen using the FieldX system QR code.</p>
+<div class="meta-row"><span class="meta">12 articles</span></div></section>
+<p id="result-count"></p>
+<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
+<section class="category-block" id="list"><div class="cat-kicker">ENROLMENT METHOD</div><div class="catrow"><div><h2>FieldX EMM / QR Enrolment</h2><p>Enrol a supported Android device directly from its initial setup screen using the FieldX system QR code.</p></div><span class="badge">12</span></div>
+<div class="articles">
+<article class="article open" id="before-you-start">
+        <button class="article-title"><span>Before you start</span><i>⌄</i></button>
+        <div class="article-body">
+          <div class="step">Confirm with your device provider that QR code provisioning is supported.</div>
+          <div class="step">For a low-resolution camera, use the Simplified QR Code shown at the bottom of the enrolment page.</div>
+        </div>
+      </article>
+<article class="article" id="step-1-start-the-device">
+        <button class="article-title"><span>Step 1 — Start the device</span><i>⌄</i></button>
+        <div class="article-body">
+          <div class="step">1. Unbox and power on the device.</div>
+          <div class="step">2. Wait for the initial Welcome screen.</div>
+          <div class="step">3. Tap the same location on the Welcome screen 6 times quickly.</div>
+        </div>
+      </article>
+<article class="article" id="step-2-scan-the-enrolment-qr-code">
+        <button class="article-title"><span>Step 2 — Scan the enrolment QR code</span><i>⌄</i></button>
+        <div class="article-body">
+          <div class="step">Position the device to scan the unique system enrolment QR code provided by your IT administrator.</div>
+        </div>
+      </article>
+<article class="article" id="step-3-connect-to-wi-fi">
+        <button class="article-title"><span>Step 3 — Connect to Wi-Fi</span><i>⌄</i></button>
+        <div class="article-body">
+          <p>When the setup wizard asks for network configuration, use the following values:</p>
+          <div class="table">
+            <table>
+              <thead><tr><th scope="col">Setting</th><th scope="col">Value</th></tr></thead>
+              <tbody>
+                <tr><td>Metered</td><td>Detect automatically</td></tr>
+                <tr><td>Proxy</td><td>None</td></tr>
+                <tr><td>IP Settings</td><td>Static</td></tr>
+                <tr><td>IP Address</td><td>Static IP on the same subnet as the router</td></tr>
+                <tr><td>Gateway</td><td>Your local router/default gateway</td></tr>
+                <tr><td>Network Prefix Length</td><td>24</td></tr>
+                <tr><td>DNS 1</td><td>34.226.155.149</td></tr>
+                <tr><td>DNS 2</td><td>34.226.155.149</td></tr>
+                <tr><td>Privacy</td><td>Use randomized MAC</td></tr>
+                <tr><td>Send device name to network</td><td>On (Recommended)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Choose a static IP that is on the same subnet as your router and is not already being used by another device.</p>
+          <div class="callout"><strong>Example:</strong> If the current IP is <span class="code">192.168.1.100</span> and the gateway is <span class="code">192.168.1.1</span>, a possible static IP is <span class="code">192.168.1.101</span>, provided it is unused.</div>
+          <p>After entering the network details, select <strong>Connect</strong> and wait until Wi-Fi shows <strong>Connected</strong>.</p>
+        </div>
+      </article>
+<article class="article" id="step-4-complete-provisioning">
+        <button class="article-title"><span>Step 4 — Complete provisioning</span><i>⌄</i></button>
+        <div class="article-body">
+          <div class="step">1. The setup wizard downloads the FieldX Manager App.</div>
+          <div class="step">2. Follow the remaining Android setup prompts.</div>
+          <div class="step">3. Grant the requested permissions to the Manager App.</div>
+          <div class="step">4. Select <strong>Done</strong> when the “You're all set!” screen appears.</div>
+        </div>
+      </article>
+<article class="article" id="qr-requirements-reset">
+<button class="article-title"><span>Requirements & factory reset</span><i>⌄</i></button>
+<div class="article-body" data-search="requirements android 8 enterprise ready fresh factory reset backup data">
+<div class="step">Device runs Android 8.0 or higher and is Android Enterprise ready.</div>
+<div class="step">Fresh out of the box (no accounts) or factory reset — back up data first, reset wipes it.</div>
+</div>
+</article>
+<article class="article" id="find-enrolment-qr">
+<button class="article-title"><span>Find the enrolment QR code</span><i>⌄</i></button>
+<div class="article-body" data-search="qr code provisioning downloads console simplified scan location">
+<div class="step">1. Login to the FieldX Web Portal → Downloads page → QR Code Provisioning tab.</div>
+<div class="step">2. If the code will not scan, use the Simplified QR Code just below it.</div>
+</div>
+</article>
+<article class="article" id="after-scanning">
+<button class="article-title"><span>After scanning</span><i>⌄</i></button>
+<div class="article-body" data-search="accept continue permissions google protect install anyway new devices tag move zone restrictions apps">
+<div class="step">1. Accept & Continue → follow setup → grant the Manager app its permissions.</div>
+<div class="step">2. If Google Protect warns during install, choose Install Anyway.</div>
+<div class="step">3. The device appears under New Devices — tag it and move it to its zone.</div>
+<div class="step">4. Next: apply Restrictions and push Apps to it.</div>
+</div>
+</article>
+<article class="article open" id="how-to-use-the-simplified-qr-code">
+        <button class="article-title"><span>How to use the Simplified QR Code</span><i>⌃</i></button>
+        <div class="article-body">
+          <div class="step">1. Scan the Simplified QR Code shown on the FieldX enrolment page.</div>
+          <div class="step">2. Wait for the FieldX Manager App to download and install.</div>
+          <div class="step">3. The Manager App asks you to scan an Activation QR Code or enter an Access Code.</div>
+          <div class="step">4. Open <strong>Activation QR Code</strong> in the FieldX Admin Portal.</div>
+          <div class="step">5. Use the corresponding activation details to register the device.</div>
+        </div>
+      </article>
+<article class="article open" id="find-your-activation-details">
+        <button class="article-title"><span>Find your activation details</span><i>⌃</i></button>
+        <div class="article-body">
+          <p>Open <strong>Enrol Devices → Activation QR Code</strong> in the FieldX Admin Portal.</p>
+          <p>The page provides the information required to register a device, including:</p>
+          <div class="step">Organization Code</div>
+          <div class="step">Access Code</div>
+          <div class="step">Activation QR Code</div>
+        </div>
+      </article>
+<article class="article" id="enrol-a-device-to-your-organization">
+        <button class="article-title"><span>Enrol a device to your organization</span><i>⌄</i></button>
+        <div class="article-body">
+          <div class="step">1. Open the FieldX Android application.</div>
+          <div class="step">2. Select <strong>Enrol Device</strong>.</div>
+          <div class="step">3. Scan the Activation QR Code or enter the Access Code manually.</div>
+          <div class="step">4. Complete the enrolment steps shown on the device.</div>
+        </div>
+      </article>
+<article class="article" id="when-is-server-url-required">
+        <button class="article-title"><span>When is Server URL required?</span><i>⌄</i></button>
+        <div class="article-body">
+          <p>The <strong>Server URL</strong> field is required only when connecting to a privately hosted MDM server.</p>
+        </div>
+      </article>
+</div></section>
+<div class="empty">No matching documentation found.</div>
+<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Resources</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a></div><div><strong>Support</strong><a href="support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">FieldX EMM / QR Enrolment</a><a href="#before-you-start">Before you start</a><a href="#step-1-start-the-device">Step 1 — Start the device</a><a href="#step-2-scan-the-enrolment-qr-code">Step 2 — Scan the enrolment QR code</a><a href="#step-3-connect-to-wi-fi">Step 3 — Connect to Wi-Fi</a><a href="#step-4-complete-provisioning">Step 4 — Complete provisioning</a><a href="#qr-requirements-reset">Requirements & factory reset</a><a href="#find-enrolment-qr">Find the enrolment QR code</a><a href="#after-scanning">After scanning</a><a href="#how-to-use-the-simplified-qr-code">How to use the Simplified QR Code</a><a href="#find-your-activation-details">Find your activation details</a><a href="#enrol-a-device-to-your-organization">Enrol a device to your organization</a><a href="#when-is-server-url-required">When is Server URL required?</a></nav>
+<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+<script src="assets/chat-demo.js"></script>
+<script src="assets/ui.js"></script>
+</body></html>
