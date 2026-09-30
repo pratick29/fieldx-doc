@@ -1,6 +1,7 @@
 /* FieldX Docs — demo chatbot prototype ( rule-based canned replies, no backend ) */
 (function(){
 'use strict';
+var ROOT=(typeof window!=='undefined'&&window.FX_ROOT)||'';
 function css(){
   if(document.getElementById('fxc-css'))return;
   var st=document.createElement('style');st.id='fxc-css';
@@ -9,16 +10,16 @@ function css(){
 }
 function reply(q){
   q=(q||'').toLowerCase();
-  if(/kiosk/.test(q))return 'Lock any device to one app (POS, signage) or a small approved set from <a href="apps.html">Apps →</a>. Need the exit PIN flow? It is on the same page.';
-  if(/enroll|qr|onboard|add device/.test(q))return 'Fastest path is QR: Console → Devices → Add → QR Enrollment, ~3 min. Full steps: <a href="enroll-device.html">Enroll Device →</a>';
-  if(/price|pricing|cost|trial|plan/.test(q))return 'For plans and pricing, please contact the team: <a href="support.html">Contact FieldX →</a>';
-  if(/ota|firmware|update|upgrade/.test(q))return 'FieldX pushes full + incremental OTA via CDN with staged rollout and rollback. See <a href="reports.html">Reports →</a> for rollout tracking.';
-  if(/restrict|policy|policies|block|lock/.test(q))return 'All 118 restrictions live in the <a href="policies.html">Restrictions reference →</a> — try searching “kiosk”, “camera” or “USB”.';
-  if(/vpn|security|knox/.test(q))return 'Always-On VPN, Samsung Knox controls and encrypted channels are covered under <a href="getting-started.html">Getting Started →</a> requirements and the Restrictions reference.';
-  if(/report|alert|sla|monitor/.test(q))return 'Inventory, compliance, app, OTA and SLA exports (CSV/Excel/PDF) plus alerts: <a href="reports.html">Reports →</a>';
-  if(/api|integrat|webhook|erp/.test(q))return 'REST APIs, on-device App-to-App actions and webhooks connect ERP/CRM dashboards. Ask <a href="support.html">Support →</a> for API tokens.';
+  if(/kiosk/.test(q))return 'Lock any device to one app (POS, signage) or a small approved set from <a href="\'+ROOT+\'apps.html">Apps →</a>. Need the exit PIN flow? It is on the same page.';
+  if(/enroll|qr|onboard|add device/.test(q))return 'Fastest path is QR: Console → Devices → Add → QR Enrollment, ~3 min. Full steps: <a href="\'+ROOT+\'enroll-device.html">Enroll Device →</a>';
+  if(/price|pricing|cost|trial|plan/.test(q))return 'For plans and pricing, please contact the team: <a href="\'+ROOT+\'support.html">Contact FieldX →</a>';
+  if(/ota|firmware|update|upgrade/.test(q))return 'FieldX pushes full + incremental OTA via CDN with staged rollout and rollback. See <a href="\'+ROOT+\'reports.html">Reports →</a> for rollout tracking.';
+  if(/restrict|policy|policies|block|lock/.test(q))return 'All 118 restrictions live in the <a href="\'+ROOT+\'policies.html">Restrictions reference →</a> — try searching “kiosk”, “camera” or “USB”.';
+  if(/vpn|security|knox/.test(q))return 'Always-On VPN, Samsung Knox controls and encrypted channels are covered under <a href="\'+ROOT+\'getting-started.html">Getting Started →</a> requirements and the Restrictions reference.';
+  if(/report|alert|sla|monitor/.test(q))return 'Inventory, compliance, app, OTA and SLA exports (CSV/Excel/PDF) plus alerts: <a href="\'+ROOT+\'reports.html">Reports →</a>';
+  if(/api|integrat|webhook|erp/.test(q))return 'REST APIs, on-device App-to-App actions and webhooks connect ERP/CRM dashboards. Ask <a href="\'+ROOT+\'support.html">Support →</a> for API tokens.';
   if(/hi|hello|hey/.test(q))return 'Hello! Ask me about enrollment, kiosk, restrictions, OTA, reports or pricing.';
-  return 'I am a demo prototype — I only know a few topics. Try “enroll”, “kiosk”, “OTA”, “reports” or “pricing”. For anything else: <a href="support.html">Contact FieldX →</a>';
+  return 'I am a demo prototype — I only know a few topics. Try “enroll”, “kiosk”, “OTA”, “reports” or “pricing”. For anything else: <a href="\'+ROOT+\'support.html">Contact FieldX →</a>';
 }
 function addMsg(body,cls,html){
   var d=document.createElement('div');d.className='fxc-m '+cls;
@@ -27,7 +28,7 @@ function addMsg(body,cls,html){
 }
 document.addEventListener('DOMContentLoaded',function(){
   css();
-  var LOGO='<img class="logo-light" src="assets/icon.png" alt="" width="26" height="26"><img class="logo-dark" src="assets/icon-white.png" alt="" width="26" height="26">';
+  var LOGO='<img class="logo-light" src="'+ROOT+'assets/icon.png" alt="" width="26" height="26"><img class="logo-dark" src="'+ROOT+'assets/icon-white.png" alt="" width="26" height="26">';
   var fab=document.createElement('button');fab.className='fxc-fab';fab.setAttribute('aria-label','Open chat');fab.innerHTML=LOGO;
   var panel=document.createElement('div');panel.className='fxc-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-label','FieldX assistant demo');
   panel.innerHTML='<div class="fxc-head"><span>FieldX Assistant <small>demo</small></span><button class="fxc-x" aria-label="Close chat">✕</button></div><div class="fxc-body"></div><div class="fxc-chips" style="padding:0 12px 4px;display:flex;gap:6px;flex-wrap:wrap"></div><div class="fxc-foot"><input placeholder="Ask about enrollment, kiosk…" aria-label="Chat message"><button class="fxc-send">➤</button></div><div class="fxc-demo">Prototype — canned demo replies, no real AI</div>';

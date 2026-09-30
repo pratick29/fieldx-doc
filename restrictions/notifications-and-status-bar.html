@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+<link rel="stylesheet" href="../assets/minimal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../assets/icon.png"><title>FieldX Documentation — Notifications & Status Bar</title></head>
+<body>
+<header class="header">
+<button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
+<a class="brand" href="../index.html"><img class="brand-logo logo-light" src="../assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="../assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+<nav class="header-links"><a href="../index.html">Home</a><a href="../faq.html">FAQ</a><a href="../support.html">Support</a></nav>
+<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Start here</div>
+<a class="nav-item" href="../index.html"><span>Home</span></a>
+<a class="nav-item" href="../getting-started.html"><span>Getting Started</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<div class="nav-drop open"><div class="nav-drop-row"><a class="nav-drop-main active" href="policies.html#overview" aria-label="Restrictions"><span class="drop-arrow">›</span><span>Restrictions</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="../policies.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="../policies.html#summary"><span>Master Summary</span></a>
+<a class="nav-sub-item" href="../policies.html#managing"><span>Managing</span></a>
+<a class="nav-sub-item" href="../policies.html#advanced"><span>App Watchdog</span></a>
+<a class="nav-sub-item" href="../policies.html#all"><span>All Restrictions</span></a></div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="enroll-device.html#overview" aria-label="Enroll Device"><span class="drop-arrow">›</span><span>Enroll Device</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="../enroll-device.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="../enroll-qr-code.html"><span>QR Enrolment</span></a>
+<a class="nav-sub-item" href="../enroll-web-installer.html"><span>Web Installer</span></a>
+<a class="nav-sub-item" href="../enroll-app-installer.html"><span>Installer App</span></a>
+<a class="nav-sub-item" href="../enroll-manual-adb.html"><span>Manual ADB</span></a>
+<a class="nav-sub-item" href="../enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="devices.html#overview" aria-label="Devices"><span class="drop-arrow">›</span><span>Devices</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="../devices.html"><span>Overview</span></a>
+<a class="nav-sub-item" href="../devices-inventory.html"><span>Inventory</span></a>
+<a class="nav-sub-item" href="../devices-details.html"><span>Details</span></a>
+<a class="nav-sub-item" href="../devices-apps.html"><span>Apps</span></a>
+<a class="nav-sub-item" href="../devices-monitor.html"><span>Monitor</span></a>
+<a class="nav-sub-item" href="../devices-remote-actions.html"><span>Remote actions</span></a></div></div>
+<a class="nav-item" href="../groups.html"><span>Groups</span></a>
+<a class="nav-item" href="../apps.html"><span>Apps</span></a>
+<a class="nav-item" href="../reports.html"><span>Reports</span></a></div></aside>
+<main class="main" id="maincontent">
+<div class="breadcrumb">FieldX <span>›</span> <a href="../policies.html" style="color:#009cde">Restrictions</a> <span>›</span> Notifications & Status Bar</div>
+<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
+<section class="intro" id="overview"><div class="eyebrow">Restrictions</div>
+<h1>Notifications & Status Bar</h1>
+<p>Hide distracting notifications (needs the listener) or force all of them on for alerting fleets.</p>
+<div class="meta-row"><span class="meta">2 restrictions</span><span class="meta">Allow / Disallow</span></div></section>
+<p id="result-count"></p>
+<div class="doc-note"><strong>Part of Restrictions</strong>Back to <a href="../policies.html" style="color:#009cde">Restrictions overview →</a></div>
+
+<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
+<section class="category-block" id="c14"><div class="cat-kicker">RESTRICTION CATEGORY</div><div class="catrow"><div><h2>Notifications & Status Bar</h2><p>Hide distracting notifications (needs the listener) or force all of them on for alerting fleets.</p></div><span class="badge">2</span></div>
+<div class="articles">
+<article class="article" id="hide-notifications" data-search="hide notifications notifications &amp; status bar what it does: hides notifications from selected apps. requires the user to enable notification listener access for fieldx. configured through its own settings window in the fieldx console rather than a simple allow/disallow toggle. available for: not specified in the fieldx source. where to find it: restrictions / notifications &amp; status bar / hide notifications when should i use this? use this to suppress distracting or sensitive notifications on managed devices. important notes note: requires notification listener to be enabled by the user before it can take effect."><button class="article-title" aria-expanded="false"><span>Hide Notifications</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Hides notifications from selected apps. Requires the user to enable Notification Listener access for FieldX.</span></div><p>Configured through its own settings window in the FieldX console rather than a simple Allow/Disallow toggle.</p><div class="field"><b>Available for</b><span>Not specified in the FieldX source.</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Notifications &amp; Status Bar / Hide Notifications</span></div><p>When should I use this? Use this to suppress distracting or sensitive notifications on managed devices.</p><p>Important notes</p><p>Note: Requires Notification Listener to be enabled by the user before it can take effect.</p></div></article>
+<article class="article" id="show-notifications-samsung-only" data-search="show notifications (samsung only) notifications &amp; status bar what it does: allows or disallows notifications from all apps on the device status bar. available only on samsung devices. available for: samsung &amp; fieldx emm where to find it: restrictions / notifications &amp; status bar / show notifications (samsung only) when should i use this? use this on samsung fleets where notification visibility should be controlled fleet-wide rather than per app."><button class="article-title" aria-expanded="false"><span>Show Notifications (Samsung Only)</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Allows or disallows notifications from all apps on the device status bar. Available only on Samsung devices.</span></div><div class="table"><table><thead><tr><th scope="col">Option</th><th scope="col">What it does</th></tr></thead><tbody><tr><td>Allow</td><td>Allows the behavior controlled by this restriction.</td></tr><tr><td>Disallow</td><td>Prevents the behavior controlled by this restriction.</td></tr></tbody></table></div><div class="field"><b>Available for</b><span>Samsung &amp; FieldX EMM</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Notifications &amp; Status Bar / Show Notifications (Samsung Only)</span></div><p>When should I use this? Use this on Samsung fleets where notification visibility should be controlled fleet-wide rather than per app.</p></div></article>
+</div></section>
+<div class="empty">No matching documentation found.</div>
+<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="../assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="../assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="../policies.html">Restrictions</a><a href="../enroll-device.html">Enroll Device</a><a href="../devices.html">Devices</a><a href="../groups.html">Groups</a><a href="../apps.html">Apps</a><a href="../reports.html">Reports</a></div><div><strong>Resources</strong><a href="../getting-started.html">Getting Started</a><a href="../faq.html">FAQ</a><a href="../changelog.html">Changelog</a></div><div><strong>Support</strong><a href="../support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
+</main>
+<aside class="right"><div class="toc-label">On this page</div>
+<nav class="toc"><a href="#overview">Notifications & Status Bar</a><a href="#hide-notifications">Hide Notifications</a><a href="#show-notifications-samsung-only">Show Notifications (Samsung Only)</a></nav>
+<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
+</div>
+<script>window.FX_ROOT='../';</script>
+<script src="../assets/full-index.js"></script>
+<script src="../assets/advanced-search.js"></script>
+<script src="../assets/chat-demo.js"></script>
+<script src="../assets/ui.js"></script>
+</body></html>

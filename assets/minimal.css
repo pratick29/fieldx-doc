@@ -124,6 +124,8 @@ h1:hover .head-link,h2:hover .head-link,.head-link:focus-visible{opacity:1}
 .master-filter:focus{background:var(--bg);border-color:var(--accent)}
 [data-theme="dark"] .master-filter{background:#1C252E}
 #master-count{font-size:11px;color:var(--subtle);margin:0 0 6px}
+.master-toggle{background:none;border:0;color:var(--accent);font-weight:700;font-size:13px;cursor:pointer;padding:10px 4px;font-family:inherit}
+.master-toggle:hover{text-decoration:underline}
 .article.static{transition:background-color .15s ease}
 .article.static:hover{background:#F9FAFB}
 [data-theme="dark"] .article.static:hover{background:rgba(145,158,171,.06)}

@@ -22,41 +22,47 @@
 <a class="nav-item" href="index.html"><span>Home</span></a>
 <a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
 <div class="nav-group"><div class="nav-label">Documentation</div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle restriction sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Restrictions</span></button></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="policies.html#overview" aria-label="Restrictions"><span class="drop-arrow">›</span><span>Restrictions</span></a></div>
 <div class="nav-sub">
-<a class="nav-sub-item" href="policies.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="restriction-master-summary.html"><span>Master Summary</span></a>
-<a class="nav-sub-item" href="restriction-managing.html"><span>Managing</span></a>
-<a class="nav-sub-item" href="restriction-app-watchdog.html"><span>App Watchdog</span></a>
-<a class="nav-sub-item" href="restriction-categories.html"><span>Categories</span></a></div></div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle enrolment sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Enroll Device</span></button></div>
+<a class="nav-sub-item" href="policies.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="policies.html#summary"><span>Master Summary</span></a>
+<a class="nav-sub-item" href="policies.html#managing"><span>Managing</span></a>
+<a class="nav-sub-item" href="policies.html#advanced"><span>App Watchdog</span></a>
+<a class="nav-sub-item" href="policies.html#all"><span>All Restrictions</span></a>
+</div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="enroll-device.html#overview" aria-label="Enroll Device"><span class="drop-arrow">›</span><span>Enroll Device</span></a></div>
 <div class="nav-sub">
-<a class="nav-sub-item" href="enroll-device.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="enroll-qr-code.html"><span>QR Enrolment</span></a>
-<a class="nav-sub-item" href="enroll-web-installer.html"><span>Web Installer</span></a>
-<a class="nav-sub-item" href="enroll-app-installer.html"><span>Installer App</span></a>
-<a class="nav-sub-item" href="enroll-manual-adb.html"><span>Manual ADB</span></a>
-<a class="nav-sub-item" href="enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle device sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Devices</span></button></div>
+<a class="nav-sub-item" href="enroll-device.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="enroll-device.html#choose"><span>Choose</span></a>
+<a class="nav-sub-item" href="enroll-device.html#qr-code"><span>QR Enrolment</span></a>
+<a class="nav-sub-item" href="enroll-device.html#web-installer"><span>Web Installer</span></a>
+<a class="nav-sub-item" href="enroll-device.html#app-installer"><span>Installer App</span></a>
+<a class="nav-sub-item" href="enroll-device.html#manual-adb"><span>Manual ADB</span></a>
+<a class="nav-sub-item" href="enroll-device.html#troubleshooting"><span>Troubleshooting</span></a>
+</div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="devices.html#overview" aria-label="Devices"><span class="drop-arrow">›</span><span>Devices</span></a></div>
 <div class="nav-sub">
-<a class="nav-sub-item" href="devices.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="devices-inventory.html"><span>Inventory</span></a>
-<a class="nav-sub-item" href="devices-details.html"><span>Details</span></a>
-<a class="nav-sub-item" href="devices-apps.html"><span>Apps</span></a>
-<a class="nav-sub-item" href="devices-monitor.html"><span>Monitor</span></a>
-<a class="nav-sub-item" href="devices-remote-actions.html"><span>Remote actions</span></a></div></div>
+<a class="nav-sub-item" href="devices.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="devices.html#inventory"><span>Inventory</span></a>
+<a class="nav-sub-item" href="devices.html#details"><span>Details</span></a>
+<a class="nav-sub-item" href="devices.html#apps"><span>Apps</span></a>
+<a class="nav-sub-item" href="devices.html#monitor"><span>Monitor</span></a>
+<a class="nav-sub-item" href="devices.html#remote-actions"><span>Remote actions</span></a>
+</div></div>
 <a class="nav-item" href="groups.html"><span>Groups</span></a>
 <a class="nav-item active" href="apps.html"><span>Apps</span></a>
 <a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
 <main class="main" id="maincontent">
 <div class="breadcrumb">FieldX <span>›</span> Documentation <span>›</span> Apps</div>
+<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
 <section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
 <h1>Apps</h1>
 <p>Three ways to get apps onto devices — force-push APKs, curate a private store, or approve from Managed Google Play — then track rollout to every unit.</p>
 <div class="meta-row"><span class="meta">Push Apps</span><span class="meta">Custom Store</span><span class="meta">Managed Play</span></div></section>
 <p id="result-count"></p>
 <div class="doc-note"><strong>Path</strong>Apps → pick a tab: Push Apps, Custom App Store, Managed Google Play.</div>
-<section class="category-block" id="push"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Push Apps</h2><p>Force-install APKs on managed devices, whether they are online now or come back later. Entries push the moment they are saved and enabled, and the detail sheet tracks rollout to every assigned unit.</p></div></div>
+<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
+<section class="category-block" id="push"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Push Apps</h2><p>Force-install APKs on managed devices, whether they are online now or come back later. Entries push the moment they are saved and enabled, and the detail sheet tracks rollout to every assigned unit.</p></div><span class="badge">5</span></div>
 <div class="articles">
 <article class="article" id="push-apps-list" data-search="push apps force auto install search add list status rows online offline queue"><button class="article-title"><span>Push Apps list</span><i>⌄</i></button><div class="article-body"><p>Push Apps is the force-install channel: apps go to devices instead of waiting to be fetched. Entries push the moment they are saved and enabled; online units install at once, offline units catch up on reconnect.</p><div class="field"><b>What it does</b><span>Pushes an app to devices immediately after saving its details. Devices must be online to receive it; offline units get it once they come back online.</span></div><div class="field"><b>List</b><span>Search box + Add button; each row shows app Name, Package Name and a status dot; Rows-per-page pagination.</span></div><div class="field"><b>Where to find it</b><span>Apps → Push Apps</span></div></div></article>
 <article class="article" id="push-app-detail" data-search="app detail assigned groups zone version version code package enabled auto update download link updated file size installed ring refresh rollout edit delete"><button class="article-title"><span>App detail</span><i>⌄</i></button><div class="article-body"><p>The detail sheet is one app’s mission control: who gets it, which build, whether it is on, where it downloads from — and the installed ring showing live rollout progress across the assignment.</p><div class="field"><b>Buttons</b><span><b>Refresh</b> re-reads state, <b>Start Rollout</b> begins deployment, <b>Edit</b> opens the editor, <b>Delete</b> removes the app.</span></div><div class="field"><b>Enable flow</b><span>New entries start Disabled — search the entry, click Enable (top-right), and a green dot marks it live; pushing begins for the assigned groups.</span></div><div class="table"><table><thead><tr><th scope="col">Field</th><th scope="col">Example</th></tr></thead><tbody><tr><td>Assigned Groups</td><td>All devices (in this Zone)</td></tr><tr><td>Zone</td><td>Global Zone</td></tr><tr><td>Version / Version Code</td><td>3.2.1 / 321</td></tr><tr><td>Package Name</td><td>com.example.sales</td></tr><tr><td>Enabled / Auto Update</td><td>On / Off toggles</td></tr><tr><td>Download Link</td><td>Direct APK URL with copy button</td></tr><tr><td>Last Updated / File size</td><td>Date-time / size in MB</td></tr></tbody></table></div><div class="field"><b>Installed ring</b><span>Live percentage of assigned devices with the app installed.</span></div></div></article>
@@ -75,17 +81,17 @@
 <div class="article-body"><p>A listing is the portal’s record of an app, not the app on devices. Deleting tidies the catalog; the installed copies stay until a restriction or action removes them — hence disable-before-delete.</p><div class="step">Push Apps → search → select the listing → Delete (top-right) → confirm.</div><div class="field"><b>Prefer Disable</b><span>Disabling beats deleting for cleanup-safe pauses; delete only to tidy the section.</span></div><div class="field warning"><b>Important</b><span>Deleting a listing does NOT uninstall the app from devices — add a “Force uninstall App” restriction for that.</span></div></div>
 </article>
 </div></section>
-<section class="category-block" id="addedit"><div class="cat-kicker">GUIDE</div><div class="catrow"><div><h2>Add & Edit dialogs</h2><p>From a bare APK link to a rollout-ready entry: fetch details automatically, verify signatures and metadata, set permissions and install windows, then target groups and save.</p></div></div>
+<section class="category-block" id="addedit"><div class="cat-kicker">GUIDE</div><div class="catrow"><div><h2>Add & Edit dialogs</h2><p>From a bare APK link to a rollout-ready entry: fetch details automatically, verify signatures and metadata, set permissions and install windows, then target groups and save.</p></div><span class="badge">2</span></div>
 <div class="articles">
 <article class="article" id="add-app-apk" data-search="add app apk download link fetch details https directly downloadable drive storage knowledge base"><button class="article-title"><span>Add via APK link</span><i>⌄</i></button><div class="article-body"><p>Adding starts with a link, not an upload. The portal fetches the APK, reads its metadata, and pre-fills the form — the admin’s job shifts from typing details to verifying them.</p><div class="step">1. Paste a Download Link → Fetch App Details.</div><div class="field"><b>Rules</b><span>Enter a valid APK link that is directly downloadable. Google Drive and file-storage links are not supported — HTTPS only. See the Knowledge Base article for details.</span></div><div class="field"><b>Signing</b><span>Sign APKs with both v1 and v2 schemes, as Android recommends.</span></div><div class="field"><b>Hosting</b><span>Upload to your own web hosting (e.g. Amazon S3, GoDaddy). FieldX never hosts apps on the portal for security reasons; OneDrive, Google Drive and Dropbox links are not supported.</span></div></div></article>
 <article class="article" id="edit-app" data-search="edit app metadata signatures md5 sha version sdk abi runtime permissions install window targeting groups save"><button class="article-title"><span>Edit app</span><i>⌄</i></button><div class="article-body"><p>Editing is where deployment policy lives: what build, who gets it, when it may install, and whether it updates itself. Save re-targets the whole assignment in one move.</p><div class="field"><b>Auto-filled metadata</b><span>Package Name, Version, Version Code, File size, Min/Target SDK, Supported ABI — plus md5 / sha1 / sha256 Signatures for verification.</span></div><div class="field"><b>Options</b><span>App Name, Managed Config (+ Add/Update), Runtime Permissions (e.g. Prompt), Auto update from Google Play Store.</span></div><div class="field"><b>Install window</b><span>Install anytime of the day, or around a time (~60 min) with a Time picker.</span></div><div class="field"><b>Targeting</b><span>All devices (in this Zone), or Push only to selected groups with an Assigned Groups picker. Finish with Save.</span></div></div></article>
 </div></section>
-<section class="category-block" id="store"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Custom App Store</h2><p>Your own private store with only the apps users need — curated centrally, downloaded by choice. Ideal for fleets with no Play Store, with per-group visibility.</p></div></div>
+<section class="category-block" id="store"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Custom App Store</h2><p>Your own private store with only the apps users need — curated centrally, downloaded by choice. Ideal for fleets with no Play Store, with per-group visibility.</p></div><span class="badge">1</span></div>
 <div class="articles">
 <article class="article" id="custom-app-store" data-search="custom app store plugin preinstall selective deploy enable green dot fill categories groups regions tutorial">
 <button class="article-title"><span>Custom App Store</span><i>⌄</i></button><div class="article-body"><p>The private store flips distribution around: instead of pushing apps out, admins publish a shelf and users pull what they need. Same catalog mechanics underneath — groups decide who sees what.</p><div class="field"><b>What it is</b><span>The FieldX Store plugin — an internal, enterprise app store for devices with no Play Store. It is NOT preinstalled, so you choose exactly which devices or groups get it.</span></div><div class="field"><b>Put the Store on devices</b><span>Downloads → Plugin Apps → copy icon next to App Store → Push Apps → Add → paste the link → pre-populated details → pick Groups → Submit → open the entry → Enable (green dot = live) → auto-installs.</span></div><div class="field"><b>Fill the Store</b><span>Host APKs yourself (e.g. S3) → App Store page → Add → paste link to prefill → pick a Category (20 + Home, multi-select) → pick device groups → Save — entries appear for users to download.</span></div><div class="field"><b>Why Groups</b><span>Group targeting makes the Store flexible: different apps for different devices, regions or zones.</span></div><div class="field"><b>Where to find it</b><span>Apps → Custom App Store (tutorial in the Knowledge Base)</span></div></div></article>
 </div></section>
-<section class="category-block" id="play"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Managed Google Play</h2><p>Approve public apps into your catalog through the embedded Play Store, then distribute them with FieldX targeting, managed configs and update modes.</p></div></div>
+<section class="category-block" id="play"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Managed Google Play</h2><p>Approve public apps into your catalog through the embedded Play Store, then distribute them with FieldX targeting, managed configs and update modes.</p></div><span class="badge">1</span></div>
 <div class="articles">
 <article class="article" id="managed-play" data-search="managed google play embedded store approve catalog search refresh edit rollout delete"><button class="article-title"><span>Managed Google Play</span><i>⌄</i></button><div class="article-body"><p>Managed Play bridges the public store and fleet control: approve once from Google’s catalog, then distribute with FieldX targeting, configs and update modes. No sideloading, no APK hosting.</p><div class="field"><b>What it does</b><span>Pick an app from the Google Play store and push it to devices. Click the Google Play icon to load the embedded store, then select apps into your App Catalog. List has Search, Play shortcut and refresh.</span></div><div class="field"><b>Detail extras</b><span>Everything in Push Apps, plus the Play Store listing URL, Managed Config JSON (e.g. VPN or server settings), Auto Update Mode (e.g. Default low-priority), and Grant Runtime Permissions (for v4.1+).</span></div><div class="field"><b>Buttons</b><span>Edit, Start Rollout, Delete.</span></div><div class="field"><b>Where to find it</b><span>Apps → Managed Google Play</span></div></div></article>
 </div></section>
@@ -93,7 +99,7 @@
 <div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Resources</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a></div><div><strong>Support</strong><a href="support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
 </main>
 <aside class="right"><div class="toc-label">On this page</div>
-<nav class="toc"><a href="#overview">Apps</a><a href="#push">Push</a><a href="#addedit">Add & Edit</a><a href="#store">Store</a><a href="#play">Play</a></nav>
+<nav class="toc"><a href="#overview">Apps</a><a href="#push-apps-list">Push Apps list</a><a href="#push-app-detail">App detail</a><a href="#split-xapk">Split APK & XAPK packages</a><a href="#updating-app">Updating an app</a><a href="#deleting-listing">Deleting a listing</a><a href="#add-app-apk">Add via APK link</a><a href="#edit-app">Edit app</a><a href="#custom-app-store">Custom App Store</a><a href="#managed-play">Managed Google Play</a></nav>
 <div class="right-card"><strong>Path</strong>Apps → pick a tab, then an app.</div></aside>
 </div>
 <script src="assets/full-index.js"></script>

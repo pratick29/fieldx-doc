@@ -1,126 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<title>FieldX Documentation — Web Based Enrolment</title><link rel="stylesheet" href="assets/minimal.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/icon.png"></head>
+<title>FieldX Documentation</title><link rel="stylesheet" href="assets/minimal.css">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<meta http-equiv="refresh" content="2;url=enroll-device.html#web-installer"></head>
 <body>
 <header class="header">
-  <button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
-  <a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
-  <button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
-  <div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
-  <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
-<nav class="header-links"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="support.html">Support</a></nav>
-<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
+<a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="35"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="35"><span class="brand-name">Docs</span></a>
 </header>
 <div class="layout" id="top">
-<aside class="sidebar">
-<div class="nav-group"><div class="nav-label">Start here</div>
-<a class="nav-item" href="index.html"><span>Home</span></a>
-<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
-<div class="nav-group"><div class="nav-label">Documentation</div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle restriction sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Restrictions</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="policies.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="restriction-master-summary.html"><span>Master Summary</span></a>
-<a class="nav-sub-item" href="restriction-managing.html"><span>Managing</span></a>
-<a class="nav-sub-item" href="restriction-app-watchdog.html"><span>App Watchdog</span></a>
-<a class="nav-sub-item" href="restriction-categories.html"><span>Categories</span></a></div></div>
-<div class="nav-drop open"><div class="nav-drop-row"><button class="nav-drop-main active" aria-label="Toggle enrolment sections" aria-expanded="true"><span class="drop-arrow">›</span><span>Enroll Device</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="enroll-device.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="enroll-qr-code.html"><span>QR Enrolment</span></a>
-<a class="nav-sub-item active" href="enroll-web-installer.html"><span>Web Installer</span></a>
-<a class="nav-sub-item" href="enroll-app-installer.html"><span>Installer App</span></a>
-<a class="nav-sub-item" href="enroll-manual-adb.html"><span>Manual ADB</span></a>
-<a class="nav-sub-item" href="enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle device sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Devices</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="devices.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="devices-inventory.html"><span>Inventory</span></a>
-<a class="nav-sub-item" href="devices-details.html"><span>Details</span></a>
-<a class="nav-sub-item" href="devices-apps.html"><span>Apps</span></a>
-<a class="nav-sub-item" href="devices-monitor.html"><span>Monitor</span></a>
-<a class="nav-sub-item" href="devices-remote-actions.html"><span>Remote actions</span></a></div></div>
-<a class="nav-item" href="groups.html"><span>Groups</span></a>
-<a class="nav-item" href="apps.html"><span>Apps</span></a>
-<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
 <main class="main" id="maincontent">
-<div class="breadcrumb">FieldX <span>›</span> <a href="enroll-device.html" style="color:#009cde">Enroll Device</a> <span>›</span> Web Based Enrolment</div>
-<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
-<section class="intro" id="overview"><div class="eyebrow">Enroll Device</div>
-<h1>Web Based Enrolment</h1>
-<p>A browser-driven flow for devices without zero-touch or QR support: USB cable, Chrome and USB debugging carry the agent over. Built for distributed and franchise deployments.</p>
-<div class="meta-row"><span class="meta">6 articles</span></div></section>
-<p id="result-count"></p>
-<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
-<section class="category-block" id="list"><div class="cat-kicker">ENROLMENT METHOD</div><div class="catrow"><div><h2>Web Based Enrolment</h2><p>A browser-driven flow for devices without zero-touch or QR support: USB cable, Chrome and USB debugging carry the agent over. Built for distributed and franchise deployments.</p></div><span class="badge">6</span></div>
-<div class="articles">
-<article class="article open" id="what-you-need">
-        <button class="article-title"><span>What you need</span><i>⌃</i></button>
-        <div class="article-body">
-          <div class="step">Android device that is new or factory-reset.</div>
-          <div class="step">USB cable.</div>
-          <div class="step">Recommended: Linux or Mac with the latest Chrome browser.</div>
-          <div class="step">Windows may require additional device drivers depending on the phone model.</div>
-        </div>
-      </article>
-<article class="article" id="step-1-prepare-the-android-device">
-        <button class="article-title"><span>Step 1 — Prepare the Android device</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Unbox a new device or factory reset an existing device.</div>
-          <div class="step">2. Power on the device.</div>
-          <div class="step">3. Complete the Android Setup Wizard.</div>
-          <div class="step">4. Do not add a Google account.</div>
-          <div class="step">5. Do not install third-party apps or perform extra setup.</div>
-        </div>
-      </article>
-<article class="article" id="step-2-enable-usb-debugging">
-        <button class="article-title"><span>Step 2 — Enable USB debugging</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Open <strong>Settings → About phone</strong>.</div>
-          <div class="step">2. Tap <strong>Build number</strong> 7 times.</div>
-          <div class="step">3. Open <strong>Developer options</strong>.</div>
-          <div class="step">4. Turn on <strong>USB debugging</strong> and confirm the warning.</div>
-        </div>
-      </article>
-<article class="article" id="step-3-prepare-your-computer">
-        <button class="article-title"><span>Step 3 — Prepare your computer</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>Close Android Studio and other tools that use ADB before starting the Web Installer. The Web Installer needs exclusive access to the device.</p>
-          <div class="callout">If an ADB server is running, stop it with <span class="code">adb kill-server</span>.</div>
-        </div>
-      </article>
-<article class="article" id="step-4-connect-and-enrol">
-        <button class="article-title"><span>Step 4 — Connect and enrol</span><i>⌄</i></button>
-        <div class="article-body">
-          <div class="step">1. Connect the Android device to your computer using USB.</div>
-          <div class="step">2. Connect the device to Wi-Fi.</div>
-          <div class="step">3. In Web Installer, select <strong>Connect your Device</strong>.</div>
-          <div class="step">4. Follow the on-screen provisioning steps.</div>
-          <div class="step">5. Wait while the FieldX EMM agent is installed and the device is provisioned.</div>
-        </div>
-      </article>
-<article class="article" id="step-5-verify-enrolment">
-        <button class="article-title"><span>Step 5 — Verify enrolment</span><i>⌄</i></button>
-        <div class="article-body">
-          <p>On the Android device, confirm that the FieldX EMM app/agent is installed.</p>
-          <p>In the FieldX Admin Portal, confirm that the device appears as enrolled and that the required policies and profiles are applied.</p>
-        </div>
-      </article>
-</div></section>
-<div class="empty">No matching documentation found.</div>
-<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Resources</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a></div><div><strong>Support</strong><a href="support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
+<div class="breadcrumb">FieldX <span>›</span> Documentation</div>
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Moved</h1>
+<p>This content now lives on the <a href="enroll-device.html#web-installer" style="color:#009cde">Enroll Device</a> page. Redirecting…</p></section>
+<div class="footer">FieldX Documentation · © 2026 Smargav Solutions</div>
 </main>
-<aside class="right"><div class="toc-label">On this page</div>
-<nav class="toc"><a href="#overview">Web Based Enrolment</a><a href="#what-you-need">What you need</a><a href="#step-1-prepare-the-android-device">Step 1 — Prepare the Android device</a><a href="#step-2-enable-usb-debugging">Step 2 — Enable USB debugging</a><a href="#step-3-prepare-your-computer">Step 3 — Prepare your computer</a><a href="#step-4-connect-and-enrol">Step 4 — Connect and enrol</a><a href="#step-5-verify-enrolment">Step 5 — Verify enrolment</a></nav>
-<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
 </div>
-<script src="assets/full-index.js"></script>
-<script src="assets/advanced-search.js"></script>
-<script src="assets/chat-demo.js"></script>
-<script src="assets/ui.js"></script>
+<script>window.location.replace('enroll-device.html#web-installer');</script>
 </body></html>

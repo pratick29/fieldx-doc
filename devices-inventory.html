@@ -1,76 +1,19 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
-<title>FieldX Documentation — Inventory & bulk actions</title><link rel="stylesheet" href="assets/minimal.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="icon" type="image/png" href="assets/icon.png"></head>
+<title>FieldX Documentation</title><link rel="stylesheet" href="assets/minimal.css">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<meta http-equiv="refresh" content="2;url=devices.html#inventory"></head>
 <body>
 <header class="header">
-<button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
-<a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
-<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
-<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
-<button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
-<nav class="header-links"><a href="index.html">Home</a><a href="faq.html">FAQ</a><a href="support.html">Support</a></nav>
-<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
+<a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="35"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="35"><span class="brand-name">Docs</span></a>
 </header>
 <div class="layout" id="top">
-<aside class="sidebar">
-<div class="nav-group"><div class="nav-label">Start here</div>
-<a class="nav-item" href="index.html"><span>Home</span></a>
-<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a></div>
-<div class="nav-group"><div class="nav-label">Documentation</div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle restriction sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Restrictions</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="policies.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="restriction-master-summary.html"><span>Master Summary</span></a>
-<a class="nav-sub-item" href="restriction-managing.html"><span>Managing</span></a>
-<a class="nav-sub-item" href="restriction-app-watchdog.html"><span>App Watchdog</span></a>
-<a class="nav-sub-item" href="restriction-categories.html"><span>Categories</span></a></div></div>
-<div class="nav-drop"><div class="nav-drop-row"><button class="nav-drop-main" aria-label="Toggle enrolment sections" aria-expanded="false"><span class="drop-arrow">›</span><span>Enroll Device</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="enroll-device.html"><span>Overview</span></a>
-<a class="nav-sub-item" href="enroll-qr-code.html"><span>QR Enrolment</span></a>
-<a class="nav-sub-item" href="enroll-web-installer.html"><span>Web Installer</span></a>
-<a class="nav-sub-item" href="enroll-app-installer.html"><span>Installer App</span></a>
-<a class="nav-sub-item" href="enroll-manual-adb.html"><span>Manual ADB</span></a>
-<a class="nav-sub-item" href="enroll-troubleshooting.html"><span>Troubleshooting</span></a></div></div>
-<div class="nav-drop open"><div class="nav-drop-row"><button class="nav-drop-main active" aria-label="Toggle device sections" aria-expanded="true"><span class="drop-arrow">›</span><span>Devices</span></button></div>
-<div class="nav-sub">
-<a class="nav-sub-item" href="devices.html"><span>Overview</span></a>
-<a class="nav-sub-item active" href="devices-inventory.html"><span>Inventory</span></a>
-<a class="nav-sub-item" href="devices-details.html"><span>Details</span></a>
-<a class="nav-sub-item" href="devices-apps.html"><span>Apps</span></a>
-<a class="nav-sub-item" href="devices-monitor.html"><span>Monitor</span></a>
-<a class="nav-sub-item" href="devices-remote-actions.html"><span>Remote actions</span></a></div></div>
-<a class="nav-item" href="groups.html"><span>Groups</span></a>
-<a class="nav-item" href="apps.html"><span>Apps</span></a>
-<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
 <main class="main" id="maincontent">
-<div class="breadcrumb">FieldX <span>›</span> <a href="devices.html" style="color:#009cde">Devices</a> <span>›</span> Inventory & bulk actions</div>
-<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
-<section class="intro" id="overview"><div class="eyebrow">Devices</div>
-<h1>Inventory & bulk actions</h1>
-<p>The fleet table lists every enrolled device with its identifiers and freshness, plus the gear menu behind it. Start here for daily checks, audits and bulk operations.</p>
-<div class="meta-row"><span class="meta">2 articles</span></div></section>
-<p id="result-count"></p>
-<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
-<section class="category-block" id="list"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Inventory & bulk actions</h2><p>The fleet table lists every enrolled device with its identifiers and freshness, plus the gear menu behind it. Start here for daily checks, audits and bulk operations.</p></div><span class="badge">2</span></div>
-<div class="articles">
-<article class="article" id="device-inventory-table" data-search="inventory table device id imei serial user alias last seen model manufacturer sync refresh"><button class="article-title"><span>Device inventory table</span><i>⌄</i></button><div class="article-body"><p>The inventory is the master list of every device FieldX manages. Each row is one endpoint with its identifiers, owner, freshness and hardware. Admins start here for daily fleet checks, rollout audits, and locating a single unit by IMEI or serial.</p><div class="field"><b>What it does</b><span>Lists every enrolled device with checkbox selection and columns for Device ID, IMEI Number, Serial Number, Device User, Alias, Last Seen Time, Model and Manufacturer.</span></div><div class="field"><b>Toolbar</b><span>Refresh icon re-reads the list; <b>Sync AE Devices</b> pulls the latest Android Enterprise inventory.</span></div><div class="field"><b>Where to find it</b><span>Devices (top-level console page)</span></div></div></article>
-<article class="article" id="bulk-actions-menu" data-search="bulk actions gear menu change zone assign group assign user unassign export csv bulk enroll delete archive"><button class="article-title"><span>Bulk actions menu</span><i>⌄</i></button><div class="article-body"><p>Bulk actions apply one operation to many devices at once. Tick checkboxes, open the gear menu, and the command runs across the whole selection — moving zones, assigning groups, exporting records, or removing units.</p><div class="field"><b>What it does</b><span>The gear icon applies one operation to every selected device.</span></div><div class="table"><table><thead><tr><th scope="col">Menu item</th><th scope="col">Effect</th></tr></thead><tbody><tr><td>Change Zone</td><td>Moves devices to another zone with its policies</td></tr><tr><td>Assign Group</td><td>Attaches devices to a group for policy targeting</td></tr><tr><td>Assign User to device</td><td>Links a device to a user</td></tr><tr><td>Unassign User</td><td>Releases the device from its user</td></tr><tr><td>Export CSV</td><td>Downloads the selected inventory rows</td></tr><tr><td>Bulk enroll Devices</td><td>Starts enrollment for a batch of units</td></tr><tr><td>Delete Devices</td><td>Removes units from management</td></tr><tr><td>Archive Devices</td><td>Archives units out of the active lists</td></tr></tbody></table></div></div></article>
-</div></section>
-<div class="empty">No matching documentation found.</div>
-<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="policies.html">Restrictions</a><a href="enroll-device.html">Enroll Device</a><a href="devices.html">Devices</a><a href="groups.html">Groups</a><a href="apps.html">Apps</a><a href="reports.html">Reports</a></div><div><strong>Resources</strong><a href="getting-started.html">Getting Started</a><a href="faq.html">FAQ</a><a href="changelog.html">Changelog</a></div><div><strong>Support</strong><a href="support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
+<div class="breadcrumb">FieldX <span>›</span> Documentation</div>
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Moved</h1>
+<p>This content now lives on the <a href="devices.html#inventory" style="color:#009cde">Devices</a> page. Redirecting…</p></section>
+<div class="footer">FieldX Documentation · © 2026 Smargav Solutions</div>
 </main>
-<aside class="right"><div class="toc-label">On this page</div>
-<nav class="toc"><a href="#overview">Inventory & bulk actions</a><a href="#device-inventory-table">Device inventory table</a><a href="#bulk-actions-menu">Bulk actions menu</a></nav>
-<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
 </div>
-<script src="assets/full-index.js"></script>
-<script src="assets/advanced-search.js"></script>
-<script src="assets/chat-demo.js"></script>
-<script src="assets/ui.js"></script>
+<script>window.location.replace('devices.html#inventory');</script>
 </body></html>

@@ -2,6 +2,7 @@
    Works on minimal theme (#docs-search) and classic theme (#searchBox). */
 (function(){
 'use strict';
+var ROOT=(typeof window!=='undefined'&&window.FX_ROOT)||'';
 var INDEX=[], READY=false;
 function norm(s){return (s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();}
 function termsOf(q){return norm(q).split(' ').filter(function(t){return t.length>1;});}
@@ -89,10 +90,10 @@ function initDropdown(){
     var q=box.value, terms=termsOf(q);
     if(q.trim().length<2||!terms.length){ dd.style.display='none'; dd.innerHTML=''; cur=[]; return; }
     var res=search(q,8); cur=res; idx=-1;
-    if(!res.length){ dd.style.display='block'; dd.innerHTML='<div class="fxs-no">No matches. Try “kiosk”, “vpn”, “wifi”, “ota”, “bluetooth”. <a href="search.html?q='+encodeURIComponent(q)+'">Full results →</a></div>'; return; }
-    dd.innerHTML='<div class="fxs-lb">'+res.length+' of results • ↑↓ + Enter • <a href="search.html?q='+encodeURIComponent(q)+'">see all</a></div>'+
-      res.map(function(r,i){return '<a class="fxs-it" data-i="'+i+'" href="'+r.e.url+'"><span class="fxs-g">'+esc(r.e.group||'Docs')+'</span><span class="fxs-t">'+hi(r.e.title,terms)+'</span><div class="fxs-c">'+esc(r.e.crumb||r.e.page||'')+'</div><div class="fxs-s">'+snippet(r.e,terms)+'</div></a>';}).join('')+
-      '<a class="fxs-ft" href="search.html?q='+encodeURIComponent(q)+'">See all results for “'+esc(q)+'” →</a>';
+    if(!res.length){ dd.style.display='block'; dd.innerHTML='<div class="fxs-no">No matches. Try “kiosk”, “vpn”, “wifi”, “ota”, “bluetooth”. <a href=""+ROOT+"search.html?q='+encodeURIComponent(q)+'">Full results →</a></div>'; return; }
+    dd.innerHTML='<div class="fxs-lb">'+res.length+' of results • ↑↓ + Enter • <a href=""+ROOT+"search.html?q='+encodeURIComponent(q)+'">see all</a></div>'+
+      res.map(function(r,i){return '<a class="fxs-it" data-i="'+i+'" href="'+ROOT+r.e.url+'"><span class="fxs-g">'+esc(r.e.group||'Docs')+'</span><span class="fxs-t">'+hi(r.e.title,terms)+'</span><div class="fxs-c">'+esc(r.e.crumb||r.e.page||'')+'</div><div class="fxs-s">'+snippet(r.e,terms)+'</div></a>';}).join('')+
+      '<a class="fxs-ft" href=""+ROOT+"search.html?q='+encodeURIComponent(q)+'">See all results for “'+esc(q)+'” →</a>';
     dd.style.display='block';
   }
   var deb=null;
@@ -107,7 +108,7 @@ function initDropdown(){
     } else if(e.key==='Enter'){ e.preventDefault();
       try{sessionStorage.setItem('fxq',box.value);}catch(err){}
       if(idx>=0&&items[idx]) window.location.href=items[idx].getAttribute('href');
-      else window.location.href='search.html?q='+encodeURIComponent(box.value);
+      else window.location.href='"+ROOT+"search.html?q='+encodeURIComponent(box.value);
     } else if(e.key==='Escape'){ dd.style.display='none'; box.value=''; fxUnmark(); filterLocal(''); box.blur(); }
   });
   dd.addEventListener('click',function(e){ try{sessionStorage.setItem('fxq',box.value);}catch(err){}
@@ -224,7 +225,7 @@ function initResultsPage(){
     if(f!=='All')res=res.filter(function(r){return r.e.group===f;});
     document.querySelector('#res-count').textContent=q?(res.length+' result(s) for “'+q+'”'):'Type above to search all documentation.';
     list.innerHTML=res.map(function(r){
-      return '<a class="fxs-it" href="'+r.e.url+'"><span class="fxs-g">'+esc(r.e.group||'Docs')+'</span><span class="fxs-t">'+hi(r.e.title,terms)+'</span><div class="fxs-c">'+esc(r.e.crumb||r.e.page||'')+' • '+esc(r.e.page||'')+'</div><div class="fxs-s">'+snippet(r.e,terms)+'</div></a>';
+      return '<a class="fxs-it" href="'+ROOT+r.e.url+'"><span class="fxs-g">'+esc(r.e.group||'Docs')+'</span><span class="fxs-t">'+hi(r.e.title,terms)+'</span><div class="fxs-c">'+esc(r.e.crumb||r.e.page||'')+' • '+esc(r.e.page||'')+'</div><div class="fxs-s">'+snippet(r.e,terms)+'</div></a>';
     }).join('')||(q?'<div class="fxs-no">Nothing found. Try fewer words, check spelling (“wifi”, not “wiffi”), or browse the <a href="policies.html">Restrictions reference</a>.</div>':'');
     list.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){try{sessionStorage.setItem('fxq',q);}catch(e){}});});
   }
@@ -258,11 +259,11 @@ document.addEventListener('DOMContentLoaded',function(){
   if(window.FX_FULL_INDEX&&window.FX_FULL_INDEX.length){
     INDEX=window.FX_FULL_INDEX.map(prep); ready();
     /* refresh in background when hosted over http */
-    try{fetch('assets/full-index.json').then(function(r){return r.json();}).then(function(j){
+    try{fetch(ROOT+'assets/full-index.json').then(function(r){return r.json();}).then(function(j){
       if(j&&j.length){INDEX=j.map(prep);initResultsPage();}
     }).catch(function(){});}catch(e){}
   } else {
-    try{fetch('assets/full-index.json').then(function(r){return r.json();}).then(function(j){
+    try{fetch(ROOT+'assets/full-index.json').then(function(r){return r.json();}).then(function(j){
       INDEX=(j||[]).map(prep); if(!INDEX.length)INDEX=crawlLocal(); ready();
     }).catch(function(){ INDEX=crawlLocal(); ready(); });}catch(e){ INDEX=crawlLocal(); ready(); }
   }

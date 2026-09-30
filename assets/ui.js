@@ -1,6 +1,7 @@
 /* FieldX Docs — UI enhancements: scrollspy, mobile TOC, to-top, progress, copy-link, master filter */
 (function(){
 'use strict';
+var ROOT=(typeof window!=='undefined'&&window.FX_ROOT)||'';
 function reduced(){return window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;}
 document.addEventListener('DOMContentLoaded',function(){
   /* reading progress */
@@ -39,27 +40,40 @@ document.addEventListener('DOMContentLoaded',function(){
     h.appendChild(b);
   });
 
-  /* master-table quick filter (Restrictions hub) */
-  var mf=document.querySelector('#master-filter');
-  if(mf){
-    mf.addEventListener('input',function(){
-      var q=mf.value.toLowerCase().trim(),n=0,total=0;
-      Array.prototype.forEach.call(document.querySelectorAll('.master tbody tr'),function(r){
-        total++;
+  /* master table: first 10 rows + expand, combined with quick filter */
+  var masterTbl=document.querySelector('.master tbody');
+  if(masterTbl){
+    var mrows=Array.prototype.slice.call(masterTbl.querySelectorAll('tr'));
+    var SHOW=10,mExpanded=false;
+    var mWrap=masterTbl.closest('.masterwrap');
+    var mBtn=document.createElement('button');mBtn.className='master-toggle';mBtn.type='button';
+    if(mWrap&&mWrap.parentNode)mWrap.parentNode.insertBefore(mBtn,mWrap.nextSibling);
+    var mf=document.querySelector('#master-filter'),mc=document.querySelector('#master-count');
+    function refreshMaster(){
+      var q=mf?mf.value.toLowerCase().trim():'',n=0;
+      mrows.forEach(function(r,i){
         var hit=!q||r.innerText.toLowerCase().indexOf(q)!==-1;
-        r.style.display=hit?'':'none';if(hit)n++;
+        var vis=hit&&(q||mExpanded||i<SHOW);
+        r.style.display=vis?'':'none';if(vis)n++;
       });
-      var c=document.querySelector('#master-count');
-      if(c)c.textContent=q?(n+' of '+total+' shown'):'';
-      var art=mf.closest('.article');if(art&&q)art.classList.add('open');
+      if(mc)mc.textContent=q?(n+' of '+mrows.length+' shown'):('Showing '+(mExpanded?('all '+mrows.length):('first '+Math.min(SHOW,mrows.length)+' of '+mrows.length)));
+      mBtn.style.display=q?'none':'';
+      mBtn.textContent=mExpanded?'Show less':'Show all '+mrows.length+' rows';
+      if(q&&mf){var art=mf.closest('.article');if(art&&!art.classList.contains('open')){art.classList.add('open');var ab=art.querySelector('.article-title');if(ab)ab.setAttribute('aria-expanded','true');}}
+    }
+    if(mf)mf.addEventListener('input',refreshMaster);
+    mBtn.addEventListener('click',function(){
+      mExpanded=!mExpanded;refreshMaster();
+      if(!mExpanded&&mWrap){try{mWrap.scrollIntoView({block:'start'});}catch(e){}}
     });
+    refreshMaster();
   }
 
   /* announcement banner (dismissible, remembered) */
   try{
     if(localStorage.getItem('fx-banner')!=='off'){
       var bn=document.createElement('div');bn.className='fx-banner';
-      bn.innerHTML='<span><strong>New:</strong> Restrictions are now 29 category pages — <a href="policies.html">Browse →</a></span><button aria-label="Dismiss announcement">✕</button>';
+      bn.innerHTML='<span><strong>New:</strong> All 120 restrictions on one page — <a href="'+ROOT+'policies.html">Browse →</a></span><button aria-label="Dismiss announcement">✕</button>';
       document.body.insertBefore(bn,document.body.firstChild);
       bn.querySelector('button').addEventListener('click',function(){
         bn.remove();try{localStorage.setItem('fx-banner','off');}catch(e){}
@@ -172,7 +186,7 @@ document.addEventListener('DOMContentLoaded',function(){
         var lb=document.createElement('div');lb.className='nav-label';lb.textContent='Recently viewed';g.appendChild(lb);
         others.forEach(function(r){
           var row=document.createElement('div');row.className='recent-row';
-          var a=document.createElement('a');a.className='nav-item';a.href=r.u;
+          var a=document.createElement('a');a.className='nav-item';a.href=ROOT+r.u;
           var s=document.createElement('span');s.textContent=r.t.length>26?r.t.slice(0,25)+'…':r.t;a.appendChild(s);row.appendChild(a);
           var x=document.createElement('button');x.className='recent-x';x.setAttribute('aria-label','Remove '+r.t+' from recently viewed');x.textContent='✕';
           x.addEventListener('click',function(ev){
@@ -289,16 +303,28 @@ document.addEventListener('DOMContentLoaded',function(){
     });
   });
 
-  /* scrollspy + to-top visibility */
+  /* scrollspy + to-top visibility (right rail AND sidebar submenu) */
   var spyLinks=Array.prototype.slice.call(document.querySelectorAll('.right .toc a[href^="#"]'));
   var spyMap={};
   spyLinks.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)spyMap[a.getAttribute('href')]=el;});
+  var curPage=(location.pathname.split('/').pop()||'index.html').split('?')[0];
+  var sideMap=[];
+  Array.prototype.forEach.call(document.querySelectorAll('.sidebar .nav-sub-item'),function(a){
+    var h=a.getAttribute('href')||'',parts=h.split('#');
+    if(parts.length<2||!parts[1])return;
+    if(parts[0]&&parts[0]!==curPage)return;
+    var el=document.getElementById(parts[1]);
+    if(el)sideMap.push({a:a,el:el,hash:'#'+parts[1]});
+  });
   var ticking=false;
   function onScroll(){
     ticking=false;
     var y=window.scrollY+140,cur=null;
     Object.keys(spyMap).forEach(function(h){if(spyMap[h].offsetTop<=y)cur=h;});
     spyLinks.forEach(function(a){a.classList.toggle('spy',a.getAttribute('href')===cur);});
+    var scur=null;
+    sideMap.forEach(function(s){if(s.el.offsetTop<=y)scur=s.hash;});
+    sideMap.forEach(function(s){s.a.classList.toggle('active',s.hash===scur);});
     st.classList.toggle('show',window.scrollY>600);
     prog();
   }
