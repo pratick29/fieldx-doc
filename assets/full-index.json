@@ -141,7 +141,7 @@
 "group": "Reference",
 "title": "Management modes",
 "crumb": "FieldX Documentation › Concepts › Management basics",
-"text": "On Android, control depth depends on provisioning. Device-owner mode (QR, Knox, ADB enrolment) grants full-device control including wipe and kiosk. Profile-owner mode manages only the work profile, leaving personal space alone — the BYOD compromise. Samsung Knox adds hardware-backed extras on…"
+"text": "On Android, control depth depends on provisioning. Device-owner mode (QR, Knox, ADB enrollment) grants full-device control including wipe and kiosk. Profile-owner mode manages only the work profile, leaving personal space alone — the BYOD compromise. Samsung Knox adds hardware-backed extras on…"
 },
 {
 "page": "concepts.html",
@@ -157,7 +157,7 @@
 "group": "Reference",
 "title": "What FieldX does differently",
 "crumb": "FieldX Documentation › Concepts › How FieldX fits together",
-"text": "Four traits shape the product. No Google dependency — enrolment, push and updates work without Play Services or Firebase, including de-Googled builds and blocked regions. Instant commands over a persistent connection instead of polling delays. Encrypted SMS fallback keeps lock, wipe and reboot…"
+"text": "Four traits shape the product. No Google dependency — enrollment, push and updates work without Play Services or Firebase, including de-Googled builds and blocked regions. Instant commands over a persistent connection instead of polling delays. Encrypted SMS fallback keeps lock, wipe and reboot…"
 },
 {
 "page": "concepts.html",
@@ -301,38 +301,38 @@
 "group": "Reference",
 "title": "Enroll Device",
 "crumb": "FieldX Documentation › Enroll Device",
-"text": "Set up and enrol an Android device with FieldX using QR code, Web Installer, or the FieldX Installer app."
+"text": "Set up and enroll an Android device with FieldX using QR code, Web Installer, or the FieldX Installer app."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#before-you-start",
 "group": "Reference",
 "title": "Before you start",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "⌄ Confirm with your device provider that QR code provisioning is supported. For a low-resolution camera, use the Simplified QR Code shown at the bottom of the enrolment page."
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
+"text": "⌄ Confirm with your device provider that QR code provisioning is supported. For a low-resolution camera, use the Simplified QR Code shown at the bottom of the enrollment page."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#step-1-start-the-device",
 "group": "Reference",
 "title": "Step 1 — Start the device",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ 1. Unbox and power on the device. 2. Wait for the initial Welcome screen. 3. Tap the same location on the Welcome screen 6 times quickly."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#step-2-scan-the-enrolment-qr-code",
 "group": "Reference",
-"title": "Step 2 — Scan the enrolment QR code",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "Position the device to scan the unique system enrolment QR code provided by your IT administrator."
+"title": "Step 2 — Scan the enrollment QR code",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
+"text": "Position the device to scan the unique system enrollment QR code provided by your IT administrator."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#step-3-connect-to-wi-fi",
 "group": "Reference",
 "title": "Step 3 — Connect to Wi-Fi",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ When the setup wizard asks for network configuration, use the following values: Setting Value Metered Detect automatically Proxy None IP Settings Static IP Address Static IP on the same subnet as the router Gateway Your local router/default gateway Network Prefix Length 24 DNS 1 34.226.155.149…"
 },
 {
@@ -340,7 +340,7 @@
 "url": "enroll-device.html#step-4-complete-provisioning",
 "group": "Reference",
 "title": "Step 4 — Complete provisioning",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ 1. The setup wizard downloads the FieldX Manager App. 2. Follow the remaining Android setup prompts. 3. Grant the requested permissions to the Manager App. 4. Select Done when the “You're all set!” screen appears."
 },
 {
@@ -348,15 +348,15 @@
 "url": "enroll-device.html#qr-requirements-reset",
 "group": "Reference",
 "title": "Requirements & factory reset",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ Device runs Android 8.0 or higher and is Android Enterprise ready. Fresh out of the box (no accounts) or factory reset — back up data first, reset wipes it."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#find-enrolment-qr",
 "group": "Reference",
-"title": "Find the enrolment QR code",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"title": "Find the enrollment QR code",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ 1. Login to the FieldX Web Portal → Downloads page → QR Code Provisioning tab. 2. If the code will not scan, use the Simplified QR Code just below it."
 },
 {
@@ -364,7 +364,7 @@
 "url": "enroll-device.html#after-scanning",
 "group": "Reference",
 "title": "After scanning",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌄ 1. Accept & Continue → follow setup → grant the Manager app its permissions. 2. If Google Protect warns during install, choose Install Anyway. 3. The device appears under New Devices — tag it and move it to its zone. 4. Next: apply Restrictions and push Apps to it."
 },
 {
@@ -372,31 +372,31 @@
 "url": "enroll-device.html#how-to-use-the-simplified-qr-code",
 "group": "Reference",
 "title": "How to use the Simplified QR Code",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "⌃ 1. Scan the Simplified QR Code shown on the FieldX enrolment page. 2. Wait for the FieldX Manager App to download and install. 3. The Manager App asks you to scan an Activation QR Code or enter an Access Code. 4. Open Activation QR Code in the FieldX Admin Portal. 5. Use the corresponding…"
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
+"text": "⌃ 1. Scan the Simplified QR Code shown on the FieldX enrollment page. 2. Wait for the FieldX Manager App to download and install. 3. The Manager App asks you to scan an Activation QR Code or enter an Access Code. 4. Open Activation QR Code in the FieldX Admin Portal. 5. Use the corresponding…"
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#find-your-activation-details",
 "group": "Reference",
 "title": "Find your activation details",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "⌃ Open Enrol Devices → Activation QR Code in the FieldX Admin Portal. The page provides the information required to register a device, including: Organization Code Access Code Activation QR Code"
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#enrol-a-device-to-your-organization",
 "group": "Reference",
-"title": "Enrol a device to your organization",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "⌄ 1. Open the FieldX Android application. 2. Select Enrol Device . 3. Scan the Activation QR Code or enter the Access Code manually. 4. Complete the enrolment steps shown on the device."
+"title": "Enroll a device to your organization",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
+"text": "⌄ 1. Open the FieldX Android application. 2. Select Enroll Device . 3. Scan the Activation QR Code or enter the Access Code manually. 4. Complete the enrollment steps shown on the device."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#when-is-server-url-required",
 "group": "Reference",
 "title": "When is Server URL required?",
-"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
 "text": "The Server URL field is required only when connecting to a privately hosted MDM server."
 },
 {
@@ -404,7 +404,7 @@
 "url": "enroll-device.html#what-you-need",
 "group": "Reference",
 "title": "What you need",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "⌃ Android device that is new or factory-reset. USB cable. Recommended: Linux or Mac with the latest Chrome browser. Windows may require additional device drivers depending on the phone model."
 },
 {
@@ -412,7 +412,7 @@
 "url": "enroll-device.html#step-1-prepare-the-android-device",
 "group": "Reference",
 "title": "Step 1 — Prepare the Android device",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "⌄ 1. Unbox a new device or factory reset an existing device. 2. Power on the device. 3. Complete the Android Setup Wizard. 4. Do not add a Google account. 5. Do not install third-party apps or perform extra setup."
 },
 {
@@ -420,7 +420,7 @@
 "url": "enroll-device.html#step-2-enable-usb-debugging",
 "group": "Reference",
 "title": "Step 2 — Enable USB debugging",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "⌄ 1. Open Settings → About phone . 2. Tap Build number 7 times. 3. Open Developer options . 4. Turn on USB debugging and confirm the warning."
 },
 {
@@ -428,23 +428,23 @@
 "url": "enroll-device.html#step-3-prepare-your-computer",
 "group": "Reference",
 "title": "Step 3 — Prepare your computer",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "Close Android Studio and other tools that use ADB before starting the Web Installer. The Web Installer needs exclusive access to the device. If an ADB server is running, stop it with adb kill-server ."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#step-4-connect-and-enrol",
 "group": "Reference",
-"title": "Step 4 — Connect and enrol",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"title": "Step 4 — Connect and enroll",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "⌄ 1. Connect the Android device to your computer using USB. 2. Connect the device to Wi-Fi. 3. In Web Installer, select Connect your Device . 4. Follow the on-screen provisioning steps. 5. Wait while the FieldX EMM agent is installed and the device is provisioned."
 },
 {
 "page": "enroll-device.html",
 "url": "enroll-device.html#step-5-verify-enrolment",
 "group": "Reference",
-"title": "Step 5 — Verify enrolment",
-"crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
+"title": "Step 5 — Verify enrollment",
+"crumb": "FieldX Documentation › Enroll Device › Web Based Enrollment",
 "text": "On the Android device, confirm that the FieldX EMM app/agent is installed. In the FieldX Admin Portal, confirm that the device appears as enrolled and that the required policies and profiles are applied."
 },
 {
@@ -452,7 +452,7 @@
 "url": "enroll-device.html#requirements",
 "group": "Reference",
 "title": "Requirements",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "⌃ Both phones must be connected to the same Wi-Fi network. The target device should be new or freshly factory-reset. The target device should have no Google/user accounts or other device-management app. Wireless debugging must be enabled on the target device. The installer phone needs a FieldX…"
 },
 {
@@ -460,7 +460,7 @@
 "url": "enroll-device.html#prepare-the-target-device",
 "group": "Reference",
 "title": "Prepare the target device",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "⌄ 1. Complete the Android setup wizard without signing in to a Google or other account. 2. Open Settings → About phone . 3. Tap Build number 7 times to enable Developer options. 4. Open Settings → System → Developer options . 5. Enable Wireless debugging . 6. Keep the Wireless debugging screen open…"
 },
 {
@@ -468,7 +468,7 @@
 "url": "enroll-device.html#sign-in-to-fieldx-installer",
 "group": "Reference",
 "title": "Sign in to FieldX Installer",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "⌄ 1. Open FieldX Installer on the installer phone. 2. Enter your FieldX email and password. 3. Tap Sign in . The session may be restored automatically on future launches."
 },
 {
@@ -476,7 +476,7 @@
 "url": "enroll-device.html#step-1-pair-the-device",
 "group": "Reference",
 "title": "Step 1 — Pair the device",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "⌄ QR pairing 1. On the target: Settings → Developer options → Wireless debugging → Pair device with QR code. 2. On the installer phone, tap Show pairing QR . 3. Scan the QR shown on the installer phone using the target device. Pairing code 1. On the target, choose Pair device with pairing code. 2.…"
 },
 {
@@ -484,7 +484,7 @@
 "url": "enroll-device.html#step-2-connect-to-the-device",
 "group": "Reference",
 "title": "Step 2 — Connect to the device",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "Important: The pairing port and connect port are different. Do not use the pairing port as the connect port. Auto-discover: Select Scan for devices , choose the target, then select Connect when the connection port is available. Manual: Enter the target IP address and the ADB connect port shown…"
 },
 {
@@ -492,7 +492,7 @@
 "url": "enroll-device.html#step-3-set-up-the-device",
 "group": "Reference",
 "title": "Step 3 — Set up the device",
-"crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
+"crumb": "FieldX Documentation › Enroll Device › App Based Enrollment",
 "text": "⌄ 1. Select Start setup . 2. Wait while provisioning runs. 3. Do not disconnect the device or close FieldX Installer. 4. When complete, the app displays “All done! FieldX is installed and this device is ready to use.” 5. Select Disconnect and check the target device."
 },
 {
@@ -500,7 +500,7 @@
 "url": "enroll-device.html#manual-prereqs",
 "group": "Reference",
 "title": "Before you start",
-"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrollment (ADB)",
 "text": "⌄ Remove all accounts (Settings → Accounts / Google Accounts) and back up data. Install Platform Tools (Windows/Mac/Linux) and try a spare device first. Copy the Organization code + Access code from the Enrollment Code page."
 },
 {
@@ -508,7 +508,7 @@
 "url": "enroll-device.html#manual-commands",
 "group": "Reference",
 "title": "Run the commands",
-"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrollment (ADB)",
 "text": "⌄ Download the Manager APK from Plugin Apps, rename to io.fieldx.app.devices-release.apk. Connect with USB debugging on, then run one by one: adb install io.fieldx.app.devices-release.apk adb shell dpm set-device-owner io.fieldx.app.devices/io.droid.admin.DeviceAdminRx adb shell appops set…"
 },
 {
@@ -516,7 +516,7 @@
 "url": "enroll-device.html#manual-bulk-script",
 "group": "Reference",
 "title": "Bulk tip: script it",
-"crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
+"crumb": "FieldX Documentation › Enroll Device › Manual enrollment (ADB)",
 "text": "Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once."
 },
 {
@@ -525,7 +525,7 @@
 "group": "Reference",
 "title": "Web Installer does not detect my device",
 "crumb": "FieldX Documentation › Enroll Device › Troubleshooting",
-"text": "⌄ Confirm USB debugging is enabled. Try another USB cable or USB port. On Windows, make sure the correct device drivers are installed. Close Android Studio and other ADB tools. If required, run adb kill-server , reconnect the device, and retry."
+"text": "⌄ Usually a host-side connection problem: debugging off, a charge-only cable, missing Windows drivers, or another ADB tool holding the device. Confirm USB debugging is enabled. Try another USB cable or USB port. On Windows, make sure the correct device drivers are installed. Close Android Studio…"
 },
 {
 "page": "enroll-device.html",
@@ -533,7 +533,7 @@
 "group": "Reference",
 "title": "FieldX Installer cannot find my device",
 "crumb": "FieldX Documentation › Enroll Device › Troubleshooting",
-"text": "⌄ Make sure both phones are connected to the same Wi-Fi network. Confirm Wireless debugging is enabled on the target device. For pairing-code mode, keep the target's pairing screen open."
+"text": "⌄ Almost always discovery: the two phones are on different networks (or bands), wireless debugging is off, or the pairing screen timed out. Make sure both phones are connected to the same Wi-Fi network. Confirm Wireless debugging is enabled on the target device. For pairing-code mode, keep the…"
 },
 {
 "page": "enroll-device.html",
@@ -541,7 +541,7 @@
 "group": "Reference",
 "title": "Wireless ADB disconnects during setup",
 "crumb": "FieldX Documentation › Enroll Device › Troubleshooting",
-"text": "⌄ Return to the Connect step. Reconnect the target device. Return to Set up device. Select Start setup again."
+"text": "⌄ Wireless ADB drops on sleep, network switches, or pairing expiry. Reconnecting and restarting setup resumes cleanly — nothing is half-applied. Return to the Connect step. Reconnect the target device. Return to Set up device. Select Start setup again."
 },
 {
 "page": "enroll-device.html",
@@ -549,7 +549,7 @@
 "group": "Reference",
 "title": "Setup says the device is not ready",
 "crumb": "FieldX Documentation › Enroll Device › Troubleshooting",
-"text": "⌄ Make sure the target device has no signed-in accounts. Make sure no other device-management app is installed. If necessary, factory reset the device and repeat the preparation steps."
+"text": "⌄ The agent refuses mixed state: leftover accounts or another management app block device-owner provisioning by Android design. Make sure the target device has no signed-in accounts. Make sure no other device-management app is installed. If necessary, factory reset the device and repeat the…"
 },
 {
 "page": "faq.html",
@@ -606,6 +606,54 @@
 "title": "Does it work without Google services?",
 "crumb": "FieldX Documentation › FAQ › Questions",
 "text": "⌄ Answer Yes — no Play Store or Firebase required, including regions where Google is blocked. google play firebase de-googled blocked regions"
+},
+{
+"page": "faq.html",
+"url": "faq.html#how-devices-enroll",
+"group": "Reference",
+"title": "How do devices get enrolled?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Over QR code, web installer, another phone, manual ADB, or pre-installed images — about three minutes per unit. Start at Enroll Device → faq enroll qr device setup provisioning"
+},
+{
+"page": "faq.html",
+"url": "faq.html#which-platforms",
+"group": "Reference",
+"title": "Which platforms are supported?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Android 5–15 (stock, Knox and custom builds), select Linux hardware, and Apple phones, tablets and Macs. faq platforms android apple linux versions"
+},
+{
+"page": "faq.html",
+"url": "faq.html#what-is-kiosk",
+"group": "Reference",
+"title": "What is kiosk mode?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Locking a device to one app (POS, signage) or a small approved set (classrooms, carts), enabled and exited remotely with a PIN. faq kiosk lockdown single multi app pin"
+},
+{
+"page": "faq.html",
+"url": "faq.html#how-apps-deployed",
+"group": "Reference",
+"title": "How are apps deployed?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Silently pushed by group with staged rollouts, offered through a private store, or approved from Managed Google Play. See Apps → faq apps deploy silent rollout store play"
+},
+{
+"page": "faq.html",
+"url": "faq.html#offline-control",
+"group": "Reference",
+"title": "What happens with no data connection?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Encrypted SMS commands still lock, wipe, reboot and sync, and queued installs land on reconnect. See Devices → faq offline sms no data control lock wipe"
+},
+{
+"page": "faq.html",
+"url": "faq.html#what-are-groups",
+"group": "Reference",
+"title": "How are fleets organized?",
+"crumb": "FieldX Documentation › FAQ › Questions",
+"text": "⌄ Answer Devices collect into groups (bulk policies and apps) inside zones (site isolation with delegated admins). See Groups → faq groups zones bulk policies apps"
 },
 {
 "page": "getting-started.html",
@@ -821,7 +869,7 @@
 "group": "Reference",
 "title": "View full master list",
 "crumb": "FieldX Documentation › Restrictions › Full master list",
-"text": "⌄ Category Restriction Available for App Installation & Permissions Disallow App Installs from all Sources FieldX EMM, Android Enterprise App Installation & Permissions Disallow App Installs from Sources except Google Play Store, adb & MDM FieldX EMM, Android Enterprise App Installation &…"
+"text": "⌄ Category Restriction Available for App Installation & Permissions Allow Installing or Sideloading Apps FieldX EMM, Android Enterprise App Installation & Permissions Allow App Installs from Unknown Sources FieldX EMM, Android Enterprise App Installation & Permissions Allow App Installs Unknown…"
 },
 {
 "page": "policies.html",
@@ -1837,7 +1885,7 @@
 "group": "Reference",
 "title": "Reports",
 "crumb": "FieldX Documentation › Reports",
-"text": "Reference for fleet visibility — report types, alerts, scheduling, exports and history retention. Send your source data to expand this to full reference depth."
+"text": "Reference for fleet visibility — report types, alerts, scheduling, exports and history retention. Every report starts from live inventory and ends as proof: for audits, for SLAs, for Monday morning."
 },
 {
 "page": "reports.html",
@@ -1845,7 +1893,7 @@
 "group": "Reference",
 "title": "Standard reports",
 "crumb": "FieldX Documentation › Reports › Report types",
-"text": "⌄ Standard reports are the five ready-made lenses on a fleet: what you own, whether it complies, what software it runs, how updates are going, and how much data and uptime that consumed. Report Shows Inventory Hardware/software per device: model, OS, apps, memory Compliance Policy adherence and…"
+"text": "⌄ Standard reports are the five ready-made lenses on a fleet. Each one filters by group, zone, status or time range, so the same report serves a technician checking ten units and an auditor reviewing ten thousand. Report Shows Answers Inventory Hardware and software per device: model, OS, apps,…"
 },
 {
 "page": "reports.html",
@@ -1853,7 +1901,23 @@
 "group": "Reference",
 "title": "Alerts",
 "crumb": "FieldX Documentation › Reports › Report types",
-"text": "Alerts watch thresholds so humans don’t have to: a device goes dark, leaves its geofence, runs low, or falls out of compliance — the right admins hear about it by email, SMS or webhook. What it does Triggers on offline, geofence exit, low battery or non-compliance — delivered by email, SMS or…"
+"text": "Alerts watch thresholds so humans don’t have to. Instead of patrolling dashboards, admins define what counts as trouble once — then get told the moment it happens, on the channel that reaches them. Trigger Example Offline Device silent for longer than the grace period Geofence exit Delivery unit…"
+},
+{
+"page": "reports.html",
+"url": "reports.html#scheduled-reports",
+"group": "Reference",
+"title": "Scheduled reports",
+"crumb": "FieldX Documentation › Reports › Report types",
+"text": "Scheduled reports run themselves: pick a report, its filters and recipients once, and it arrives by email on cadence — daily health digests, weekly compliance packs, monthly SLA evidence. Automation replaces the Monday-morning export ritual and guarantees the audit trail exists before anyone asks…"
+},
+{
+"page": "reports.html",
+"url": "reports.html#export-formats",
+"group": "Reference",
+"title": "Export formats",
+"crumb": "FieldX Documentation › Reports › Report types",
+"text": "Every report exports three ways. CSV feeds spreadsheets and scripts, Excel arrives formatted for sharing with non-technical readers, and PDF freezes a timestamped snapshot for compliance files. Exports honor the active filters, so what you see is what leaves the building."
 },
 {
 "page": "reports.html",
@@ -1861,7 +1925,7 @@
 "group": "Reference",
 "title": "Retention & delivery",
 "crumb": "FieldX Documentation › Reports › History & scheduling",
-"text": "Retention decides how far back you can investigate; delivery decides how reports reach you. Short history with manual exports suits daily ops; unlimited history with scheduled mail suits audits and SLA proof. Standard plans keep 60-day device history; extended plans add unlimited history, scheduled…"
+"text": "Retention decides how far back you can investigate; delivery decides how reports reach you. Short history with manual exports suits daily ops and keeps storage lean. Standard plans keep 60-day device history; extended plans add unlimited history, scheduled email and custom BI export for ERP and…"
 },
 {
 "page": "restrictions.html",
