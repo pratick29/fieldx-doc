@@ -154,6 +154,8 @@ body,.header,.sidebar,.main,.article,.table,.step,.doc-note,.right-card,.to-top,
 .help-card .help-btns{display:flex;gap:8px}
 .help-card .help-btns button{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:7px;padding:6px 16px;font-size:12px;cursor:pointer}
 .help-card .help-btns button:hover{border-color:var(--accent);color:var(--accent)}
+.verify-flag{display:inline-block;background:rgba(255,171,0,.18);border:1px solid rgba(255,171,0,.55);color:#7A4100;border-radius:999px;font-size:10.5px;font-weight:700;padding:1px 9px;margin-left:6px;vertical-align:1px}
+[data-theme="dark"] .verify-flag{color:#FFD666}
 .recent-row{display:flex;align-items:center;gap:2px}
 .recent-row .nav-item{flex:1;min-width:0}
 .recent-x{border:0;background:none;color:var(--subtle);cursor:pointer;font-size:11px;padding:6px 8px;border-radius:7px;line-height:1;flex:none;opacity:0}

@@ -21,7 +21,7 @@
 "group": "Reference",
 "title": "Push Apps list",
 "crumb": "FieldX Documentation › Apps › Push Apps",
-"text": "⌄ Push Apps is the force-install channel: apps go to devices instead of waiting to be fetched. Entries push the moment they are saved and enabled; online units install at once, offline units catch up on reconnect. What it does Pushes an app to devices immediately after saving its details. Devices…"
+"text": "Push Apps is the force-install channel: apps go to devices instead of waiting to be fetched. Entries push the moment they are saved and enabled; online units install at once, offline units catch up on reconnect. What it does Pushes an app to devices immediately after saving its details. Devices…"
 },
 {
 "page": "apps.html",
@@ -37,7 +37,7 @@
 "group": "Reference",
 "title": "Split APK & XAPK packages",
 "crumb": "FieldX Documentation › Apps › Push Apps",
-"text": "⌄ Split packages exist because stores slim downloads per device configuration. FieldX sidesteps the store entirely, so it wants the raw APKs re-packed plainly — zips of zips and bundled folders will not install. Split APKs Generate the APKs, put them in one folder, and zip the folder contents — the…"
+"text": "Split packages exist because stores slim downloads per device configuration. FieldX sidesteps the store entirely, so it wants the raw APKs re-packed plainly — zips of zips and bundled folders will not install. Split APKs Generate the APKs, put them in one folder, and zip the folder contents — the…"
 },
 {
 "page": "apps.html",
@@ -53,7 +53,7 @@
 "group": "Reference",
 "title": "Deleting a listing",
 "crumb": "FieldX Documentation › Apps › Push Apps",
-"text": "⌄ A listing is the portal’s record of an app, not the app on devices. Deleting tidies the catalog; the installed copies stay until a restriction or action removes them — hence disable-before-delete. Push Apps → search → select the listing → Delete (top-right) → confirm. Prefer Disable Disabling…"
+"text": "A listing is the portal’s record of an app, not the app on devices. Deleting tidies the catalog; the installed copies stay until a restriction or action removes them — hence disable-before-delete. Push Apps → search → select the listing → Delete (top-right) → confirm. Prefer Disable Disabling beats…"
 },
 {
 "page": "apps.html",
@@ -61,7 +61,7 @@
 "group": "Reference",
 "title": "Add via APK link",
 "crumb": "FieldX Documentation › Apps › Add & Edit dialogs",
-"text": "⌄ Adding starts with a link, not an upload. The portal fetches the APK, reads its metadata, and pre-fills the form — the admin’s job shifts from typing details to verifying them. 1. Paste a Download Link → Fetch App Details. Rules Enter a valid APK link that is directly downloadable. Google Drive…"
+"text": "Adding starts with a link, not an upload. The portal fetches the APK, reads its metadata, and pre-fills the form — the admin’s job shifts from typing details to verifying them. 1. Paste a Download Link → Fetch App Details. Rules Enter a valid APK link that is directly downloadable. Google Drive and…"
 },
 {
 "page": "apps.html",
@@ -69,7 +69,7 @@
 "group": "Reference",
 "title": "Edit app",
 "crumb": "FieldX Documentation › Apps › Add & Edit dialogs",
-"text": "⌄ Editing is where deployment policy lives: what build, who gets it, when it may install, and whether it updates itself. Save re-targets the whole assignment in one move. Auto-filled metadata Package Name, Version, Version Code, File size, Min/Target SDK, Supported ABI — plus md5 / sha1 / sha256…"
+"text": "Editing is where deployment policy lives: what build, who gets it, when it may install, and whether it updates itself. Save re-targets the whole assignment in one move. Auto-filled metadata Package Name, Version, Version Code, File size, Min/Target SDK, Supported ABI — plus md5 / sha1 / sha256…"
 },
 {
 "page": "apps.html",
@@ -77,7 +77,7 @@
 "group": "Reference",
 "title": "Custom App Store",
 "crumb": "FieldX Documentation › Apps",
-"text": "⌄ The private store flips distribution around: instead of pushing apps out, admins publish a shelf and users pull what they need. Same catalog mechanics underneath — groups decide who sees what. What it is The FieldX Store plugin — an internal, enterprise app store for devices with no Play Store.…"
+"text": "The private store flips distribution around: instead of pushing apps out, admins publish a shelf and users pull what they need. Same catalog mechanics underneath — groups decide who sees what. What it is The FieldX Store plugin — an internal, enterprise app store for devices with no Play Store. It…"
 },
 {
 "page": "apps.html",
@@ -85,7 +85,7 @@
 "group": "Reference",
 "title": "Managed Google Play",
 "crumb": "FieldX Documentation › Apps",
-"text": "⌄ Managed Play bridges the public store and fleet control: approve once from Google’s catalog, then distribute with FieldX targeting, configs and update modes. No sideloading, no APK hosting. What it does Pick an app from the Google Play store and push it to devices. Click the Google Play icon to…"
+"text": "Managed Play bridges the public store and fleet control: approve once from Google’s catalog, then distribute with FieldX targeting, configs and update modes. No sideloading, no APK hosting. What it does Pick an app from the Google Play store and push it to devices. Click the Google Play icon to…"
 },
 {
 "page": "changelog.html",
@@ -104,6 +104,78 @@
 "text": "⌄ Navigation Restrictions split into 29 category sub-pages with a sidebar dropdown; collapsible master list; unified menus everywhere. Theme Minix blue palette with Public Sans/Barlow, dark mode with saved preference, FieldX logo and favicon. Search Full-text ranked search with light-blue…"
 },
 {
+"page": "concepts.html",
+"url": "concepts.html#overview",
+"group": "Reference",
+"title": "Concepts",
+"crumb": "FieldX Documentation › Concepts",
+"text": "The ideas behind device management — what MDM is, how fleets are organized, and how FieldX fits together. Start here if the terminology is new."
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#what-is-mdm",
+"group": "Reference",
+"title": "What is MDM?",
+"crumb": "FieldX Documentation › Concepts › Management basics",
+"text": "Mobile Device Management means controlling phones and tablets from a central console instead of touching each one. An admin enrolls devices once, then pushes apps, policies and updates remotely — across ten units or ten thousand. Without MDM, every change is manual labor per device; with it, one…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#uem-mdm-emm",
+"group": "Reference",
+"title": "UEM vs MDM vs EMM",
+"crumb": "FieldX Documentation › Concepts › Management basics",
+"text": "Three acronyms for overlapping ideas. MDM (Mobile Device Management) covers phones and tablets. EMM (Enterprise Mobility Management) is Android-focused management with app and content controls. UEM (Unified Endpoint Management) extends the same thinking to every endpoint — laptops, desktops, IoT…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#ownership-models",
+"group": "Reference",
+"title": "Ownership models",
+"crumb": "FieldX Documentation › Concepts › Management basics",
+"text": "Who owns the device decides how strictly you may lock it. Corporate-owned units accept full control — lockdown, wipe, kiosk. BYOD (personal devices) gets partial control through work profiles that wall off company data without touching photos and messages. Shared devices (classrooms, nurse carts,…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#management-modes",
+"group": "Reference",
+"title": "Management modes",
+"crumb": "FieldX Documentation › Concepts › Management basics",
+"text": "On Android, control depth depends on provisioning. Device-owner mode (QR, Knox, ADB enrolment) grants full-device control including wipe and kiosk. Profile-owner mode manages only the work profile, leaving personal space alone — the BYOD compromise. Samsung Knox adds hardware-backed extras on…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#fieldx-parts",
+"group": "Reference",
+"title": "Console, agents, channel, server",
+"crumb": "FieldX Documentation › Concepts › How FieldX fits together",
+"text": "FieldX has four moving parts. The console is the web portal where admins enroll devices, build groups, write restrictions and watch reports. On-device agents (Manager, Updater, Kiosk, Store) enforce those decisions locally. A persistent channel carries commands instantly instead of waiting for…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#fieldx-different",
+"group": "Reference",
+"title": "What FieldX does differently",
+"crumb": "FieldX Documentation › Concepts › How FieldX fits together",
+"text": "Four traits shape the product. No Google dependency — enrolment, push and updates work without Play Services or Firebase, including de-Googled builds and blocked regions. Instant commands over a persistent connection instead of polling delays. Encrypted SMS fallback keeps lock, wipe and reboot…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#fieldx-day",
+"group": "Reference",
+"title": "A day with FieldX",
+"crumb": "FieldX Documentation › Concepts › How FieldX fits together",
+"text": "Morning: dashboard shows overnight compliance and offline units. Midday: a new store batch enrols by QR into its group and inherits policies automatically. Afternoon: a staged app update rolls to 10% while signage kiosks report uptime. Evening: scheduled reports land in inboxes. The pattern…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#fieldx-terms",
+"group": "Reference",
+"title": "Terms you will meet",
+"crumb": "FieldX Documentation › Concepts › How FieldX fits together",
+"text": "Group, Zone and Bucket organize devices at different levels. Restriction, Policy and Order control behavior with priority. Kiosk, OTA, Watchdog, Geofence and App Limits are the headline features. Hover any dotted term anywhere in these docs for its one-line definition."
+},
+{
 "page": "devices.html",
 "url": "devices.html#overview",
 "group": "Reference",
@@ -117,7 +189,7 @@
 "group": "Reference",
 "title": "Device inventory table",
 "crumb": "FieldX Documentation › Devices › Inventory & bulk actions",
-"text": "⌄ The inventory is the master list of every device FieldX manages. Each row is one endpoint with its identifiers, owner, freshness and hardware. Admins start here for daily fleet checks, rollout audits, and locating a single unit by IMEI or serial. What it does Lists every enrolled device with…"
+"text": "The inventory is the master list of every device FieldX manages. Each row is one endpoint with its identifiers, owner, freshness and hardware. Admins start here for daily fleet checks, rollout audits, and locating a single unit by IMEI or serial. What it does Lists every enrolled device with…"
 },
 {
 "page": "devices.html",
@@ -141,7 +213,7 @@
 "group": "Reference",
 "title": "System & battery",
 "crumb": "FieldX Documentation › Devices › Details tab",
-"text": "⌄ System parameters show live resource pressure: CPU load, memory and storage fill, battery charge and temperature. Power and screen fields reveal how the device is actually used day to day. Check here first when a single device misbehaves. System CPU load and frequency, memory and storage usage…"
+"text": "System parameters show live resource pressure: CPU load, memory and storage fill, battery charge and temperature. Power and screen fields reveal how the device is actually used day to day. Check here first when a single device misbehaves. System CPU load and frequency, memory and storage usage with…"
 },
 {
 "page": "devices.html",
@@ -149,7 +221,7 @@
 "group": "Reference",
 "title": "Network & EMM",
 "crumb": "FieldX Documentation › Devices › Details tab",
-"text": "⌄ Network fields show how the device reaches the world: Wi-Fi network and address, cellular SIMs and roaming, Bluetooth peers, VPN state and location mode. The EMM fields describe the management agent itself — its version, installation type and resource use. Wi-Fi Connected SSID, IP and MAC…"
+"text": "Network fields show how the device reaches the world: Wi-Fi network and address, cellular SIMs and roaming, Bluetooth peers, VPN state and location mode. The EMM fields describe the management agent itself — its version, installation type and resource use. Wi-Fi Connected SSID, IP and MAC address,…"
 },
 {
 "page": "devices.html",
@@ -157,7 +229,7 @@
 "group": "Reference",
 "title": "Installed Apps",
 "crumb": "FieldX Documentation › Devices › Installed Apps & App Limits",
-"text": "⌄ The installed-apps table is the software truth for one device: every package with its usage, data consumption, installed versus expected version, and whether it is a system app. Send App Action pushes commands to the selected apps. What it does Per-app table with Send App Action dropdown, Filter…"
+"text": "The installed-apps table is the software truth for one device: every package with its usage, data consumption, installed versus expected version, and whether it is a system app. Send App Action pushes commands to the selected apps. What it does Per-app table with Send App Action dropdown, Filter…"
 },
 {
 "page": "devices.html",
@@ -165,7 +237,7 @@
 "group": "Reference",
 "title": "App Limits",
 "crumb": "FieldX Documentation › Devices › Installed Apps & App Limits",
-"text": "⌄ App limits cap how long an app may run each day. Set a day, an app and a time budget; the platform enforces it and lists the active limits below. Built for shared, classroom and kids devices. What it does Caps daily usage per app — pick Day, App Name, Hour, Minutes, then Submit. Existing limits…"
+"text": "App limits cap how long an app may run each day. Set a day, an app and a time budget; the platform enforces it and lists the active limits below. Built for shared, classroom and kids devices. What it does Caps daily usage per app — pick Day, App Name, Hour, Minutes, then Submit. Existing limits…"
 },
 {
 "page": "devices.html",
@@ -181,7 +253,7 @@
 "group": "Reference",
 "title": "Device logs",
 "crumb": "FieldX Documentation › Devices › Monitor",
-"text": "⌄ Logs are the timestamped diary of device and agent events. Filter by type, search the text, refresh for the latest entries — the first stop for “what happened at 2am?” questions. What it does Time-stamped log messages with Search, Type filter (e.g. All Logs) and refresh. Where to find it Devices…"
+"text": "Logs are the timestamped diary of device and agent events. Filter by type, search the text, refresh for the latest entries — the first stop for “what happened at 2am?” questions. What it does Time-stamped log messages with Search, Type filter (e.g. All Logs) and refresh. Where to find it Devices →…"
 },
 {
 "page": "devices.html",
@@ -189,7 +261,7 @@
 "group": "Reference",
 "title": "Applied Restrictions",
 "crumb": "FieldX Documentation › Devices › Monitor",
-"text": "⌄ Applied restrictions show the effective policy set on this exact unit: type, value and source policy name. When a device behaves unexpectedly, this table names the responsible rule. What it does Searchable table of effective restrictions: Restriction Type, Value, Restriction Name. Use it to…"
+"text": "Applied restrictions show the effective policy set on this exact unit: type, value and source policy name. When a device behaves unexpectedly, this table names the responsible rule. What it does Searchable table of effective restrictions: Restriction Type, Value, Restriction Name. Use it to confirm…"
 },
 {
 "page": "devices.html",
@@ -205,7 +277,7 @@
 "group": "Reference",
 "title": "Screen View",
 "crumb": "FieldX Documentation › Devices › Remote actions",
-"text": "⌄ Screen view streams the live device screen and forwards taps, swipes and typing as if you held the unit. Unattended access skips on-device acceptance — the feature that makes kiosk and headless fleets supportable. What it does Watch and control the live screen — tap, swipe and type as if holding…"
+"text": "Screen view streams the live device screen and forwards taps, swipes and typing as if you held the unit. Unattended access skips on-device acceptance — the feature that makes kiosk and headless fleets supportable. What it does Watch and control the live screen — tap, swipe and type as if holding…"
 },
 {
 "page": "devices.html",
@@ -253,7 +325,7 @@
 "group": "Reference",
 "title": "Step 2 — Scan the enrolment QR code",
 "crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "⌄ Position the device to scan the unique system enrolment QR code provided by your IT administrator."
+"text": "Position the device to scan the unique system enrolment QR code provided by your IT administrator."
 },
 {
 "page": "enroll-device.html",
@@ -325,7 +397,7 @@
 "group": "Reference",
 "title": "When is Server URL required?",
 "crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrolment",
-"text": "⌄ The Server URL field is required only when connecting to a privately hosted MDM server."
+"text": "The Server URL field is required only when connecting to a privately hosted MDM server."
 },
 {
 "page": "enroll-device.html",
@@ -357,7 +429,7 @@
 "group": "Reference",
 "title": "Step 3 — Prepare your computer",
 "crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
-"text": "⌄ Close Android Studio and other tools that use ADB before starting the Web Installer. The Web Installer needs exclusive access to the device. If an ADB server is running, stop it with adb kill-server ."
+"text": "Close Android Studio and other tools that use ADB before starting the Web Installer. The Web Installer needs exclusive access to the device. If an ADB server is running, stop it with adb kill-server ."
 },
 {
 "page": "enroll-device.html",
@@ -373,7 +445,7 @@
 "group": "Reference",
 "title": "Step 5 — Verify enrolment",
 "crumb": "FieldX Documentation › Enroll Device › Web Based Enrolment",
-"text": "⌄ On the Android device, confirm that the FieldX EMM app/agent is installed. In the FieldX Admin Portal, confirm that the device appears as enrolled and that the required policies and profiles are applied."
+"text": "On the Android device, confirm that the FieldX EMM app/agent is installed. In the FieldX Admin Portal, confirm that the device appears as enrolled and that the required policies and profiles are applied."
 },
 {
 "page": "enroll-device.html",
@@ -413,7 +485,7 @@
 "group": "Reference",
 "title": "Step 2 — Connect to the device",
 "crumb": "FieldX Documentation › Enroll Device › App Based Enrolment",
-"text": "⌄ Important: The pairing port and connect port are different. Do not use the pairing port as the connect port. Auto-discover: Select Scan for devices , choose the target, then select Connect when the connection port is available. Manual: Enter the target IP address and the ADB connect port shown…"
+"text": "Important: The pairing port and connect port are different. Do not use the pairing port as the connect port. Auto-discover: Select Scan for devices , choose the target, then select Connect when the connection port is available. Manual: Enter the target IP address and the ADB connect port shown…"
 },
 {
 "page": "enroll-device.html",
@@ -445,7 +517,7 @@
 "group": "Reference",
 "title": "Bulk tip: script it",
 "crumb": "FieldX Documentation › Enroll Device › Manual enrolment (ADB)",
-"text": "⌄ Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once."
+"text": "Turn the commands into a script and target units with adb -s SERIAL to flash many devices at once."
 },
 {
 "page": "enroll-device.html",
@@ -573,7 +645,7 @@
 "group": "Reference",
 "title": "Requirements",
 "crumb": "FieldX Documentation › Getting Started › First device & requirements",
-"text": "⌄ FieldX is built for constrained environments: decade-old Android versions, de-Googled builds, offline sites with SMS fallback. If the hardware runs Android 5 or better and you have a browser, you can start. Platforms Android 5–15 (stock, Knox, or custom AOSP), select Linux builds, Apple…"
+"text": "FieldX is built for constrained environments: decade-old Android versions, de-Googled builds, offline sites with SMS fallback. If the hardware runs Android 5 or better and you have a browser, you can start. Platforms Android 5–15 (stock, Knox, or custom AOSP), select Linux builds, Apple…"
 },
 {
 "page": "getting-started.html",
@@ -581,7 +653,7 @@
 "group": "Reference",
 "title": "Next steps",
 "crumb": "FieldX Documentation › Getting Started › First device & requirements",
-"text": "⌄ One enrolled device turns reading into operating. Bulk enrollment repeats the QR flow across hundreds of units; the Devices inventory is where you will spend most days. Continue with Enroll Device → Or explore Devices → next steps enroll bulk explore console"
+"text": "One enrolled device turns reading into operating. Bulk enrollment repeats the QR flow across hundreds of units; the Devices inventory is where you will spend most days. Continue with Enroll Device → Or explore Devices →"
 },
 {
 "page": "groups.html",
@@ -597,7 +669,7 @@
 "group": "Reference",
 "title": "What groups are for",
 "crumb": "FieldX Documentation › Groups › Groups table",
-"text": "⌄ Definition A group is a logical classification of managed devices — by Department, Branch, Type of use, or Hardware characteristics (e.g. Production Devices, Beta Devices, Internal Test Users, Samsung Devices, TV Boxes). Grouping lets admins manage devices at scale. Use cases Selectively push…"
+"text": "Definition A group is a logical classification of managed devices — by Department, Branch, Type of use, or Hardware characteristics (e.g. Production Devices, Beta Devices, Internal Test Users, Samsung Devices, TV Boxes). Grouping lets admins manage devices at scale. Use cases Selectively push Apps,…"
 },
 {
 "page": "groups.html",
@@ -605,7 +677,7 @@
 "group": "Reference",
 "title": "Three ways to fill a group",
 "crumb": "FieldX Documentation › Groups › Groups table",
-"text": "⌄ Groups fill three ways, often combined: hand-picked assignment for precision, bulk lists for migrations, and automatic rules for everything that keeps arriving. Manual addition — pick devices and assign them. Bulk addition — paste IMEI/Serial lists. Automatic grouping — rules place devices…"
+"text": "Groups fill three ways, often combined: hand-picked assignment for precision, bulk lists for migrations, and automatic rules for everything that keeps arriving. Manual addition — pick devices and assign them. Bulk addition — paste IMEI/Serial lists. Automatic grouping — rules place devices…"
 },
 {
 "page": "groups.html",
@@ -613,7 +685,7 @@
 "group": "Reference",
 "title": "Groups table",
 "crumb": "FieldX Documentation › Groups",
-"text": "⌄ The groups table is the starting point for fleet organization: every group with its freshness, member count and attached policies and apps. Row actions run commands on the whole group or delete it. What it does Lists all groups with columns for Name, Last Updated Time, Devices, Restrictions and…"
+"text": "The groups table is the starting point for fleet organization: every group with its freshness, member count and attached policies and apps. Row actions run commands on the whole group or delete it. What it does Lists all groups with columns for Name, Last Updated Time, Devices, Restrictions and…"
 },
 {
 "page": "groups.html",
@@ -629,7 +701,7 @@
 "group": "Reference",
 "title": "Edit group & rules",
 "crumb": "FieldX Documentation › Groups › Group Details tab",
-"text": "⌄ A group’s rules are living filters: every enrolled device is checked immediately, and every new device is evaluated on arrival. Tighten or loosen the rules and membership follows without manual moves. What it does Change the Group Name, Max. Devices, Reported-Since date or AE-only flag, then Save…"
+"text": "A group’s rules are living filters: every enrolled device is checked immediately, and every new device is evaluated on arrival. Tighten or loosen the rules and membership follows without manual moves. What it does Change the Group Name, Max. Devices, Reported-Since date or AE-only flag, then Save .…"
 },
 {
 "page": "groups.html",
@@ -645,7 +717,7 @@
 "group": "Reference",
 "title": "Bulk Assign / Delete Devices",
 "crumb": "FieldX Documentation › Groups › Group Details tab",
-"text": "⌄ Bulk membership trades clicks for lists: paste identifiers once instead of ticking hundreds of rows. Built for migrations, batch rollouts and decom fleets. What it does Paste comma-separated IMEI or Serial numbers (pick which with the radio buttons) and Submit — to add units in bulk, or remove…"
+"text": "Bulk membership trades clicks for lists: paste identifiers once instead of ticking hundreds of rows. Built for migrations, batch rollouts and decom fleets. What it does Paste comma-separated IMEI or Serial numbers (pick which with the radio buttons) and Submit — to add units in bulk, or remove them…"
 },
 {
 "page": "groups.html",
@@ -661,7 +733,7 @@
 "group": "Reference",
 "title": "Group devices",
 "crumb": "FieldX Documentation › Groups › Devices tab",
-"text": "⌄ The Devices tab answers “who is in this group?” — members with freshness and hardware, plus group-scoped Send, Assign, Remove and Export. Pagination keeps thousand-device groups usable. Toolbar Send Action , Assign Group , Remove Group , Export CSV and a Search-device box. Columns Device ID, IMEI…"
+"text": "The Devices tab answers “who is in this group?” — members with freshness and hardware, plus group-scoped Send, Assign, Remove and Export. Pagination keeps thousand-device groups usable. Toolbar Send Action , Assign Group , Remove Group , Export CSV and a Search-device box. Columns Device ID, IMEI…"
 },
 {
 "page": "groups.html",
@@ -669,7 +741,7 @@
 "group": "Reference",
 "title": "Group restrictions",
 "crumb": "FieldX Documentation › Groups › Restrictions tab",
-"text": "⌄ The Restrictions tab shows which policies ride with the group and their Order — the priority ladder that decides which rule wins when policies overlap. What it does Lists attached restriction policies as Name / Order rows — Order is the priority: higher-priority policies win on the same devices.…"
+"text": "The Restrictions tab shows which policies ride with the group and their Order — the priority ladder that decides which rule wins when policies overlap. What it does Lists attached restriction policies as Name / Order rows — Order is the priority: higher-priority policies win on the same devices.…"
 },
 {
 "page": "groups.html",
@@ -677,7 +749,7 @@
 "group": "Reference",
 "title": "Group apps",
 "crumb": "FieldX Documentation › Groups › Apps tab",
-"text": "⌄ The Apps tab shows which apps the group carries, their versions against expected versions, and per-row Download and Shell shortcuts for direct handling. Columns App Status (e.g. Enabled), Name, Version, Package Name, Last Updated Time — plus per-row Download and Shell cmd shortcuts. Where to find…"
+"text": "The Apps tab shows which apps the group carries, their versions against expected versions, and per-row Download and Shell shortcuts for direct handling. Columns App Status (e.g. Enabled), Name, Version, Package Name, Last Updated Time — plus per-row Download and Shell cmd shortcuts. Where to find…"
 },
 {
 "page": "index.html",
@@ -1781,7 +1853,7 @@
 "group": "Reference",
 "title": "Alerts",
 "crumb": "FieldX Documentation › Reports › Report types",
-"text": "⌄ Alerts watch thresholds so humans don’t have to: a device goes dark, leaves its geofence, runs low, or falls out of compliance — the right admins hear about it by email, SMS or webhook. What it does Triggers on offline, geofence exit, low battery or non-compliance — delivered by email, SMS or…"
+"text": "Alerts watch thresholds so humans don’t have to: a device goes dark, leaves its geofence, runs low, or falls out of compliance — the right admins hear about it by email, SMS or webhook. What it does Triggers on offline, geofence exit, low battery or non-compliance — delivered by email, SMS or…"
 },
 {
 "page": "reports.html",
@@ -1789,7 +1861,7 @@
 "group": "Reference",
 "title": "Retention & delivery",
 "crumb": "FieldX Documentation › Reports › History & scheduling",
-"text": "⌄ Retention decides how far back you can investigate; delivery decides how reports reach you. Short history with manual exports suits daily ops; unlimited history with scheduled mail suits audits and SLA proof. Standard plans keep 60-day device history; extended plans add unlimited history,…"
+"text": "Retention decides how far back you can investigate; delivery decides how reports reach you. Short history with manual exports suits daily ops; unlimited history with scheduled mail suits audits and SLA proof. Standard plans keep 60-day device history; extended plans add unlimited history, scheduled…"
 },
 {
 "page": "restrictions.html",
