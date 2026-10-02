@@ -61,6 +61,8 @@ button,input{font:inherit}
 .doc-note{border:1px solid #BFE7F7;background:#F4FAFE;border-radius:9px;padding:15px 16px;margin-bottom:45px;font-size:14px;color:var(--muted)}
 .doc-note strong{display:block;color:var(--text);margin-bottom:2px}
 .category-block{scroll-margin-top:100px;margin:65px 0}
+.intro{scroll-margin-top:88px}
+article[id]{scroll-margin-top:84px}
 .cat-kicker{font-size:9px;letter-spacing:.12em;font-weight:800;color:#919EAB}
 .catrow{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:18px}
 .catrow h2{font-size:25px;line-height:1.25;letter-spacing:-.035em;margin:4px 0 5px}
