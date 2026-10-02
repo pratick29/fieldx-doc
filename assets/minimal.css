@@ -116,9 +116,6 @@ button,input{font:inherit}
 .mobile-toc a{display:block;padding:8px 14px;font-size:11.5px;color:var(--muted);border-top:1px solid var(--border)}
 .mobile-toc a:hover{color:var(--accent)}
 @media(max-width:1050px){.mobile-toc{display:block}}
-.head-link{border:0;background:none;color:var(--subtle);cursor:pointer;font-size:.65em;margin-left:10px;opacity:0;vertical-align:middle;padding:2px 4px}
-h1:hover .head-link,h2:hover .head-link,.head-link:focus-visible{opacity:1}
-.head-link.copied{color:var(--accent);opacity:1}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .master-filter{width:100%;height:40px;border:1px solid var(--border);border-radius:9px;background:#F4F6F8;padding:0 14px;outline:none;font-size:13px;margin:4px 0 6px;color:var(--text)}
 .master-filter:focus{background:var(--bg);border-color:var(--accent)}
@@ -154,6 +151,10 @@ body,.header,.sidebar,.main,.article,.table,.step,.doc-note,.right-card,.to-top,
 .help-card .help-btns{display:flex;gap:8px}
 .help-card .help-btns button{border:1px solid var(--border);background:transparent;color:var(--text);border-radius:7px;padding:6px 16px;font-size:12px;cursor:pointer}
 .help-card .help-btns button:hover{border-color:var(--accent);color:var(--accent)}
+.copy-btn{float:right;border:1px solid var(--border);background:transparent;color:var(--subtle);border-radius:6px;font-size:10.5px;padding:2px 9px;cursor:pointer;margin-left:8px;font-family:inherit}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+.copy-btn.copied{border-color:var(--accent);color:var(--accent)}
+.code.copyable{cursor:pointer;border-bottom:1px dashed var(--accent)}
 .verify-flag{display:inline-block;background:rgba(255,171,0,.18);border:1px solid rgba(255,171,0,.55);color:#7A4100;border-radius:999px;font-size:10.5px;font-weight:700;padding:1px 9px;margin-left:6px;vertical-align:1px}
 [data-theme="dark"] .verify-flag{color:#FFD666}
 .recent-row{display:flex;align-items:center;gap:2px}
@@ -214,7 +215,12 @@ body.docs-collapsed .layout{grid-template-columns:minmax(0,1fr) 220px}
 .a11y-switch i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
 .a11y-switch[aria-checked="true"]{background:var(--accent);border-color:var(--accent)}
 .a11y-switch[aria-checked="true"] i{left:22px}
+.a11y-hc{width:44px;height:24px;border-radius:999px;border:1px solid var(--border);background:#C4CDD5;position:relative;cursor:pointer;flex:none;padding:0}
+.a11y-hc i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .15s}
+.a11y-hc[aria-checked="true"]{background:#000;border-color:#000}
+.a11y-hc[aria-checked="true"] i{left:22px}
 [data-theme="dark"] .a11y-switch{background:#454F5B}
+[data-theme="dark"] .a11y-hc{background:#454F5B}
 .theme-toggle:hover,.font-toggle:hover{border-color:var(--accent);color:var(--accent)}
 :root{color-scheme:light}
 [data-theme="dark"]{--text:#FFFFFF;--muted:#919EAB;--subtle:#637381;--border:rgba(145,158,171,.2);--bg:#141A21;--sidebar:#1C252E;--accent:#009cde;--accent-soft:rgba(0,156,222,.16);--th-bg:#28323D;color-scheme:dark}
@@ -244,6 +250,10 @@ body.docs-collapsed .layout{grid-template-columns:minmax(0,1fr) 220px}
 [data-theme="dark"] .fxs-it,[data-theme="dark"] .fxs-lb{border-color:rgba(145,158,171,.2)}
 [data-theme="dark"] .fxs-t{color:#fff}
 [data-theme="dark"] .fxs-s,[data-theme="dark"] .fxs-c,[data-theme="dark"] .fxs-no{color:#919EAB}
+/* high contrast (forces light HC palette) */
+[data-contrast="high"]{--text:#000;--muted:#1F2937;--subtle:#4B5563;--border:#6B7280;--bg:#fff;--sidebar:#fff;--accent:#005F8F;--accent-soft:#D6EDF7;--th-bg:#E5E7EB;color-scheme:light}
+[data-contrast="high"] .article-body a,[data-contrast="high"] .doc-note a,[data-contrast="high"] .right-card a{text-decoration:underline}
+[data-contrast="high"] :focus-visible{outline-width:3px}
 @media print{
  [data-theme="dark"]{--bg:#fff;--text:#1C252E;--muted:#637381;--subtle:#919EAB;--border:#DFE3E8;--sidebar:#F9FAFB;--accent-soft:#E8F6FD;color-scheme:light}
 }
