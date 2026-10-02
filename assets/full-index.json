@@ -669,7 +669,7 @@
 "group": "Reference",
 "title": "Create account",
 "crumb": "FieldX Documentation › Getting Started › Account & console",
-"text": "⌄ Your account lives on the FieldX console — the web portal where every fleet action happens. Sign up, verify, log in: the dashboard you land on is the same surface you will operate daily. 1. Go to admin.fieldx.io/accounts/register → Sign Up. 2. Verify email → Login at admin.fieldx.io/users/login .…"
+"text": "Your account lives on the FieldX console — the web portal where every fleet action happens. Sign up, verify, log in: the dashboard you land on is the same surface you will operate daily. 1. Go to admin.fieldx.io/accounts/register → Sign Up. 2. Verify email → Login at admin.fieldx.io/users/login .…"
 },
 {
 "page": "getting-started.html",
@@ -677,7 +677,7 @@
 "group": "Reference",
 "title": "Console tour",
 "crumb": "FieldX Documentation › Getting Started › Account & console",
-"text": "⌄ The console mirrors the fleet’s structure: health up top, inventory and grouping in the middle, policies-apps-kiosk-OTA as the levers, reports and downloads as the outputs. Learn this map once and every guide below makes sense. Area Use Dashboard Live fleet status, online/offline, compliance…"
+"text": "The console mirrors the fleet’s structure: health up top, inventory and grouping in the middle, policies-apps-kiosk-OTA as the levers, reports and downloads as the outputs. Learn this map once and every guide below makes sense. Area Use Dashboard Live fleet status, online/offline, compliance donut,…"
 },
 {
 "page": "getting-started.html",
@@ -685,7 +685,7 @@
 "group": "Reference",
 "title": "First device (fastest path — QR)",
 "crumb": "FieldX Documentation › Getting Started › First device & requirements",
-"text": "⌄ The first device proves the whole pipeline — console entry, QR code, agent install, policy download — in about three minutes. Everything after it is the same flow at scale. 1. Console → Devices → Add → QR Enrollment → download/print QR. 2. Factory-reset Android → tap 6x on welcome → scan QR. 3.…"
+"text": "The first device proves the whole pipeline — console entry, QR code, agent install, policy download — in about three minutes. Everything after it is the same flow at scale. 1. Console → Devices → Add → QR Enrollment → download/print QR. 2. Factory-reset Android → tap 6x on welcome → scan QR. 3.…"
 },
 {
 "page": "getting-started.html",
