@@ -69,13 +69,7 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   }catch(e){}
 
-  /* print / PDF button in the right rail */
-  var rightRail=document.querySelector('.right');
-  if(rightRail){
-    var pb2=document.createElement('button');pb2.className='print-btn';pb2.textContent='Print / PDF';
-    pb2.addEventListener('click',function(){window.print();});
-    rightRail.insertBefore(pb2,rightRail.firstChild);
-  }
+  /* print / PDF button removed per request */
 
   /* glossary tooltips */
   var GLOSS=[
@@ -138,59 +132,9 @@ document.addEventListener('DOMContentLoaded',function(){
     if(main0)glossWalk(main0);
   }catch(e){}
 
-  /* was-this-helpful widget before the footer */
-  try{
-    var foot=document.querySelector('main .footer');
-    if(foot){
-      var page=location.pathname.split('/').pop()||'index.html';
-      var key='fx-help-'+page;
-      var hw=document.createElement('div');hw.className='help-card';
-      var voted=null;try{voted=localStorage.getItem(key);}catch(e2){}
-      if(voted){hw.innerHTML='<strong>Thanks for your feedback!</strong><span>You rated this page '+voted+'.</span>';}
-      else{
-        hw.innerHTML='<strong>Was this page helpful?</strong><span class="help-btns"><button data-v="helpful">Yes</button><button data-v="needs work">No</button></span>';
-        Array.prototype.forEach.call(hw.querySelectorAll('button'),function(b){
-          b.addEventListener('click',function(){
-            try{localStorage.setItem(key,b.getAttribute('data-v'));}catch(e3){}
-            hw.innerHTML='<strong>Thanks for your feedback!</strong>';
-          });
-        });
-      }
-      foot.parentNode.insertBefore(hw,foot);
-    }
-  }catch(e){}
+  /* helpful widget removed per request */
 
-  /* recently viewed in the sidebar */
-  try{
-    var side=document.querySelector('.sidebar');
-    if(side){
-      var cur={t:document.title.replace(/^FieldX Documentation\s*[—–-]\s*/,'').trim()||'Page',u:location.pathname.split('/').pop()||'index.html'};
-      var rec=[];try{rec=JSON.parse(localStorage.getItem('fx-recent')||'[]');}catch(e4){rec=[];}
-      rec=[cur].concat(rec.filter(function(r){return r.u!==cur.u;})).slice(0,6);
-      try{localStorage.setItem('fx-recent',JSON.stringify(rec));}catch(e5){}
-      var others=rec.filter(function(r){return r.u!==cur.u;}).slice(0,5);
-      if(others.length){
-        var g=document.createElement('div');g.className='nav-group recent-group';
-        var lb=document.createElement('div');lb.className='nav-label';lb.textContent='Recently viewed';g.appendChild(lb);
-        others.forEach(function(r){
-          var row=document.createElement('div');row.className='recent-row';
-          var a=document.createElement('a');a.className='nav-item';a.href=ROOT+r.u;
-          var s=document.createElement('span');s.textContent=r.t.length>26?r.t.slice(0,25)+'…':r.t;a.appendChild(s);row.appendChild(a);
-          var x=document.createElement('button');x.className='recent-x';x.setAttribute('aria-label','Remove '+r.t+' from recently viewed');x.textContent='✕';
-          x.addEventListener('click',function(ev){
-            ev.preventDefault();ev.stopPropagation();
-            var kept=[];try{kept=JSON.parse(localStorage.getItem('fx-recent')||'[]');}catch(e6){kept=[];}
-            kept=kept.filter(function(k){return k.u!==r.u;});
-            try{localStorage.setItem('fx-recent',JSON.stringify(kept));}catch(e7){}
-            row.remove();
-            if(!g.querySelector('.recent-row'))g.remove();
-          });
-          row.appendChild(x);g.appendChild(row);
-        });
-        side.appendChild(g);
-      }
-    }
-  }catch(e){}
+  /* recently viewed removed per request */
 
   /* screen-reader announcements — only when the Accessibility toggle is ON */
   var A11Y_ON=false;try{A11Y_ON=localStorage.getItem('fx-a11y')==='on';}catch(e){}

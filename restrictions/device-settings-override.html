@@ -13,8 +13,6 @@
 <button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
 <div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
 <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
-<nav class="header-links"><a href="../index.html">Home</a><a href="../faq.html">FAQ</a><a href="../support.html">Support</a></nav>
-<button class="font-toggle" aria-label="Change text size" title="Text size: 100%">A</button>
 </header>
 <div class="layout" id="top">
 <aside class="sidebar">
@@ -57,12 +55,10 @@
 </div></div>
 <a class="nav-item" href="../reports.html"><span>Reports</span></a></div></aside>
 <main class="main" id="maincontent">
-<div class="breadcrumb">FieldX <span>›</span> <a href="../policies.html" style="color:#009cde">Restrictions</a> <span>›</span> Device Settings Override</div>
 <!-- EDIT: heading + intro text below — change words freely, keep the tags -->
 <section class="intro" id="overview"><div class="eyebrow">Restrictions</div>
 <h1>Device Settings Override</h1>
-<p>Override low-level device settings directly. These are powerful controls — test thoroughly before wide deployment, since incorrect values can cause unwanted device behavior, and not all changes apply immediately (some require a reboot).</p>
-<div class="meta-row"><span class="meta">3 restrictions</span><span class="meta">Allow / Disallow</span><span class="meta">2 min read</span></div></section>
+<p>Override low-level device settings directly. These are powerful controls — test thoroughly before wide deployment, since incorrect values can cause unwanted device behavior, and not all changes apply immediately (some require a reboot).</p></section>
 <p id="result-count"></p>
 <div class="doc-note"><strong>Part of Restrictions</strong>Back to <a href="../policies.html" style="color:#009cde">Restrictions overview →</a></div>
 
@@ -74,11 +70,10 @@
 <article class="article" id="global-settings" data-search="global settings device settings override what it does: directly sets values in android&#x27;s global settings namespace (equivalent to settings.global). configured through its own settings window in the fieldx console rather than a simple allow/disallow toggle. available for: not specified in the fieldx source. where to find it: restrictions / device settings override / global settings when should i use this? use this only for specific, documented global-namespace keys you need to override — consult the fieldx knowledge base for the constants list before changing anything here. important notes note: applying an unsupported or malformed value can cause unexpected device behavior. some global settings require a device reboot to take effect."><button class="article-title" aria-expanded="false"><span>Global Settings</span><i>⌄</i></button><div class="article-body"><div class="field"><b>What it does</b><span>Directly sets values in Android&#x27;s Global Settings namespace (equivalent to Settings.Global).</span></div><p>Configured through its own settings window in the FieldX console rather than a simple Allow/Disallow toggle.</p><div class="field"><b>Available for</b><span>Not specified in the FieldX source.</span></div><div class="field"><b>Where to find it</b><span>Restrictions / Device Settings Override / Global Settings</span></div><p>When should I use this? Use this only for specific, documented Global-namespace keys you need to override — consult the FieldX knowledge base for the constants list before changing anything here.</p><p>Important notes</p><p>Note: Applying an unsupported or malformed value can cause unexpected device behavior. Some Global settings require a device reboot to take effect.</p></div></article>
 </div></section>
 <div class="empty">No matching documentation found.</div>
-<div class="footer"><div class="foot-grid"><div class="foot-brand"><img class="brand-logo logo-light" src="../assets/logo.png" alt="FieldX" height="26"><img class="brand-logo logo-dark" src="../assets/logo-white.png" alt="FieldX" height="26"><strong>FieldX Docs</strong><span>Manage, monitor and troubleshoot Android, Apple and Linux fleets at scale.</span></div><div><strong>Modules</strong><a href="../policies.html">Restrictions</a><a href="../enroll-device.html">Enroll Device</a><a href="../devices.html">Devices</a><a href="../groups.html">Groups</a><a href="../apps.html">Apps</a><a href="../reports.html">Reports</a></div><div><strong>Resources</strong><a href="../getting-started.html">Getting Started</a><a href="../faq.html">FAQ</a><a href="../changelog.html">Changelog</a></div><div><strong>Support</strong><a href="../support.html">Contact FieldX</a><a href="https://support.fieldx.io/portal/en/kb">Knowledge Base</a><a href="mailto:info@fieldx.io">info@fieldx.io</a></div></div><div class="foot-base"><span>FieldX Documentation · © 2026 Smargav Solutions</span><span>Updated September 2026</span></div></div>
 </main>
 <aside class="right"><div class="toc-label">On this page</div>
 <nav class="toc"><a href="#overview">Device Settings Override</a><a href="#system-settings">System Settings</a><a href="#secure-settings">Secure Settings</a><a href="#global-settings">Global Settings</a></nav>
-<div class="right-card"><strong>Tip</strong>Press <kbd>/</kbd> to focus search, <kbd>Esc</kbd> to clear.</div></aside>
+</aside>
 </div>
 <script>window.FX_ROOT='../';</script>
 <script src="../assets/full-index.js"></script>
