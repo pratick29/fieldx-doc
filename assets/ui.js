@@ -291,6 +291,31 @@ document.addEventListener('DOMContentLoaded',function(){
     img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openLb();}});
   });
 
+  /* platform pills: color-code availability so restrictions scan by platform */
+  function platClass(name){
+    if(/samsung/i.test(name))return 'plat-ss';
+    if(/android enterprise/i.test(name))return 'plat-ae';
+    if(/fieldx emm/i.test(name))return 'plat-fx';
+    return 'plat-na';
+  }
+  function pillify(el){
+    if(!el||el.getAttribute('data-pilled'))return;
+    var parts=el.textContent.split(',').map(function(s){return s.trim();}).filter(Boolean);
+    if(!parts.length)return;
+    el.textContent='';
+    parts.forEach(function(p){
+      var s=document.createElement('span');s.className='plat '+platClass(p);s.textContent=p;el.appendChild(s);
+    });
+    el.setAttribute('data-pilled','1');
+  }
+  document.querySelectorAll('.field').forEach(function(f){
+    var b=f.querySelector('b'),v=f.querySelector('span');
+    if(b&&v&&b.textContent.trim()==='Available for')pillify(v);
+  });
+  document.querySelectorAll('table.master tbody tr').forEach(function(tr){
+    pillify(tr.cells&&tr.cells[2]);
+  });
+
   /* scrollspy + to-top visibility (right rail AND sidebar submenu) */
   var spyLinks=Array.prototype.slice.call(document.querySelectorAll('.right .toc a[href^="#"]'));
   var spyMap={};
