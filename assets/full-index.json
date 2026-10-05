@@ -8,6 +8,62 @@
 "text": "The page you asked for moved or never existed. Try search, or jump to a section below."
 },
 {
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#overview",
+"group": "Reference",
+"title": "Android Enterprise",
+"crumb": "FieldX Documentation › Android Enterprise",
+"text": "Google's enterprise framework inside FieldX — work profiles for personal devices, full management for corporate units, and Managed Play for apps. Orange pills mark every restriction that needs it."
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#work-profile",
+"group": "Reference",
+"title": "Work profile (BYOD)",
+"crumb": "FieldX Documentation › Android Enterprise › Management with AE",
+"text": "Profile-owner mode manages only the work profile and leaves the personal side alone — company apps and data stay controlled while photos and messages stay private. The BYOD compromise, backed by Android Enterprise. work profile byod profile owner personal side managed enterprise"
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#fully-managed",
+"group": "Reference",
+"title": "Fully managed (corporate)",
+"crumb": "FieldX Documentation › Android Enterprise › Management with AE",
+"text": "Device-owner mode — usually via QR provisioning — grants full-device control including wipe and kiosk. A managed device shows its AE roots in the inventory: the EMM agent fields record the installation type. Where to find it Devices → click a Device ID → Network & EMM fully managed device owner…"
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#managed-play",
+"group": "Reference",
+"title": "Managed Google Play",
+"crumb": "FieldX Documentation › Android Enterprise › Play and inventory",
+"text": "Alongside silent pushes and the private store, apps can be approved from Managed Google Play — Google's enterprise channel, curated by the admin. See the deployment paths in Apps → managed google play approve apps store enterprise private"
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#sync-ae",
+"group": "Reference",
+"title": "Sync AE devices",
+"crumb": "FieldX Documentation › Android Enterprise › Play and inventory",
+"text": "Google-side changes don't walk over by themselves: the Sync AE Devices toolbar action pulls the latest Android Enterprise inventory into FieldX. Run it after adding devices on the Google side. Where to find it Devices → inventory toolbar → Sync AE Devices sync ae devices android enterprise…"
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#ae-pills",
+"group": "Reference",
+"title": "Reading the pills",
+"crumb": "FieldX Documentation › Android Enterprise › Which restrictions need AE",
+"text": "Every restriction carries platform pills: green is FieldX EMM, orange is Android Enterprise , blue is Samsung. Some entries carry a version floor — the default-apps family, for example, needs Android Enterprise v16+. orange pills ae default apps v16 version availability platform"
+},
+{
+"page": "android-enterprise.html",
+"url": "android-enterprise.html#ae-only",
+"group": "Reference",
+"title": "AE-only entries",
+"crumb": "FieldX Documentation › Android Enterprise › Which restrictions need AE",
+"text": "A few restrictions exist only on Android Enterprise — the credential-provider policies, for instance. The fastest way to find them all is the platform column of the master list. Where to find it Restrictions → Master Summary → ae only credential provider certificates install private dns…"
+},
+{
 "page": "apps.html",
 "url": "apps.html#overview",
 "group": "Reference",
@@ -672,6 +728,54 @@
 "text": "⌄ Answer Devices collect into groups (bulk policies and apps) inside zones (site isolation with delegated admins). See Groups → faq groups zones bulk policies apps"
 },
 {
+"page": "firmware.html",
+"url": "firmware.html#overview",
+"group": "Reference",
+"title": "Firmware Management",
+"crumb": "FieldX Documentation › Firmware Management",
+"text": "Keep every device on the right software — staged firmware rollouts with rollback, delivered over CDN and tracked per device from download to installed."
+},
+{
+"page": "firmware.html",
+"url": "firmware.html#staged-rollouts",
+"group": "Reference",
+"title": "Staged rollouts",
+"crumb": "FieldX Documentation › Firmware Management › How an update flows",
+"text": "Rollouts move in stages instead of all at once: prove the build on a small slice, then expand to the fleet. Each device reports its own stage — downloaded, installing, failed or rolled back — so a bad build is visible before it spreads. staged rollout firmware custom builds expand stages ota"
+},
+{
+"page": "firmware.html",
+"url": "firmware.html#updater-agent",
+"group": "Reference",
+"title": "The Updater agent",
+"crumb": "FieldX Documentation › Firmware Management › How an update flows",
+"text": "The Updater agent enforces firmware decisions on the device, pulling builds over CDN and installing them locally. Grab it from console Downloads alongside DeviceManager.apk and fieldx_settings.json. Where to find it Console Downloads updater agent apk downloads custom builds install firmware"
+},
+{
+"page": "firmware.html",
+"url": "firmware.html#rollback",
+"group": "Reference",
+"title": "Rollback",
+"crumb": "FieldX Documentation › Firmware Management › How an update flows",
+"text": "Updates that fail don't strand devices: failed units roll back and report the rolled-back stage in the OTA report, ready for a fixed build. Check the failure stage first — downloads, installation and device-side blocks fail for different reasons. rollback failed firmware update revert custom builds…"
+},
+{
+"page": "firmware.html",
+"url": "firmware.html#ota-report",
+"group": "Reference",
+"title": "The OTA report",
+"crumb": "FieldX Documentation › Firmware Management › Track the rollout",
+"text": "The OTA report is the rollout dashboard: every device sits in exactly one stage — downloaded, installing, failed or rolled back. Filter by group or zone to see where an update is stuck, then export for the record. Where to find it Reports → OTA report → filter → Export ota report firmware stages…"
+},
+{
+"page": "firmware.html",
+"url": "firmware.html#stuck-downloads",
+"group": "Reference",
+"title": "Stuck downloads",
+"crumb": "FieldX Documentation › Firmware Management › Track the rollout",
+"text": "Interrupted transfers sit in the failed-downloads queue and retry dirty. Clearing the queue drops the stuck app and OTA downloads so they retry cleanly — the first fix to try before investigating further. Where to find it Devices → select → Action → Clear Failed Downloads Queue stuck failed…"
+},
+{
 "page": "getting-started.html",
 "url": "getting-started.html#overview",
 "group": "Reference",
@@ -862,6 +966,22 @@
 "title": "Apps",
 "crumb": "FieldX Documentation › Documentation › FieldX modules",
 "text": "Apps management controls which applications exist on devices. Admins silently install, update, or remove apps, block distracting ones through blacklist and whitelist policies, and offer approved tools through a private store that needs no Google Play. Read full → apps silent install blacklist…"
+},
+{
+"page": "index.html",
+"url": "index.html#firmware",
+"group": "Home",
+"title": "Firmware",
+"crumb": "FieldX Documentation › Documentation › FieldX modules",
+"text": "Firmware management keeps every device on the right software. Updates roll out in stages over CDN with rollback for failures, enforced locally by the Updater agent and tracked per device in the OTA report. Read full → firmware ota updates staged rollout rollback updater"
+},
+{
+"page": "index.html",
+"url": "index.html#android-enterprise",
+"group": "Home",
+"title": "Android Enterprise",
+"crumb": "FieldX Documentation › Documentation › FieldX modules",
+"text": "Android Enterprise is Google's enterprise framework inside FieldX. Work profiles cover BYOD, full management covers corporate units, and Managed Play curates apps — orange pills mark every restriction that needs it. Read full → android enterprise work profile managed play ae sync orange"
 },
 {
 "page": "index.html",

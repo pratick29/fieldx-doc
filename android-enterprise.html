@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<script>try{if(localStorage.getItem('fx-theme')==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
+<title>FieldX Documentation — Apps</title><link rel="stylesheet" href="assets/minimal.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/icon.png"></head>
+<body>
+<header class="header">
+<button class="side-toggle" aria-label="Collapse sidebar" title="Collapse sidebar">☰</button>
+<a class="brand" href="index.html"><img class="brand-logo logo-light" src="assets/logo.png" alt="FieldX" height="30"><img class="brand-logo logo-dark" src="assets/logo-white.png" alt="FieldX" height="30"><span class="brand-name">Docs</span></a>
+<button class="mobile-menu" aria-label="Open navigation" onclick="document.querySelector('.sidebar').style.display=document.querySelector('.sidebar').style.display==='block'?'none':'block'">☰</button>
+<div class="header-search"><span class="search-icon">⌕</span><input id="docs-search" placeholder="Search documentation..." autocomplete="off"><kbd>/</kbd></div>
+<button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+</header>
+<div class="layout" id="top">
+<aside class="sidebar">
+<div class="nav-group"><div class="nav-label">Start here</div>
+<a class="nav-item" href="index.html"><span>Home</span></a>
+<a class="nav-item" href="getting-started.html"><span>Getting Started</span></a>
+<a class="nav-item" href="concepts.html"><span>Concepts</span></a></div>
+<div class="nav-group"><div class="nav-label">Documentation</div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="policies.html#overview" aria-label="Restrictions"><span class="drop-arrow">›</span><span>Restrictions</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="policies.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="policies.html#summary"><span>Master Summary</span></a>
+<a class="nav-sub-item" href="policies.html#managing"><span>Managing</span></a>
+<a class="nav-sub-item" href="policies.html#advanced"><span>App Watchdog</span></a>
+<a class="nav-sub-item" href="policies.html#all"><span>All Restrictions</span></a>
+</div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="enroll-device.html#overview" aria-label="Enroll Device"><span class="drop-arrow">›</span><span>Enroll Device</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="enroll-device.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="enroll-device.html#choose"><span>Choose</span></a>
+<a class="nav-sub-item" href="enroll-device.html#qr-code"><span>QR Enrollment</span></a>
+<a class="nav-sub-item" href="enroll-device.html#web-installer"><span>Web Installer</span></a>
+<a class="nav-sub-item" href="enroll-device.html#app-installer"><span>Installer App</span></a>
+<a class="nav-sub-item" href="enroll-device.html#manual-adb"><span>Manual ADB</span></a>
+<a class="nav-sub-item" href="enroll-device.html#troubleshooting"><span>Troubleshooting</span></a>
+</div></div>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="devices.html#overview" aria-label="Devices"><span class="drop-arrow">›</span><span>Devices</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="devices.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="devices.html#inventory"><span>Inventory</span></a>
+<a class="nav-sub-item" href="devices.html#details"><span>Details</span></a>
+<a class="nav-sub-item" href="devices.html#apps"><span>Apps</span></a>
+<a class="nav-sub-item" href="devices.html#monitor"><span>Monitor</span></a>
+<a class="nav-sub-item" href="devices.html#remote-actions"><span>Remote actions</span></a>
+</div></div>
+<a class="nav-item" href="groups.html"><span>Groups</span></a>
+<div class="nav-drop"><div class="nav-drop-row"><a class="nav-drop-main" href="apps.html#overview" aria-label="Apps"><span class="drop-arrow">›</span><span>Apps</span></a></div>
+<div class="nav-sub">
+<a class="nav-sub-item" href="apps.html#overview"><span>Overview</span></a>
+<a class="nav-sub-item" href="apps.html#push"><span>Push Apps</span></a>
+<a class="nav-sub-item" href="apps.html#addedit"><span>Add & Edit</span></a>
+<a class="nav-sub-item" href="apps.html#store"><span>Custom Store</span></a>
+<a class="nav-sub-item" href="apps.html#play"><span>Managed Play</span></a>
+</div></div>
+<a class="nav-item" href="firmware.html"><span>Firmware</span></a>
+<a class="nav-item active" href="android-enterprise.html"><span>Android Enterprise</span></a>
+<a class="nav-item" href="reports.html"><span>Reports</span></a></div></aside>
+<main class="main" id="maincontent">
+<!-- EDIT: heading + intro text below — change words freely, keep the tags -->
+<section class="intro" id="overview"><div class="eyebrow">FieldX Documentation</div>
+<h1>Android Enterprise</h1>
+<p>Google's enterprise framework inside FieldX — work profiles for personal devices, full management for corporate units, and Managed Play for apps. Orange pills mark every restriction that needs it.</p></section>
+<p id="result-count"></p>
+<!-- EDIT: content sections below — edit text freely; to add one, copy a full <article>…</article> block -->
+<section class="category-block" id="modes"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Management with AE</h2><p>Two depths of control from the same framework — pick per device, not per fleet.</p></div><span class="badge">2</span></div>
+<div class="articles">
+<article class="article static" id="work-profile" data-search="work profile byod profile owner personal side managed enterprise"><div class="static-title"><span>Work profile (BYOD)</span></div><div class="article-body"><p>Profile-owner mode manages only the work profile and leaves the personal side alone — company apps and data stay controlled while photos and messages stay private. The BYOD compromise, backed by Android Enterprise.</p></div></article>
+<article class="article static" id="fully-managed" data-search="fully managed device owner corporate qr provisioning ae installation type emm agent"><div class="static-title"><span>Fully managed (corporate)</span></div><div class="article-body"><p>Device-owner mode — usually via QR provisioning — grants full-device control including wipe and kiosk. A managed device shows its AE roots in the inventory: the EMM agent fields record the installation type.</p><div class="field"><b>Where to find it</b><span>Devices → click a Device ID → Network &amp; EMM</span></div></div></article>
+</div></section>
+<section class="category-block" id="play-sync"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Play and inventory</h2><p>Approved apps and a synced device list — the two AE console jobs.</p></div><span class="badge">2</span></div>
+<div class="articles">
+<article class="article static" id="managed-play" data-search="managed google play approve apps store enterprise private"><div class="static-title"><span>Managed Google Play</span></div><div class="article-body"><p>Alongside silent pushes and the private store, apps can be approved from Managed Google Play — Google's enterprise channel, curated by the admin. See the deployment paths in <a href="apps.html" style="color:#009cde">Apps →</a></p></div></article>
+<article class="article static" id="sync-ae" data-search="sync ae devices android enterprise inventory toolbar refresh"><div class="static-title"><span>Sync AE devices</span></div><div class="article-body"><p>Google-side changes don't walk over by themselves: the Sync AE Devices toolbar action pulls the latest Android Enterprise inventory into FieldX. Run it after adding devices on the Google side.</p><div class="field"><b>Where to find it</b><span>Devices → inventory toolbar → Sync AE Devices</span></div></div></article>
+</div></section>
+<section class="category-block" id="ae-restrictions"><div class="cat-kicker">REFERENCE</div><div class="catrow"><div><h2>Which restrictions need AE</h2><p>Read the pills — orange means Android Enterprise.</p></div><span class="badge">2</span></div>
+<div class="articles">
+<article class="article static" id="ae-pills" data-search="orange pills ae default apps v16 version availability platform"><div class="static-title"><span>Reading the pills</span></div><div class="article-body"><p>Every restriction carries platform pills: green is FieldX EMM, <b>orange is Android Enterprise</b>, blue is Samsung. Some entries carry a version floor — the default-apps family, for example, needs Android Enterprise v16+.</p></div></article>
+<article class="article static" id="ae-only" data-search="ae only credential provider certificates install private dns availability master list"><div class="static-title"><span>AE-only entries</span></div><div class="article-body"><p>A few restrictions exist only on Android Enterprise — the credential-provider policies, for instance. The fastest way to find them all is the platform column of the master list.</p><div class="field"><b>Where to find it</b><span><a href="policies.html#summary" style="color:#009cde">Restrictions → Master Summary →</a></span></div></div></article>
+</div></section>
+<div class="empty">No matching documentation found.</div>
+<nav class="prevnext" aria-label="Guide navigation"><a class="pn-prev" href="apps.html"><span>&larr; Previous</span><strong>Apps</strong></a><a class="pn-next" href="firmware.html"><span>Next &rarr;</span><strong>Firmware</strong></a></nav>
+</main>
+<aside class="right"><div class="toc-label">On this page</div><nav class="toc"><a href="#overview">Android Enterprise</a><a href="#modes">AE modes</a><a href="#play-sync">Play & sync</a><a href="#ae-restrictions">AE restrictions</a></nav>
+</aside>
+</div>
+<script src="assets/full-index.js"></script>
+<script src="assets/advanced-search.js"></script>
+<script src="assets/chat-demo.js"></script>
+<script src="assets/ui.js"></script>
+</body></html>
