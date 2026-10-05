@@ -85,7 +85,7 @@ article[id]{scroll-margin-top:84px}
 .table th,.master th{text-align:left;background:var(--th-bg);color:#637381;font-size:9px;text-transform:uppercase;letter-spacing:.05em}
 .table thead th,.master thead th{position:sticky;top:0;z-index:5}
 .table th,.table td,.master th,.master td{padding:9px 10px;border-bottom:1px solid var(--border);vertical-align:top}
-.step{background:#F4F6F8;border-radius:6px;padding:6px 9px;margin:4px 0;color:#637381;font-size:14px}
+.step{background:none;border:0;padding:3px 0;margin:7px 0;color:var(--text);font-size:14px}
 .right{height:calc(100vh - 72px);position:sticky;top:72px;overflow:auto;padding:50px 16px 40px}
 .toc{border-left:1px solid var(--border)}
 .toc a{display:block;padding:4px 10px;color:#919EAB;font-size:10px;line-height:1.5}
@@ -139,6 +139,32 @@ article[id]{scroll-margin-top:84px}
 [data-theme="dark"] .plat-ae{background:rgba(251,146,60,.16);color:#fb923c}
 [data-theme="dark"] .plat-ss{background:rgba(56,189,248,.16);color:#38bdf8}
 [data-theme="dark"] .plat-na{background:rgba(148,163,184,.16);color:#94a3b8}
+/* prev/next guide navigation */
+.prevnext{display:flex;justify-content:space-between;gap:12px;margin:44px 0 8px;border-top:1px solid var(--border);padding-top:18px}
+.prevnext a{display:flex;flex-direction:column;gap:2px;max-width:48%;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none}
+.prevnext a:hover{border-color:var(--accent)}
+.prevnext .pn-next{margin-left:auto;text-align:right}
+.prevnext span{font-size:11px;color:var(--subtle);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.prevnext strong{font-size:14px;color:var(--text)}
+/* guide directory + spec lists (ManageEngine-style home) */
+.guide-dir{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;counter-reset:gd}
+.guide-dir li{display:flex;gap:10px;align-items:baseline;padding:6px 0;border:0;counter-increment:gd}
+.guide-dir li::before{content:counter(gd);flex:none;width:24px;height:24px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.guide-dir a{font-weight:700;white-space:nowrap}
+.guide-dir span{font-size:12px;color:var(--muted)}
+.spec-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+.spec-cols h3{font-size:13px;margin:0 0 8px;text-transform:uppercase;letter-spacing:.05em;color:var(--subtle)}
+.spec{list-style:none;margin:0;padding:0}
+.spec li{font-size:13px;padding:7px 0 7px 26px;position:relative;border-bottom:1px dashed var(--border)}
+.spec li:last-child{border-bottom:0}
+.spec li::before{content:"✓";position:absolute;left:4px;color:#16a34a;font-weight:800}
+@media(max-width:760px){.guide-dir{grid-template-columns:1fr}.spec-cols{grid-template-columns:1fr}}
+/* ManageEngine-style numbered procedures + note callouts */
+ol.proc{list-style:none;margin:10px 0;padding:0;counter-reset:ps}
+ol.proc li{position:relative;padding:5px 12px 5px 36px;margin:7px 0;border:0;counter-increment:ps;font-size:14px}
+ol.proc li::before{content:counter(ps);position:absolute;left:0;top:5px;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:800;display:inline-flex;align-items:center;justify-content:center}
+.callout{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0;padding:12px 16px;margin:12px 0;font-size:13.5px;color:var(--text)}
+.doc-note{border-left:4px solid var(--accent)}
 .master-filter{width:100%;height:40px;border:1px solid var(--border);border-radius:9px;background:#F4F6F8;padding:0 14px;outline:none;font-size:13px;margin:4px 0 6px;color:var(--text)}
 .master-filter:focus{background:var(--bg);border-color:var(--accent)}
 [data-theme="dark"] .master-filter{background:#1C252E}
@@ -257,7 +283,7 @@ body.docs-collapsed .layout{grid-template-columns:minmax(0,1fr) 220px}
 [data-theme="dark"] .field span{color:#919EAB}
 [data-theme="dark"] .field.warning{background:rgba(255,171,0,.1);border-color:rgba(255,171,0,.4)}
 [data-theme="dark"] .table th,[data-theme="dark"] .master th{color:#919EAB}
-[data-theme="dark"] .step{background:#28323D;color:#919EAB}
+[data-theme="dark"] .step{background:none;color:var(--muted)}
 [data-theme="dark"] .image-wrap{background:#28323D}
 [data-theme="dark"] .code{background:#28323D}
 [data-theme="dark"] .mobile-menu{color:#fff}
