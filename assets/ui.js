@@ -57,17 +57,7 @@ document.addEventListener('DOMContentLoaded',function(){
     refreshMaster();
   }
 
-  /* announcement banner (dismissible, remembered) */
-  try{
-    if(localStorage.getItem('fx-banner')!=='off'){
-      var bn=document.createElement('div');bn.className='fx-banner';
-      bn.innerHTML='<span><strong>New:</strong> All 120 restrictions on one page — <a href="'+ROOT+'policies.html">Browse →</a></span><button aria-label="Dismiss announcement">✕</button>';
-      document.body.insertBefore(bn,document.body.firstChild);
-      bn.querySelector('button').addEventListener('click',function(){
-        bn.remove();try{localStorage.setItem('fx-banner','off');}catch(e){}
-      });
-    }
-  }catch(e){}
+  /* announcement banner removed per request */
 
   /* print / PDF button removed per request */
 

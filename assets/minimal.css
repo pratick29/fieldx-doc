@@ -186,9 +186,6 @@ body,.header,.sidebar,.main,.article,.table,.step,.doc-note,.right-card,.to-top,
 [data-theme="dark"] *{scrollbar-color:#454F5B transparent}
 [data-theme="dark"] ::-webkit-scrollbar-thumb{background:#454F5B;border-color:#141A21}
 [data-theme="dark"] ::-webkit-scrollbar-thumb:hover{background:#637381}
-.fx-banner{background:var(--accent-soft);color:var(--text);text-align:center;font-size:12px;padding:9px 44px 9px 12px;position:relative;border-bottom:1px solid var(--border)}
-.fx-banner a{color:var(--accent);font-weight:700}
-.fx-banner button{position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--muted);cursor:pointer;font-size:14px;padding:4px 8px}
 .print-btn{width:100%;border:1px solid var(--border);background:transparent;color:var(--text);border-radius:9px;padding:9px;font-size:11.5px;font-weight:700;cursor:pointer;margin-bottom:22px}
 .print-btn:hover{border-color:var(--accent);color:var(--accent)}
 .gloss{border-bottom:1px dotted var(--accent);cursor:help;position:relative;white-space:nowrap}
