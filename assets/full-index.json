@@ -109,7 +109,7 @@
 "group": "Reference",
 "title": "Concepts",
 "crumb": "FieldX Documentation › Concepts",
-"text": "The ideas behind device management — what MDM is, how fleets are organized, and how FieldX fits together. Start here if the terminology is new."
+"text": "Everything the rest of these docs assumes you know: what device management is, how fleets are organized, the journey from enrollment to retirement, and how the FieldX pieces fit together. New here? Read this page first — ten minutes now saves an hour later."
 },
 {
 "page": "concepts.html",
@@ -117,7 +117,7 @@
 "group": "Reference",
 "title": "What is MDM?",
 "crumb": "FieldX Documentation › Concepts › Management basics",
-"text": "Mobile Device Management means controlling phones and tablets from a central console instead of touching each one. An admin enrolls devices once, then pushes apps, policies and updates remotely — across ten units or ten thousand. Without MDM, every change is manual labor per device; with it, one…"
+"text": "Managing phones, tablets and other endpoints from a central console instead of touching each one. Enroll a device once; afterwards apps, settings, policies and updates go out over the air — to ten units or ten thousand. Every MDM product does three jobs: configure devices without handling them,…"
 },
 {
 "page": "concepts.html",
@@ -125,7 +125,7 @@
 "group": "Reference",
 "title": "UEM vs MDM vs EMM",
 "crumb": "FieldX Documentation › Concepts › Management basics",
-"text": "Three acronyms for overlapping ideas. MDM (Mobile Device Management) covers phones and tablets. EMM (Enterprise Mobility Management) is Android-focused management with app and content controls. UEM (Unified Endpoint Management) extends the same thinking to every endpoint — laptops, desktops, IoT…"
+"text": "Overlapping names for the same idea at different widths. MDM (Mobile Device Management) covers phones and tablets. EMM (Enterprise Mobility Management) is Android-centered management with app and content controls. UEM (Unified Endpoint Management) stretches the idea to every endpoint — laptops,…"
 },
 {
 "page": "concepts.html",
@@ -133,7 +133,7 @@
 "group": "Reference",
 "title": "Ownership models",
 "crumb": "FieldX Documentation › Concepts › Management basics",
-"text": "Who owns the device decides how strictly you may lock it. Corporate-owned units accept full control — lockdown, wipe, kiosk. BYOD (personal devices) gets partial control through work profiles that wall off company data without touching photos and messages. Shared devices (classrooms, nurse carts,…"
+"text": "Who owns the device decides how far your control may go. Corporate-owned units accept everything — lockdown, wipe, kiosk (think retail POS or warehouse scanners). BYOD — personal phones — gets partial control through a work profile that walls off company data without touching photos and messages.…"
 },
 {
 "page": "concepts.html",
@@ -141,7 +141,15 @@
 "group": "Reference",
 "title": "Management modes",
 "crumb": "FieldX Documentation › Concepts › Management basics",
-"text": "On Android, control depth depends on provisioning. Device-owner mode (QR, Knox, ADB enrollment) grants full-device control including wipe and kiosk. Profile-owner mode manages only the work profile, leaving personal space alone — the BYOD compromise. Samsung Knox adds hardware-backed extras on…"
+"text": "On Android, control depth depends on how the device was provisioned. Device-owner mode (QR, Knox or ADB enrollment) grants full-device control including wipe and kiosk. Profile-owner mode manages only the work profile and leaves the personal side alone — the BYOD compromise. Samsung Knox adds…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#device-lifecycle",
+"group": "Reference",
+"title": "The device lifecycle",
+"crumb": "FieldX Documentation › Concepts › Management basics",
+"text": "Every managed device travels the same loop. Enroll it once, by whichever method fits. It joins groups — manually or through auto-grouping rules — and inherits their policies. It then lives under monitoring , where dashboards, alerts and instant actions keep it healthy. Reports turn that history…"
 },
 {
 "page": "concepts.html",
@@ -149,7 +157,7 @@
 "group": "Reference",
 "title": "Console, agents, channel, server",
 "crumb": "FieldX Documentation › Concepts › How FieldX fits together",
-"text": "FieldX has four moving parts. The console is the web portal where admins enroll devices, build groups, write restrictions and watch reports. On-device agents (Manager, Updater, Kiosk, Store) enforce those decisions locally. A persistent channel carries commands instantly instead of waiting for…"
+"text": "Four moving parts. The console is the web portal where admins enroll devices, build groups, write restrictions and read reports. On-device agents (Manager, Updater, Kiosk, Store) enforce those decisions locally. A persistent channel carries commands instantly instead of waiting for check-ins.…"
 },
 {
 "page": "concepts.html",
@@ -157,7 +165,7 @@
 "group": "Reference",
 "title": "What FieldX does differently",
 "crumb": "FieldX Documentation › Concepts › How FieldX fits together",
-"text": "Four traits shape the product. No Google dependency — enrollment, push and updates work without Play Services or Firebase, including de-Googled builds and blocked regions. Instant commands over a persistent connection instead of polling delays. Encrypted SMS fallback keeps lock, wipe and reboot…"
+"text": "No Google dependency — enrollment, push and updates work without Play Services or Firebase, including de-Googled builds and blocked regions. Instant commands over a persistent connection instead of polling delays. Encrypted SMS fallback keeps lock, wipe and reboot working with zero data. CDN…"
 },
 {
 "page": "concepts.html",
@@ -165,7 +173,15 @@
 "group": "Reference",
 "title": "A day with FieldX",
 "crumb": "FieldX Documentation › Concepts › How FieldX fits together",
-"text": "Morning: dashboard shows overnight compliance and offline units. Midday: a new store batch enrols by QR into its group and inherits policies automatically. Afternoon: a staged app update rolls to 10% while signage kiosks report uptime. Evening: scheduled reports land in inboxes. The pattern…"
+"text": "Morning: the dashboard shows overnight compliance and offline units. Midday: a new store batch enrolls by QR into its group and inherits policies automatically. Afternoon: a staged app update rolls to 10% while signage kiosks report uptime. Evening: scheduled reports land in inboxes. The pattern…"
+},
+{
+"page": "concepts.html",
+"url": "concepts.html#policy-journey",
+"group": "Reference",
+"title": "How a policy reaches a device",
+"crumb": "FieldX Documentation › Concepts › How FieldX fits together",
+"text": "Follow one restriction from thought to enforcement. You write it once in the console and attach it to a group — never to individual devices. Where rules conflict, the priority order decides which wins. The console pushes it instantly over the persistent channel (or encrypted SMS if the device is…"
 },
 {
 "page": "concepts.html",
@@ -317,7 +333,7 @@
 "group": "Reference",
 "title": "Step 1 — Start the device",
 "crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
-"text": "⌄ 1. Unbox and power on the device. 2. Wait for the initial Welcome screen. 3. Tap the same location on the Welcome screen 6 times quickly."
+"text": "⌄ Unbox and power on the device. Wait for the initial Welcome screen. Tap the same location on the Welcome screen 6 times quickly."
 },
 {
 "page": "enroll-device.html",
@@ -341,7 +357,7 @@
 "group": "Reference",
 "title": "Step 4 — Complete provisioning",
 "crumb": "FieldX Documentation › Enroll Device › FieldX EMM / QR Enrollment",
-"text": "⌄ 1. The setup wizard downloads the FieldX Manager App. 2. Follow the remaining Android setup prompts. 3. Grant the requested permissions to the Manager App. 4. Select Done when the “You're all set!” screen appears."
+"text": "⌄ The setup wizard downloads the FieldX Manager App. Follow the remaining Android setup prompts. Grant the requested permissions to the Manager App. Select Done when the “You're all set!” screen appears."
 },
 {
 "page": "enroll-device.html",
@@ -804,7 +820,7 @@
 "url": "index.html#overview",
 "group": "Home",
 "title": "Documentation",
-"crumb": "FieldX Documentation › Home",
+"crumb": "FieldX Documentation › Documentation",
 "text": "360° control for every modern device — manage, monitor & troubleshoot Android, Apple & Linux fleets at scale. 10x faster operations with zero guesswork."
 },
 {

@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded',function(){
       }else if(node.nodeType===1){
         var tag=(node.tagName||'').toLowerCase();
         if(tag==='script'||tag==='style'||tag==='input'||tag==='textarea'||tag==='select'||tag==='a'||tag==='button'||/^h[1-6]$/.test(tag))return;
-        if(node.classList&&(node.classList.contains('gloss')||node.classList.contains('fxs-dd')||node.classList.contains('fxc-panel')))return;
+        if(node.classList&&(node.classList.contains('gloss')||node.classList.contains('guide-dir')||node.classList.contains('fxs-dd')||node.classList.contains('fxc-panel')))return;
         var kids=Array.prototype.slice.call(node.childNodes);
         for(var i=0;i<kids.length&&gcount<=80;i++)glossWalk(kids[i]);
       }
