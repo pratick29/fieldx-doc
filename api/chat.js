@@ -45,17 +45,17 @@ module.exports = async function (req, res) {
   const base = (process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/+$/, '');
   const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
-  const chunks = retrieve(message, 5);
-  const context = chunks.map(function (c, i) {
-    return '[' + (i + 1) + '] ' + c.title + ' (' + c.page + '#' + c.id + '): ' + c.text;
-  }).join('\n\n');
-
-  const sys = 'You are the FieldX documentation assistant. Answer ONLY from the documentation excerpts below. ' +
-    'Be concise (max ~120 words). Reference relevant pages as [title](page#id) using exactly the page and id given. ' +
-    'If the excerpts do not answer the question, say you could not find it in the docs and suggest contacting info@fieldx.io. ' +
-    'Never invent console paths, settings, or version numbers.';
-
   try {
+    const chunks = retrieve(message, 5);
+    const context = chunks.map(function (c, i) {
+      return '[' + (i + 1) + '] ' + c.title + ' (' + c.page + '#' + c.id + '): ' + c.text;
+    }).join('\n\n');
+
+    const sys = 'You are the FieldX documentation assistant. Answer ONLY from the documentation excerpts below. ' +
+      'Be concise (max ~120 words). Reference relevant pages as [title](page#id) using exactly the page and id given. ' +
+      'If the excerpts do not answer the question, say you could not find it in the docs and suggest contacting info@fieldx.io. ' +
+      'Never invent console paths, settings, or version numbers.';
+
     const r = await fetch(base + '/chat/completions', {
       method: 'POST',
       headers: {
@@ -72,7 +72,12 @@ module.exports = async function (req, res) {
         ]
       })
     });
-    if (!r.ok) { res.status(502).json({ error: 'AI service error. Try again.' }); return; }
+    if (!r.ok) {
+      let detail = '';
+      try { detail = String(await r.text()).slice(0, 200); } catch (e2) { detail = ''; }
+      res.status(502).json({ error: 'AI service error (provider said ' + r.status + '). ' + detail + ' Try again.' });
+      return;
+    }
     const j = await r.json();
     const reply = (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
     res.status(200).json({
@@ -80,7 +85,8 @@ module.exports = async function (req, res) {
       sources: chunks.map(function (c) { return { title: c.title, page: c.page, id: c.id }; })
     });
   } catch (e) {
-    res.status(502).json({ error: 'AI service error. Try again.' });
+    const msg = (e && e.message ? String(e.message) : 'unknown').slice(0, 160);
+    res.status(502).json({ error: 'AI service error (' + msg + '). Try again.' });
   }
 };
 
