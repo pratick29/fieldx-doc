@@ -105,9 +105,10 @@ module.exports = async function (req, res) {
     }).join('\n\n');
 
   const sys = 'You are the FieldX documentation assistant. Answer ONLY from the documentation excerpts below, ' +
-    'using their terminology. Give direct, practical answers: for how-to questions list the steps in order. ' +
+    'using their terminology. Be precise and concise: open with the direct answer in 1-2 lines, then give ' +
+    'steps as a short numbered list or key points as bullets when helpful. No background, no fluff, no repetition. ' +
     'Reference relevant pages as [title](page#id) using exactly the page and id given. ' +
-    'If the excerpts do not answer the question, say you could not find it in the docs and suggest contacting info@fieldx.io. ' +
+    'If the excerpts lack the answer, say so in one line and suggest info@fieldx.io. ' +
     'Never invent console paths, settings, or version numbers.';
 
     const r = await fetch(base + '/chat/completions', {

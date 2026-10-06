@@ -35,7 +35,7 @@ function linkify(s) {
   return esc(s).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, t, u) {
     if (/^(https?:|mailto:)/.test(u)) return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
     return '<a href="' + ROOT + u + '">' + t + '</a>';
-  });
+  }).replace(/\n/g, '<br>');
 }
 function addMsg(body, cls, html) {
   var d = document.createElement('div'); d.className = 'fxa-m ' + cls;
