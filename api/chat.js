@@ -5,7 +5,10 @@ let KB = null;
 function loadKB() {
   if (!KB) {
     KB = JSON.parse(fs.readFileSync(path.join(__dirname, 'kb.json'), 'utf8'));
-    KB.forEach(function (e) { e._t = (e.title + ' ' + e.text).toLowerCase(); });
+    KB.forEach(function (e) {
+      e._t = (e.title + ' ' + e.text).toLowerCase();
+      e._k = (((e.keys || []).join(' ')) + ' ' + ((e.user_intents || []).join(' ')) + ' ' + (e.section || '') + ' ' + ((e.platforms || []).join(' '))).toLowerCase();
+    });
   }
   return KB;
 }
@@ -43,15 +46,32 @@ function expand(terms) {
   return out;
 }
 
+const NORM = [
+  ['wi-fi', 'wifi'], ['wi fi', 'wifi'], ['wireless', 'wifi'],
+  ['passcode', 'password'], ['pin', 'password'],
+  ['cellular', 'mobile data'], ['sd card', 'external storage'],
+  ['factory reset', 'wipe'], ['signage', 'kiosk'],
+];
+function normalize(q) {
+  let s = ' ' + q.toLowerCase() + ' ';
+  NORM.forEach(function (pair) { s = s.split(pair[0]).join(pair[1]); });
+  return s;
+}
 function score(entry, terms, neg) {
-  let s = 0, covered = 0;
+  let s = 0, covered = 0, titleHits = 0;
   const title = entry.title.toLowerCase();
+  const sec = (entry.section || '').toLowerCase();
   for (const t of terms) {
     if (!t) continue;
     const th = title.split(t).length - 1;
     const xh = entry._t.split(t).length - 1;
-    if (th > 0 || xh > 0) covered++;
-    if (th > 0) s += 5 * Math.min(th, 3);
+    const sh = sec ? sec.split(t).length - 1 : 0;
+    const kh = entry._k.split(t).length - 1;
+    if (th > 0 || xh > 0 || kh > 0) covered++;
+    titleHits += Math.min(th, 3);
+    if (th > 0) s += 6 * Math.min(th, 3);
+    if (sh > 0) s += 5 * Math.min(sh, 2);
+    if (kh > 0) s += 3 * Math.min(kh, 3);
     s += Math.min(xh, 5);
   }
   if (covered >= 2) s += 12 * covered;
@@ -62,29 +82,40 @@ function score(entry, terms, neg) {
       if (title.split(t).length > 1) s -= 60;
     }
   }
-  return s;
+  return { s: s, cov: covered, th: titleHits };
 }
 
-function retrieve(q, k) {
-  k = k || 6;
-  let terms = q.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 2 && !STOP.has(w); });
-  if (!terms.length) terms = q.toLowerCase().split(/\s+/).filter(function (w) { return w.length > 2; });
+var CONF_THRESHOLD = 15;
+
+function retrieve(q, k, withScores) {
+  k = k || 5;
+  const nq = normalize(q);
+  let terms = nq.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 2 && !STOP.has(w); });
+  if (!terms.length) terms = nq.split(/\s+/).filter(function (w) { return w.length > 2; });
   const neg = [];
-  const nq = q.toLowerCase();
   ['without', 'except', 'no ', 'not '].forEach(function (n) {
-    const i = nq.indexOf(n === 'no ' || n === 'not ' ? n : n);
+    const i = nq.indexOf(n);
     if (i !== -1) {
       const w = nq.slice(i + n.length).split(/\s+/).filter(Boolean)[0];
       if (w && w.length > 1) neg.push(w.replace(/[^a-z0-9]/g, ''));
     }
   });
   terms = expand(terms);
-  return loadKB()
-    .map(function (e) { return { e: e, s: score(e, terms, neg) }; })
+  // stage 1: broad recall, top 12
+  const cands = loadKB()
+    .map(function (e) { const r = score(e, terms, neg); return { e: e, s: r.s, cov: r.cov, th: r.th }; })
     .filter(function (r) { return r.s > 0; })
     .sort(function (a, b) { return b.s - a.s; })
-    .slice(0, k)
-    .map(function (r) { return r.e; });
+    .slice(0, 12);
+  // stage 2: rerank — score first, title hits then coverage break ties
+  cands.sort(function (a, b) {
+    if (b.s !== a.s) return b.s - a.s;
+    if (b.th !== a.th) return b.th - a.th;
+    return b.cov - a.cov;
+  });
+  const top = cands.slice(0, k);
+  if (withScores) return top;
+  return top.map(function (r) { return r.e; });
 }
 
 module.exports = async function (req, res) {
@@ -99,17 +130,43 @@ module.exports = async function (req, res) {
   const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
   try {
-    const chunks = retrieve(message, 5);
-    const context = chunks.map(function (c, i) {
-      return '[' + (i + 1) + '] ' + c.title + ' (' + c.page + '#' + c.id + '): ' + c.text;
-    }).join('\n\n');
+    const scored = retrieve(message, 5, true);
+    if (!scored.length || scored[0].s < CONF_THRESHOLD) {
+      res.status(200).json({ reply: "I couldn't find this information in the FieldX documentation.", sources: [] });
+      return;
+    }
+    const chunks = scored.map(function (r) { return r.e; });
+  const context = chunks.map(function (c, i) {
+    const where = c.path || [c.module, c.section].filter(Boolean).join(' › ');
+    const avail = (c.platforms && c.platforms.length) ? ' Available for: ' + c.platforms.join(', ') + '.' : '';
+    return '[' + (i + 1) + '] ' + c.title + (where ? ' (' + where + ')' : '') + ' [' + c.page + '#' + c.id + ']: ' + c.text + avail;
+  }).join('\n\n');
 
-  const sys = 'You are the FieldX documentation assistant. Answer ONLY from the documentation excerpts below, ' +
-    'using their terminology. Be precise and concise: open with the direct answer in 1-2 lines, then give ' +
-    'steps as a short numbered list or key points as bullets when helpful. No background, no fluff, no repetition. ' +
-    'Reference relevant pages as [title](page#id) using exactly the page and id given. ' +
-    'If the excerpts lack the answer, say so in one line and suggest info@fieldx.io. ' +
-    'Never invent console paths, settings, or version numbers.';
+  const sys = `You are the FieldX Documentation Assistant.
+
+Your knowledge is strictly limited to the documentation excerpts provided
+in this request.
+
+Answer the user's question ONLY when the provided excerpts contain enough
+information to support the answer.
+
+Do not use your general knowledge.
+Do not infer or guess missing information.
+Do not invent features, settings, console paths, URLs, procedures,
+versions, or capabilities.
+
+If the provided excerpts do not contain enough information to answer,
+respond exactly:
+
+"I couldn't find this information in the FieldX documentation."
+
+Keep answers concise and practical.
+
+When the documentation provides steps, present them as a numbered list.
+
+Use the terminology exactly as it appears in the documentation.
+
+Reference relevant pages as [title](page#id), using exactly the page and id given in the excerpts.`;
 
     const r = await fetch(base + '/chat/completions', {
       method: 'POST',
