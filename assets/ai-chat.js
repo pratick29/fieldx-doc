@@ -6,6 +6,7 @@ var SELF = (document.currentScript) || null;
 function selfAttr(n) { try { return SELF && SELF.getAttribute(n); } catch (e) { return null; } }
 var API = selfAttr('data-api') || (ROOT + 'api/chat');
 var DOCS = /^https?:\/\//.test(API) ? API.replace(/\/api\/chat\/?$/, '') : '';
+var LOGO = DOCS ? DOCS + '/assets/icon-chat.png' : ROOT + 'assets/icon-chat.png';
 function docUrl(u) {
   if (/^(https?:|mailto:)/.test(u)) return u;
   if (DOCS) return DOCS + '/' + u.replace(/^\.\.\//, '');
@@ -56,7 +57,7 @@ function addMsg(body, cls, html) {
   var row = document.createElement('div'); row.className = 'fxa-row' + (isBot ? '' : ' u');
   if (isBot) {
     var av = document.createElement('span'); av.className = 'fxa-ava';
-    av.innerHTML = '<img src="' + ROOT + 'assets/icon-chat.png" alt="">';
+    av.innerHTML = '<img src="' + LOGO + '" alt="">';
     row.appendChild(av);
   }
   var d = document.createElement('div'); d.className = 'fxa-m ' + cls;
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
   css();
   var fab = document.createElement('button');
   fab.className = 'fxa-fab'; fab.setAttribute('aria-label', 'Ask FieldX docs');
-  fab.innerHTML = '<img src="' + ROOT + 'assets/icon-chat.png" alt="FieldX chat">';
+  fab.innerHTML = '<img src="' + LOGO + '" alt="FieldX chat">';
   var panel = document.createElement('div');
   panel.className = 'fxa-panel';
   panel.innerHTML = '<div class="fxa-head"><span class="fxa-brand"><span>FieldX AI Assistant</span></span><button class="fxa-x" aria-label="Close chat">✕</button></div>' +
@@ -94,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
     input.value = '';
     var row = document.createElement('div'); row.className = 'fxa-row';
     var av = document.createElement('span'); av.className = 'fxa-ava';
-    av.innerHTML = '<img src="' + ROOT + 'assets/icon-chat.png" alt="">'; row.appendChild(av);
+    av.innerHTML = '<img src="' + LOGO + '" alt="">'; row.appendChild(av);
     var t = document.createElement('div'); t.className = 'fxa-m fxa-bot fxa-typing'; t.innerHTML = '<i></i><i></i><i></i>';
     row.appendChild(t); body.appendChild(row); body.scrollTop = body.scrollHeight;
     var url = API;
