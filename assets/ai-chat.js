@@ -2,6 +2,15 @@
 (function () {
 'use strict';
 var ROOT = location.pathname.indexOf('/restrictions/') !== -1 ? '../' : '';
+var SELF = (document.currentScript) || null;
+function selfAttr(n) { try { return SELF && SELF.getAttribute(n); } catch (e) { return null; } }
+var API = selfAttr('data-api') || (ROOT + 'api/chat');
+var DOCS = /^https?:\/\//.test(API) ? API.replace(/\/api\/chat\/?$/, '') : '';
+function docUrl(u) {
+  if (/^(https?:|mailto:)/.test(u)) return u;
+  if (DOCS) return DOCS + '/' + u.replace(/^\.\.\//, '');
+  return ROOT + u;
+}
 
 function css() {
   if (document.getElementById('fxa-css')) return;
@@ -37,7 +46,9 @@ function linkify(s) {
   // [title](page#id) -> anchor, prefixed for subdirectory pages
   return esc(s).replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, t, u) {
     if (/^(https?:|mailto:)/.test(u)) return '<a href="' + u + '" target="_blank" rel="noopener">' + t + '</a>';
-    return '<a href="' + ROOT + u + '">' + t + '</a>';
+    var href = docUrl(u);
+    var ext = /^https?:\/\//.test(href) && href.indexOf(location.host) === -1;
+    return '<a href="' + href + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' + t + '</a>';
   }).replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
 }
 function addMsg(body, cls, html) {
@@ -86,8 +97,13 @@ document.addEventListener('DOMContentLoaded', function () {
     av.innerHTML = '<img src="' + ROOT + 'assets/icon-chat.png" alt="">'; row.appendChild(av);
     var t = document.createElement('div'); t.className = 'fxa-m fxa-bot fxa-typing'; t.innerHTML = '<i></i><i></i><i></i>';
     row.appendChild(t); body.appendChild(row); body.scrollTop = body.scrollHeight;
-    var url = ROOT + 'api/chat';
-    fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: q }) })
+    var url = API;
+    var pg = selfAttr('data-page') || '';
+    try {
+      var bp = document.body && document.body.getAttribute('data-fxa-page');
+      if (!pg && bp) pg = bp;
+    } catch (e2) {}
+    fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: q, page: pg }) })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
       .then(function (out) {
         t.classList.remove('fxa-typing');

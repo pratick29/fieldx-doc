@@ -87,7 +87,7 @@ function score(entry, terms, neg) {
 
 var CONF_THRESHOLD = 15;
 
-function retrieve(q, k, withScores) {
+function retrieve(q, k, withScores, pg) {
   k = k || 5;
   const nq = normalize(q);
   let terms = nq.replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 2 && !STOP.has(w); });
@@ -101,9 +101,17 @@ function retrieve(q, k, withScores) {
     }
   });
   terms = expand(terms);
+  const pgt = String(pg || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 2; });
   // stage 1: broad recall, top 12
   const cands = loadKB()
-    .map(function (e) { const r = score(e, terms, neg); return { e: e, s: r.s, cov: r.cov, th: r.th }; })
+    .map(function (e) {
+      const r = score(e, terms, neg);
+      if (pgt.length) {
+        const where = ((e.module || '') + ' ' + (e.section || '')).toLowerCase();
+        if (pgt.some(function (w) { return where.indexOf(w) !== -1; })) r.s += 8;
+      }
+      return { e: e, s: r.s, cov: r.cov, th: r.th };
+    })
     .filter(function (r) { return r.s > 0; })
     .sort(function (a, b) { return b.s - a.s; })
     .slice(0, 12);
@@ -118,21 +126,37 @@ function retrieve(q, k, withScores) {
   return top.map(function (r) { return r.e; });
 }
 
+function cors(res, origin) {
+  const allowed = (process.env.ALLOWED_ORIGINS || 'https://fieldx-doc.vercel.app').split(',').map(s => s.trim());
+  if (origin && allowed.indexOf(origin) !== -1) res.setHeader('Access-Control-Allow-Origin', origin);
+  res.setHeader('Vary', 'Origin');
+}
+
 module.exports = async function (req, res) {
-  if (req.method !== 'POST') { res.status(405).json({ error: 'POST only' }); return; }
+  const origin = req.headers && req.headers.origin;
+  if (req.method === 'OPTIONS') {
+    cors(res, origin);
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+    res.status(204).json({});
+    return;
+  }
+  const resJ = (code, obj) => { cors(res, origin); res.status(code).json(obj); };
+  if (req.method !== 'POST') { resJ(405, { error: 'POST only' }); return; }
   let body = req.body;
   if (typeof body === 'string') { try { body = JSON.parse(body); } catch (e) { body = {}; } }
   const message = String((body && body.message) || '').slice(0, 500).trim();
-  if (!message) { res.status(400).json({ error: 'Empty question' }); return; }
+  const page = String((body && body.page) || '').slice(0, 60).trim();
+  if (!message) { resJ(400, { error: 'Empty question' }); return; }
   const key = process.env.OPENAI_API_KEY;
-  if (!key) { res.status(503).json({ error: 'Chat backend is not configured yet.' }); return; }
+  if (!key) { resJ(503, { error: 'Chat backend is not configured yet.' }); return; }
   const base = (process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/+$/, '');
   const model = process.env.OPENAI_MODEL || 'gpt-4o-mini';
 
   try {
-    const scored = retrieve(message, 5, true);
+    const scored = retrieve(message, 5, true, page);
     if (!scored.length || scored[0].s < CONF_THRESHOLD) {
-      res.status(200).json({ reply: "I couldn't find this information in the FieldX documentation.", sources: [] });
+      resJ(200, { reply: "I couldn't find this information in the FieldX documentation.", sources: [] });
       return;
     }
     const chunks = scored.map(function (r) { return r.e; });
@@ -180,25 +204,25 @@ Reference relevant pages as [title](page#id), using exactly the page and id give
         model: model, max_tokens: 500, temperature: 0.2,
         messages: [
           { role: 'system', content: sys },
-          { role: 'user', content: 'Documentation excerpts:\n' + context + '\n\nQuestion: ' + message }
+          { role: 'user', content: 'Documentation excerpts:\n' + context + '\n\nQuestion: ' + message + (page ? '\n(User is viewing the ' + page + ' screen in the FieldX console.)' : '') }
         ]
       })
     });
     if (!r.ok) {
       let detail = '';
       try { detail = String(await r.text()).slice(0, 200); } catch (e2) { detail = ''; }
-      res.status(502).json({ error: 'AI service error (provider said ' + r.status + '). ' + detail + ' Try again.' });
+      resJ(502, { error: 'AI service error (provider said ' + r.status + '). ' + detail + ' Try again.' });
       return;
     }
     const j = await r.json();
     const reply = (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || '';
-    res.status(200).json({
+    resJ(200, {
       reply: String(reply).trim(),
       sources: chunks.map(function (c) { return { title: c.title, page: c.page, id: c.id }; })
     });
   } catch (e) {
     const msg = (e && e.message ? String(e.message) : 'unknown').slice(0, 160);
-    res.status(502).json({ error: 'AI service error (' + msg + '). Try again.' });
+    resJ(502, { error: 'AI service error (' + msg + '). Try again.' });
   }
 };
 
