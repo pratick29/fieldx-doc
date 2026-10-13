@@ -57,7 +57,10 @@ button,input{font:inherit}
 .intro h1{font-size:44px;line-height:1.08;letter-spacing:-.055em;margin:8px 0 12px}
 .intro p{font-size:18px;color:var(--muted);max-width:680px;margin:0}
 .meta-row{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}
-.meta{border:1px solid var(--border);border-radius:7px;padding:4px 8px;font-size:10px;color:var(--muted)}
+.meta{font-size:11px;color:var(--muted)}
+button.meta{border:1px solid var(--border);background:transparent;border-radius:999px;padding:5px 14px;font-size:11px;font-weight:700;font-family:Manrope,Roboto,sans-serif;color:var(--muted);cursor:pointer;transition:all .15s ease}
+button.meta:hover{border-color:var(--accent);color:var(--accent)}
+button.meta.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .doc-note{border:1px solid #BFE7F7;background:#F4FAFE;border-radius:9px;padding:15px 16px;margin-bottom:45px;font-size:14px;color:var(--muted)}
 .doc-note strong{display:block;color:var(--text);margin-bottom:2px}
 .category-block{scroll-margin-top:100px;margin:65px 0}
@@ -142,8 +145,10 @@ article[id]{scroll-margin-top:84px}
 [data-theme="dark"] .plat-na{background:rgba(148,163,184,.16);color:#94a3b8}
 /* prev/next guide navigation */
 .prevnext{display:flex;justify-content:space-between;gap:12px;margin:44px 0 8px;border-top:1px solid var(--border);padding-top:18px}
-.prevnext a{display:flex;flex-direction:column;gap:2px;max-width:48%;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none}
-.prevnext a:hover{border-color:var(--accent)}
+.prevnext a{display:flex;flex-direction:column;gap:2px;max-width:48%;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.prevnext a:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,24,40,.1)}
+.article.static{transition:transform .18s ease,box-shadow .18s ease}
+.article.static:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(16,24,40,.1)}
 .prevnext .pn-next{margin-left:auto;text-align:right}
 .prevnext span{font-size:11px;color:var(--subtle);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .prevnext strong{font-size:14px;color:var(--text)}
