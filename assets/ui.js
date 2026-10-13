@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded',function(){
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(ok,ok);}
     else{var ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);ok();}
   }
-  var CMD=/^(adb|dumpsys|pm\s|cmd\s|curl|FX\s|cd\s|ls\s|make\s|source\s|lunch|fastboot|apksigner|unzip|ping|tail|grep|ssh)\b/i;
+  var CMD=/^(adb|dumpsys|pm\s|cmd\s|curl|FX\s|cd\s|ls\s|source\s|lunch|fastboot|apksigner|unzip|ping|tail|grep|ssh)\b/i;
   document.querySelectorAll('.step').forEach(function(s){
     var txt=(s.innerText||'').trim();
     if(!CMD.test(txt))return;
@@ -254,6 +254,7 @@ document.addEventListener('DOMContentLoaded',function(){
     s.appendChild(b);
   });
   document.querySelectorAll('.code').forEach(function(c){
+    if(/^\d+\.\d+\.\d+\.\d+$/.test((c.innerText||'').trim()))return;
     c.classList.add('copyable');c.setAttribute('title','Click to copy');
     c.addEventListener('click',function(){copyText(c.innerText,c);});
   });
