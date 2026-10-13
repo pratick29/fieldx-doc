@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
   /* announcement banner removed per request */
 
+  /* page preloader: fade out on ready, force-hide fallback */
+  function hidePre(){var p=document.querySelector('.fx-preloader');if(p){p.classList.add('done');setTimeout(function(){p.remove();},450);}}
+  if(document.readyState==='complete'||document.readyState==='interactive')setTimeout(hidePre,60);
+  else document.addEventListener('DOMContentLoaded',function(){setTimeout(hidePre,60);});
+  setTimeout(hidePre,2500);
+
   /* print / PDF button removed per request */
 
   /* glossary tooltips */

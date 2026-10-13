@@ -36,7 +36,7 @@ function css() {
   '.fxa-foot input:focus{border-color:#4E43FA;background:#fff}[data-theme="dark"] .fxa-foot input:focus{background:#1C252E}' +
   '.fxa-send{border:0;background:linear-gradient(135deg,#6D63FF,#3618d3);color:#fff;border-radius:50%;width:38px;height:38px;font-size:16px;cursor:pointer;flex:none;box-shadow:0 4px 12px rgba(0,156,222,.4);transition:transform .15s}.fxa-send:hover{transform:scale(1.07)}' +
   '.fxa-send:disabled{opacity:.5;cursor:wait}' +
-  '.fxa-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}.fxa-typing i{width:7px;height:7px;border-radius:50%;background:#98a2b3;animation:fxab 1.1s infinite}.fxa-typing i:nth-child(2){animation-delay:.15s}.fxa-typing i:nth-child(3){animation-delay:.3s}@keyframes fxab{0%,60%,100%{opacity:.3;transform:none}30%{opacity:1;transform:translateY(-3px)}}';
+  '.fxa-typing{display:flex;gap:4px;align-items:center;padding:12px 14px}.fxa-typing img{width:24px;height:24px;object-fit:contain;animation:fxaflip 1.4s ease-in-out infinite}@keyframes fxaflip{0%{transform:perspective(400px) rotateY(0)}50%{transform:perspective(400px) rotateY(180deg)}100%{transform:perspective(400px) rotateY(360deg)}}';
   document.head.appendChild(st);
 }
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var row = document.createElement('div'); row.className = 'fxa-row';
     var av = document.createElement('span'); av.className = 'fxa-ava';
     av.innerHTML = '<img src="' + LOGO + '" alt="">'; row.appendChild(av);
-    var t = document.createElement('div'); t.className = 'fxa-m fxa-bot fxa-typing'; t.innerHTML = '<i></i><i></i><i></i>';
+    var t = document.createElement('div'); t.className = 'fxa-m fxa-bot fxa-typing'; t.innerHTML = '<img src="' + LOGO + '" alt="Thinking">';
     row.appendChild(t); body.appendChild(row); body.scrollTop = body.scrollHeight;
     var url = API;
     var pg = selfAttr('data-page') || '';

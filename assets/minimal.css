@@ -61,6 +61,11 @@ button,input{font:inherit}
 button.meta{border:1px solid var(--border);background:transparent;border-radius:999px;padding:5px 14px;font-size:11px;font-weight:700;font-family:Manrope,Roboto,sans-serif;color:var(--muted);cursor:pointer;transition:all .15s ease}
 button.meta:hover{border-color:var(--accent);color:var(--accent)}
 button.meta.active{background:var(--accent);border-color:var(--accent);color:#fff}
+/* page preloader (matches main site) */
+.fx-preloader{position:fixed;inset:0;background:var(--bg);z-index:999;display:grid;place-items:center;transition:opacity .35s ease}
+.fx-preloader.done{opacity:0;pointer-events:none}
+.fx-preloader img{width:58px;height:58px;object-fit:contain;animation:fxaflip 1.6s ease-in-out infinite}
+@keyframes fxaflip{0%{transform:perspective(400px) rotateY(0)}50%{transform:perspective(400px) rotateY(180deg)}100%{transform:perspective(400px) rotateY(360deg)}}
 .doc-note{border:1px solid #BFE7F7;background:#F4FAFE;border-radius:9px;padding:15px 16px;margin-bottom:45px;font-size:14px;color:var(--muted)}
 .doc-note strong{display:block;color:var(--text);margin-bottom:2px}
 .category-block{scroll-margin-top:100px;margin:65px 0}
