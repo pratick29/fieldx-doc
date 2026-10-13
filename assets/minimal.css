@@ -69,8 +69,7 @@ button.meta.active{background:var(--accent);border-color:var(--accent);color:#ff
 .doc-note{border:1px solid #BFE7F7;background:#F4FAFE;border-radius:9px;padding:15px 16px;margin-bottom:45px;font-size:14px;color:var(--muted)}
 .doc-note strong{display:block;color:var(--text);margin-bottom:2px}
 .category-block{scroll-margin-top:100px;margin:65px 0}
-.intro{scroll-margin-top:88px;background:linear-gradient(180deg,rgba(78,67,250,.07),rgba(78,67,250,0) 85%);border-radius:0 0 18px 18px;padding:26px 26px 30px;margin:0 -26px 8px}
-[data-theme="dark"] .intro{background:linear-gradient(180deg,rgba(127,117,255,.1),rgba(127,117,255,0) 85%)}
+.intro{scroll-margin-top:88px}
 article[id]{scroll-margin-top:84px}
 .cat-kicker{font-size:9px;letter-spacing:.12em;font-weight:800;color:var(--accent)}
 .catrow{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:18px}
