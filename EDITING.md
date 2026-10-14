@@ -14,10 +14,11 @@ Open http://localhost:8000 — edit, save, refresh the browser.
 
 | What | Where | Example |
 |---|---|---|
-| Page heading + intro | After `<!-- EDIT: heading + intro -->` | `<h1>`, `<p>`, `<span class="meta">` |
-| Article titles | `<button class="article-title"><span>…` | Text inside `<span>` |
+| Page heading + intro | After `<!-- EDIT: heading + intro -->` | `<h1>`, `<p>` |
+| Article titles | `<span>` inside `.static-title` / `.article-title` | Text inside `<span>` |
 | Article bodies | `<div class="article-body">…` | `<p>`, table cells `<td>`, steps `<div class="step">` |
 | Right-side menu | `<nav class="toc">…` | Link text (keep `href="#…"` matching a section `id`) |
+| Guide order links | `<nav class="prevnext">…` | Previous/next page names (keep the chain in order) |
 | FAQ / Changelog entries | Copy a full `<article>…</article>` block, paste, change text |
 
 ## Do NOT touch
@@ -38,5 +39,12 @@ Vercel redeploys https://fieldx-doc.vercel.app/ automatically in ~1 minute.
 
 ## Add a brand-new page (ask first)
 
-A new page needs the same header/sidebar/footer as the others plus a search-index
-rebuild. Ping before doing this one — it needs a helper script run.
+A new page needs the same header/sidebar as the others, a search-index
+rebuild (`python tools/build_index.py`), a sitemap entry, and (if it
+should answer questions) a chatbot KB record — ask before doing this one.
+
+## Chatbot KB
+
+`api/kb.json` answers user questions — it is hand-curated. If you add a
+documented feature, mirror an existing record (keys, intents, platforms,
+sources) or ask for help. Never paste secrets anywhere in the repo.
