@@ -41,10 +41,13 @@ Vercel redeploys https://fieldx-doc.vercel.app/ automatically in ~1 minute.
 
 A new page needs the same header/sidebar as the others, a search-index
 rebuild (`python tools/build_index.py`), a sitemap entry, and (if it
-should answer questions) a chatbot KB record — ask before doing this one.
+should answer questions) a chatbot KB record in the separate
+`fieldx-chatbot` repo — ask before doing this one.
 
-## Chatbot KB
+## Chatbot
 
-`api/kb.json` answers user questions — it is hand-curated. If you add a
-documented feature, mirror an existing record (keys, intents, platforms,
-sources) or ask for help. Never paste secrets anywhere in the repo.
+The chatbot lives in the separate `fieldx-chatbot` project and appears
+here as an iframe bubble (see `fxa-frame-btn` in any page). Nothing
+chatbot-related lives in this repo. If you add a documented feature,
+ask for a matching KB record over there. Never paste secrets anywhere
+in any repo.
